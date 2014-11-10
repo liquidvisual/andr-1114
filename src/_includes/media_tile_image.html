@@ -1,0 +1,13 @@
+<a class="media-tile image-tile" href="{{ item.url }}">
+    <img width="122" src="http://lorempixel.com/122/138/people?{{ forloop.index }}" alt="">
+    <h3 class="text">
+        {{ item.title }}
+
+        {% if item.description %}
+        <span class="desc">
+            {{ item.description }}
+        </span>
+        {% endif %}
+    </h3>
+    <i class="fa fa-angle-right"></i>
+</a>
