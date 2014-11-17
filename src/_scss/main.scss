@@ -25,9 +25,9 @@ $vertical-spacing: rem-calc(20);
 //-----------------------------------------------------------------
 
 html, body {
-	//@media #{$small-only} {
+    //@media #{$small-only} {
         //font-size: 90%;
-	//}
+    //}
 }
 
 //=========================================
@@ -43,28 +43,30 @@ html, body {
 //=========================================
 
 .row {
-	@media #{$medium-up}  { max-width: upper-bound($medium-range)  + 5.000em; }
-	@media #{$large-up}   { max-width: upper-bound($large-range)   + 5.000em; }
-	@media #{$xlarge-up}  { max-width: upper-bound($xlarge-range)  + 5.000em; }
-	@media #{$xxlarge-up} { max-width: upper-bound($xxlarge-range) + 5.000em; }
+    @media #{$medium-up}  { max-width: upper-bound($medium-range)  + 5.000em; }
+    @media #{$large-up}   { max-width: upper-bound($large-range)   + 5.000em; }
+    @media #{$xlarge-up}  { max-width: upper-bound($xlarge-range)  + 5.000em; }
+    @media #{$xxlarge-up} { max-width: upper-bound($xxlarge-range) + 5.000em; }
 }
 
 //Add side padding to the page above small
 .outer-row {
-	@media #{$medium-up} {
-		padding-left: $page-padding - $column-gutter / 2;
-		padding-right: $page-padding - $column-gutter / 2;
-	}
+    @media #{$medium-up} {
+        padding-left: $page-padding - $column-gutter / 2;
+        padding-right: $page-padding - $column-gutter / 2;
+    }
 }
 
 // Ensure images scale to block grid LIs */
 // ul[class*='block-grid'] li img {
-// 	width: 100%;
+//  width: 100%;
 // }
 
 // to close the gap on the promo-tiles and blog panel
 .collapse-left {
-    padding-left: 0;
+    @media #{$medium-up} {
+        padding-left: 0;
+    }
 }
 
 //-----------------------------------------------------------------
@@ -76,19 +78,22 @@ html, body {
 
 .header {
     position: relative;
+    padding: rem-calc(20 0);
 
     @media #{$medium-up} {
         height: rem-calc(230);
+        padding: 0;
     }
 
     .logo {
         @media #{$medium-up} {
             position: relative;
-            top: rem-calc(96);
+            top: rem-calc(77); // magic number - line up with topbar
         }
     }
 
     .phone {
+        @extend .transition;
         position: relative;
         top: rem-calc(20);
         color: #626161;
@@ -99,6 +104,10 @@ html, body {
             left: rem-calc(-25);
             font-size: rem-calc(42);
             line-height: 0;
+        }
+
+        &:hover {
+            color: $primary-color;
         }
     }
 }
@@ -111,7 +120,7 @@ html, body {
     .topbar{
         @media #{$medium-up} {
             position: absolute;
-            bottom: rem-calc(20);
+            bottom: rem-calc(26);
         }
     }
 }
@@ -129,8 +138,22 @@ html, body {
     visibility: visible;
 }
 
+.internal .lv-hero {
+    min-height: rem-calc(170);
+
+    .lv-hero-header h1 {
+        position: relative;
+        top: 90px;
+        color: white;
+    }
+}
+
 .homepage .lv-hero {
-    padding: rem-calc(70 0);
+    padding: rem-calc(40 0);
+
+    @media #{$large-up} {
+        padding: rem-calc(70 0);
+    }
 
     h2 {
         margin-bottom: rem-calc(30);
@@ -143,12 +166,83 @@ html, body {
 //-----------------------------------------------------------------
 // Breadcrumbs
 //-----------------------------------------------------------------
+
+.breadcrumbs-bar {
+    background: $secondary-color;
+    margin-bottom: rem-calc(30);
+
+    .lv-breadcrumbs {
+        margin-bottom: 0;
+        border: 0;
+        padding: rem-calc(11 0);
+
+        li {
+            text-transform: capitalize;
+        }
+
+        a {
+            color: #ddd;
+        }
+    }
+}
+
 //-----------------------------------------------------------------
 // Content
 //-----------------------------------------------------------------
+
+.content {
+    margin-bottom: rem-calc(30);
+
+}
+
 //-----------------------------------------------------------------
 // Sections
 //-----------------------------------------------------------------
+
+//-----------------------------------------------------------------
+// Tabs
+//-----------------------------------------------------------------
+
+.lv-super .tabs {
+    position: relative;
+
+    &:after {
+        content: "";
+        left: 0;
+        width: 100%;
+        height: 10px;
+        background: #E5E5E5;
+    }
+
+    dd {
+        @media #{$small-only} {
+            display: table-cell;
+            float: none;
+            text-align: center;
+
+            a {
+                font-size: rem-calc(13);
+                // padding: 0;
+            }
+        }
+    }
+
+    .active a {
+        border-bottom-color: #E5E5E5;
+    }
+
+    a {
+
+        border-right: 2px solid white;
+        border-bottom: 2px solid white;
+        border-top: 0;
+
+        @media #{$large-up} {
+            padding: rem-calc(12 220 12 12);
+        }
+    }
+}
+
 //-----------------------------------------------------------------
 // Media Object
 //-----------------------------------------------------------------
@@ -156,34 +250,60 @@ html, body {
 // Modules
 //-----------------------------------------------------------------
 
+.media-block {
+    img {
+        padding-right: rem-calc(15);
+        margin-bottom: rem-calc(30);
+
+        @media #{$small-only} {
+            padding: 0;
+        }
+    }
+}
+
 .blog-panel {
     position: relative;
     background: rgba($primary-color, 0.7);
-    height: 100%;
+    margin-top: rem-calc(30); // a bit hacky
+
+    @media #{$large-up} {
+        height: rem-calc(440);
+        margin-top: 0;
+    }
 
     h3 {
         position: relative;
         color: white;
+        font-size: rem-calc(25);
 
         i {
-            position: absolute;
+            position: absolute; // speech bubble
             top: rem-calc(-5);
             right: 0;
             font-size: rem-calc(35);
         }
     }
 
+    li {
+        padding-bottom: 0;
+    }
+
     .inner {
-        padding: rem-calc(25);
+        padding: rem-calc(15 25 25 25);
     }
 
     .button {
-        position: absolute;
-        bottom: 0;
+        background: #CC253A;
         padding-right: rem-calc(25);
         text-transform: uppercase;
         margin-bottom: 0;
         font-size: rem-calc(12);
+        font-weight: bold;
+
+        @media #{$large-up} {
+            position: absolute;
+            bottom: 0;
+        }
     }
 
     .blog-article {
@@ -192,14 +312,64 @@ html, body {
         line-height: 1.2;
 
         a {
+            font-size: rem-calc(16);
             color: white;
             display: block;
+            margin-bottom: rem-calc(5);
         }
 
         date {
             font-size: rem-calc(12);
             color: lighten($primary-color, 25%);
             text-transform: uppercase;
+        }
+    }
+}
+
+//=========================================
+// Refactor this
+//=========================================
+
+.blog-panel-wrapper {
+    background: $secondary-color;
+    padding: rem-calc(20 0);
+
+    .blog-panel {
+        background: $secondary-color;
+        height: auto;
+
+        .button {
+            display: none;
+        }
+
+        h3 {
+            border-bottom: 1px solid #474747;
+            padding-bottom: rem-calc(10);
+
+            a {
+                position: absolute;
+                top: rem-calc(15);
+                right: 0;
+                color: white;
+                font-size: rem-calc(13);
+
+                i {
+                    font-size: rem-calc(13);
+                }
+            }
+        }
+
+        i {
+            position: static;
+            margin-right: rem-calc(10);
+        }
+    }
+
+    .blog-article {
+        border: 0;
+
+        date {
+            color: #848383;
         }
     }
 }
@@ -215,6 +385,10 @@ html, body {
     overflow: hidden;
     height: rem-calc(138);
     background: rgba(0,0,0, 0.56);
+
+    &:hover {
+        background: rgba(0,0,0, 0.7);
+    }
 }
 
 .media-tile i {
@@ -230,8 +404,8 @@ html, body {
     position: absolute;
     bottom: 0;
     display: inline-block;
-    padding: rem-calc(15 40 15 15);
-    font-size: rem-calc(16);
+    padding: rem-calc(15 40 5 15);
+    font-size: rem-calc(20);
     font-weight: bold;
     color: white;
     line-height: 1.2;
@@ -264,6 +438,20 @@ html, body {
     color: white;
 }
 
+.media-tiles-light {
+    .media-tile {
+        background: #EFEFEF;
+
+        .text {
+            color: #404141;
+        }
+
+        i {
+            color: #C8C7C7;
+        }
+    }
+}
+
 /*  Bit of a hack */
 @media (max-width: 767px) {
     .media-tiles li {
@@ -274,13 +462,43 @@ html, body {
 //-----------------------------------------------------------------
 // Sidebar
 //-----------------------------------------------------------------
+
+.lv-super .side-nav {
+    padding-top: 0;
+
+    li {
+        margin-bottom: 1px;
+        font-size: rem-calc(17);
+
+        a {
+            @extend .transition;
+            display: block;
+            line-height: 1.2;
+            padding: rem-calc(18);
+            color: white;
+            background: $primary-color;
+
+            &:hover {
+                background: darken($primary-color, 10%);
+                color: white;
+            }
+        }
+
+        &.active a {
+            background: $secondary-color;
+            color: white !important; // refactor
+        }
+    }
+
+}
+
 //-----------------------------------------------------------------
 // Footer
 //-----------------------------------------------------------------
 
-.footer-top {
+.footer-contact {
     background: #EEEEEE;
-    padding: rem-calc(20 0);
+    padding: rem-calc(30 0 0 0);
 
     a {
         @extend .transition;
@@ -301,9 +519,13 @@ html, body {
     }
 }
 
-.footer-middle {
+.footer-about {
     background: #E7E6E6;
-    padding: rem-calc(20 0);
+    padding: rem-calc(30 0);
+
+    p {
+        margin-bottom: 0;
+    }
 
     .greyed-link {
         font-size: rem-calc(18);
@@ -311,10 +533,24 @@ html, body {
     }
 }
 
-.footer-bottom {
-    height: rem-calc(170);
-    padding-top: rem-calc(30);
+.footer-about-contents {
+    display: none;
+    background: #DDDDDD;
+    padding: rem-calc(30 0);
+
+    p {
+        font-size: rem-calc(13);
+        color: #707070;
+    }
+}
+
+.footer-sitemap {
+    padding: rem-calc(22 0);
     background: $primary-color;
+
+    @media #{$medium-up} {
+       height: rem-calc(76);
+    }
 
     a {
         font-size: rem-calc(13);
@@ -323,10 +559,59 @@ html, body {
     }
 }
 
-.footer .author-logo {
-    display: block;
-    font-size: rem-calc(10);
-    color: #333333;
+.footer-sitemap-contents {
+    display: none;
+    background: #E42038;
+    padding: rem-calc(30 0);
+
+    ul {
+        font-size: rem-calc(13);
+
+        li {
+            margin-bottom: rem-calc(10);
+            line-height: 1.3;
+        }
+    }
+
+    h5 {
+        max-width: rem-calc(150);
+        // padding-bottom: rem-calc(20);
+        min-height: 70px;
+        margin-bottom: rem-calc(15);
+    }
+
+    h5, a {
+        color: white;
+    }
+}
+
+.sitemap-header-line {
+    position: relative;
+    &:after {
+        content: "";
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: $primary-color;
+    }
+}
+
+.footer-legal {
+    height: rem-calc(80);
+    background: $primary-color;
+    padding-top: rem-calc(34);
+
+    .author-logo {
+        display: block;
+        font-size: rem-calc(14);
+        color: #FD596C;
+
+        .text {
+            margin-right: rem-calc(5);
+        }
+    }
 }
 
 //-----------------------------------------------------------------
@@ -355,6 +640,32 @@ html, body {
 //-----------------------------------------------------------------
 // Template Buttons
 //-----------------------------------------------------------------
+
+.lv-super .micro-button {
+    background: #EFEFEF;
+    color: #222;
+    text-transform: uppercase;
+    padding: rem-calc(5);
+    line-height: 0;
+}
+
+.sidebar .button {
+    background: #D8D5D5;
+    color: #2E2D2D;
+    text-align: left;
+    padding: rem-calc(20 15);
+
+    &:hover {
+        color: white;
+    }
+
+    i {
+        font-size: rem-calc(45);
+        float: left;
+        margin-right: rem-calc(10);
+    }
+}
+
 //-----------------------------------------------------------------
 // Forms
 //-----------------------------------------------------------------
@@ -363,16 +674,16 @@ html, body {
 //-----------------------------------------------------------------
 
 .transition {
-	-webkit-transition: all .2s linear;
-	   -moz-transition: all .2s linear;
-	     -o-transition: all .2s linear;
-	    -ms-transition: all .2s linear;
-	        transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+       -moz-transition: all .2s linear;
+         -o-transition: all .2s linear;
+        -ms-transition: all .2s linear;
+            transition: all .2s linear;
 
-	-webkit-transition-property: opacity, color, background;
-	   -moz-transition-property: opacity, color, background;
-	     -o-transition-property: opacity, color, background;
-	    -ms-transition-property: opacity, color, background;
+    -webkit-transition-property: opacity, color, background;
+       -moz-transition-property: opacity, color, background;
+         -o-transition-property: opacity, color, background;
+        -ms-transition-property: opacity, color, background;
             transition-property: opacity, color, background;
 }
 
@@ -382,6 +693,16 @@ html, body {
 
 .greyed-link {
     color: $body-font-color;
+}
+
+/* What gives, Webkit?! */
+.lv-super .accordion,
+.lv-super .accordion *,
+.lv-super .accordion a,
+.lv-super .tabs a,
+.lv-super .tabs-content .content ,
+.lv-super .tabs-content .content * {
+    outline: none !important;
 }
 
 //-----------------------------------------------------------------

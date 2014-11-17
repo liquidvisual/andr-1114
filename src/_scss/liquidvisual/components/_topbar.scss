@@ -1,7 +1,7 @@
 /*
     LIQUIDVISUAL TOPBAR :: A Personal Framework
 
-    - updated: 07.11.14
+    - updated: 14.11.14
     - liquidvisual.com
 
     - Notes -
@@ -23,25 +23,32 @@
 
 .topbar ul {
     // margin-bottom: 0;
-    font-size: rem-calc(17);
+
     // background: red;
     margin: 0;
+    // margin-left: 2%;
     // padding-bottom: rem-calc(10);
     // padding-bottom: rem-calc(4);
 
     @media #{$medium-up} {
         width: 100%;
         display: table;
+        font-size: rem-calc(14);
         // text-align: center;
+    }
+
+    @media #{$xlarge-up} {
+        font-size: rem-calc(17);
     }
 }
 
 .topbar li {
     display: inline-block;
-    display: table-cell;
-    vertical-align: middle;
-    @media #{$large-up} {
 
+    vertical-align: middle;
+
+    @media #{$xlarge-up} {
+        display: table-cell;
     }
 }
 
@@ -55,16 +62,9 @@
     @extend .transition;
     display: block;
     text-align: center;
-
     padding: rem-calc(10 15);
-    // margin: rem-calc(0 2);
-    // margin: rem-calc(10 0);
-    color: grey;
-    font-weight: 500;
-
-    @media #{$large-up} {
-        // color: white;
-    }
+    // color: $body-font-color;
+    color: #404141;
 }
 
 .topbar a:active,
@@ -75,10 +75,8 @@
 }
 
 .no-touch .topbar a:hover {
-    color: white;
     // background: #222;
     background: #DCDBDB;
-    color: grey;
     // background: rgba(0, 0, 0, .5);
 }
 
@@ -144,7 +142,60 @@
     color: white;
 }
 
+//=========================================
+// Hamburger
+//=========================================
 
+.hamburger {
+    position: absolute;
+    // visibility: hidden;
+    // top: 50%;
+    bottom: rem-calc(10);
+    right: rem-calc(15);
+    display: block;
+    width: rem-calc(28);
+    height: rem-calc(24);
+    z-index: 2;
+
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+    @media #{$medium-up} {
+        right: rem-calc(30);
+    }
+}
+
+.hamburger:before,
+.hamburger:after,
+.hamburger span {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: rem-calc(4);
+    background: #201E1F;
+}
+.hamburger:before {
+    top: 0;
+}
+.hamburger:after {
+    bottom: 0;
+}
+.hamburger span {
+    top: 50%;
+    margin-top: rem-calc(-2);
+}
+
+html.mm-opening .hamburger:before,
+html.mm-opening .hamburger:after {
+    display: none;
+}
+
+//-----------------------------------------------------------------
+// Transitions
+//-----------------------------------------------------------------
 
 .transition {
     -webkit-transition: all .2s linear;

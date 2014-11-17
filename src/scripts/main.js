@@ -22,6 +22,7 @@ $(window).load(function() {
 // window.onload = function(){
 //     // NProgress.done();
 // }
+
 //-----------------------------------------------------------------
 // Kickstart Foundation / Touch Conditionals
 //-----------------------------------------------------------------
@@ -43,6 +44,23 @@ if (TOUCH_ENABLED) {
         }
     });*/
 }
+
+//-----------------------------------------------------------------
+// Footer
+//-----------------------------------------------------------------
+
+$('.content-drawer').click(function(){
+    var $this = $(this);
+    var contentDrawer = $($this.attr('href'));
+
+    if (TOUCH_ENABLED) {
+        contentDrawer.toggle();
+    } else {
+        contentDrawer.slideToggle();
+        $("i", $this).toggleClass('fa-angle-down');
+    }
+});
+
 //-----------------------------------------------------------------
 // <= IE8 Caution Message
 //-----------------------------------------------------------------

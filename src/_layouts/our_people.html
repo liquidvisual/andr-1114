@@ -1,0 +1,69 @@
+---
+layout: internal
+sidebar_id: 3
+---
+
+{% assign settings = site.data.settings %}
+{% assign words_array = "Partners_In-house Consultants_Senior Associates_Associates_Solicitors_Management" | split: '_' %}
+
+<!-- MAIN -->
+<div class="columns">
+    <main class="main">
+
+        <!-- Tabs for mobile / tablet -->
+        <dl class="tabs" data-tab>
+            <dd class="list-view active"><a href="#panel1"><span class="text">View by position</a></span></dd>
+            <dd class="map-view"><a href="#panel2"><span class="text">View alphabetical list</a></span></dd>
+        </dl>
+        <div class="tabs-content">
+            <div class="content active" id="panel1">
+                {% for item in words_array %}
+
+                    <h2>{{ item }}</h2>
+                    <hr>
+                    <br>
+
+                    {% capture people_listing %}
+                    <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
+                        {% for item in (1..6) %}
+                        <li>
+                            <div class="media-block">
+                                <div class="row collapse">
+                                    <div class="medium-5 columns">
+                                        <img width="100%" src="http://lorempixel.com/242/242/people?{{forloop.index}}" alt="">
+                                    </div>
+                                    <div class="medium-7 columns">
+                                        <a href="/our-people/person/"><h5>Bill Connelly &nbsp;<i class="fa fa-angle-right"></i></h5></a>
+                                        <p>E: <a href="mailto:">bconnelly@andersons.com.au</a><br>
+                                        P: 08 8447 4911<br>
+                                        F: 08 8447 6284
+                                        </p>
+                                    </div>
+                                </div>
+                            </div> <!-- .media-block -->
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    {% endcapture %}
+                    {{ people_listing }}
+
+                {% endfor %}
+            </div>
+            <div class="content" id="panel2">
+                <h2>People by Surname</h2>
+                <hr>
+                <br>
+                <!-- Simulating only -->
+                {% for i in (1..6) %}
+                    {{ people_listing }}
+                {% endfor %}
+            </div>
+        </div>
+
+    </main> <!-- .main -->
+</div> <!-- .columns -->
+
+
+
+
+

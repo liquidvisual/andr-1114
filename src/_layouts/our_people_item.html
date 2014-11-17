@@ -1,0 +1,44 @@
+---
+layout: internal
+sidebar_id: 3
+---
+
+{% assign settings = site.data.settings %}
+
+<!-- MAIN -->
+<div class="columns">
+    <main class="main">
+
+        <h1>{{ page.title }}</h1>
+
+        <div class="row">
+            <div class="medium-8 columns">
+                <div class="row collapse">
+                    <div class="medium-1 columns">
+                        <img width="100%" src="http://lorempixel.com/242/242/people?{{forloop.index}}" alt="">
+                    </div>
+                    <div class="medium-11 columns">
+                        <a href="/our-people/person/"><h5>Partner</h5></a>
+                        <p>E: <a href="mailto:">bconnelly@andersons.com.au</a><br>
+                        P: 08 8447 4911<br>
+                        F: 08 8447 6284
+                        </p>
+                        <a href="button">Download vCard</a>
+                    </div>
+                </div>
+
+                {{ content }}
+
+            </div> <!-- .columns -->
+
+            <div class="medium-4 columns">
+                <h3><i class="fa fa-align-left"></i>&nbsp; Felix's practice areas</h3>
+                {% include sidebar.html %}
+            </div>
+        </div>
+
+    </main> <!-- .main -->
+</div> <!-- .columns -->
+
+
+

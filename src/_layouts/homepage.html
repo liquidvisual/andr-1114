@@ -19,30 +19,35 @@ hero_link: /some-link-here/
 
 					<h2>I am looking for...</h2>
 
-					<div class="row" data-equalizer>
-						<div class="medium-9 columns" data-equalizer-watch>
+					<div class="row">
+						<div class="large-9 columns">
 							<ul class="media-tiles medium-block-grid-2">
 				            	{% for item in (promo_practices) %}
 				                <li>{% include media_tile_image.html %}</li>
 				            	{% endfor %}
 		            		</ul>
-						</div> <!-- .medium-8 -->
-						<div class="medium-3 columns collapse-left" data-equalizer-watch>
+						</div> <!-- .large-9 -->
+						<div class="large-3 columns collapse-left">
 							<div class="blog-panel">
 								<div class="inner">
 									<h3>LawTalk Blog <i class="fa fa-comment"></i></h3>
 
-									{% for i in (1..3) %}
-									<article class="blog-article">
-										<a>What do Medicare and Centrelink have to do with my compensation claim? &nbsp;<i class="fa fa-angle-right"></i></a>
-										<date>August, 2014</date>
-									</article>
-									{% endfor %}
+									<ul class="medium-block-grid-3 large-block-grid-1">
+										{% for i in (1..3) %}
+										<li>
+											<!-- TRUNCATION IS *VERY* IMPORTANT HERE -->
+											<article class="blog-article">
+												<a>{{ "What do Medicare and Centrelink have to do with my compensation claim?" | truncate: 65 }} &nbsp;<i class="fa fa-angle-right"></i></a>
+												<date>August, 2014</date>
+											</article>
+										</li>
+										{% endfor %}
+									</ul>
 
 								</div> <!-- .inner -->
 								<a class="button expand text-right" href="#">More Blog Posts <i class="fa fa-angle-right"></i></a>
 							</div>
-						</div> <!-- .medium-4 -->
+						</div> <!-- .large-3 -->
 					</div> <!-- .row -->
 				</div> <!-- .columns -->
 			</div> <!-- .row -->

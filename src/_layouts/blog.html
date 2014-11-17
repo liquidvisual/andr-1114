@@ -1,0 +1,34 @@
+---
+layout: internal
+---
+
+{% assign blog = site.pages | where: "type", "blog_item" %}
+{% assign stubbed_image_url = "http://lorempixel.com/400/300/nature?" %}
+
+<!-- MAIN -->
+<div class="columns">
+    <main class="main">
+
+        {% for item in blog %}
+        <article class="blog-item">
+            <div class="row">
+                <div class="medium-3 columns">
+                    <a href="{{ item.url }}" class="img"><img width="100%" src="{{ stubbed_image_url | append: forloop.index }}" alt="..."></a>
+                </div>
+                <div class="medium-9 columns">
+                    <a href="{{ item.url }}"><h2>{{ item.title }}</h2></a>
+                    <p class="tagline">{{ item.date | date: "%d %B %Y" }}</p>
+                    <p class="excerpt">{{ item.content | strip_html | truncate: 200 }} &nbsp;<a href="{{ item.permalink }}" class="primary-color">Read more &nbsp;<i class="icon-angle-right"></i></a></p>
+                </div>
+            </div>
+        </article>
+        <hr>
+        <a href="{{ item.url | prepend: site.baseurl }}"></a>
+        {% endfor %}
+
+        <!-- Pagination Controls -->
+        <p class="left"><a href="#"><i class="icon-angle-left"></i>&nbsp; Older</a></p>
+        <p class="right"><a href="#">Newer &nbsp;<i class="icon-angle-right"></i></a></p>
+
+    </main> <!-- .main -->
+</div> <!-- .columns -->

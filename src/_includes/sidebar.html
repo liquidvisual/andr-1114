@@ -1,25 +1,26 @@
-{% assign navigation = site.data.navigation %}
+{% assign navigation = site.data.sitemap %}
 {% assign sidebar_id = page.sidebar_id %}
 
 <aside class="sidebar">
     <div class="row">
         <div class="large-10 large-offset-2 columns">
 
-            {% comment %} If SIDEBAR_ID is passed, create second level menu - rolling through data (site sections) from /data/navigation.yml {% endcomment %}
+            {% comment %} If SIDEBAR_ID is passed, create second level menu - rolling through data (site sections) from /data/sitemap.yml {% endcomment %}
             {% if sidebar_id %}
 
                 <ul class="side-nav no-bullet">
+
                     {% comment %} Top Level {% endcomment %}
                     {% assign top_level = navigation[sidebar_id] %}
-                    <li class="{% if top_level.url == page.url %} active {% endif %}">
+                    <!-- <li class="{% if top_level.url == page.url %} active {% endif %}">
                         <a href="{{ top_level.url }}">{{ top_level.title }}</a>
-                    </li>
+                    </li> -->
 
                     {% comment %} Second Level {% endcomment %}
-                    {% for item in navigation[sidebar_id].children %}
-                    <li class="{% if item.url == page.url %} active {% endif %}">
-                        <a href="{{ item.url }}">{{ item.title }}</a>
-                    </li>
+                    {% for item in navigation[sidebar_id].children | limit: 1 %}
+                        <li class="{% if item.url == page.url %} active {% endif %}">
+                            <a href="{{ item.url }}">{{ item.title }}</a>
+                        </li>
 
                         {% comment %} Third Level {% endcomment %}
                         {% if item.children %}
@@ -29,10 +30,12 @@
                             </li>
                             {% endfor %}
                         {% endif %}
-
                     {% endfor %}
+
                 </ul>
             {% endif %}
+
+            <a href="#" class="button"><i class="fa fa-chevron-circle-down"></i> Download our personal injury service guide</a>
 
         </div> <!-- .columns -->
     </div> <!-- .row -->

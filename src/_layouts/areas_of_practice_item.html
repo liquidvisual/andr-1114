@@ -1,0 +1,42 @@
+---
+layout: internal
+sidebar_id: 3
+---
+
+{% assign settings = site.data.settings %}
+
+<!-- MAIN -->
+<div class="columns">
+    <main class="main">
+
+		<h1>{{ page.title }}</h1>
+
+		<div class="row">
+			<div class="medium-8 columns">
+				{{ content }}
+
+				<hr>
+
+				<h4><i class="fa fa-users"></i>&nbsp; Meet some of our personal injury team members <a href="#" class="micro-button right button tiny">See More <i class="fa fa-angle-down"></i></a></h4>
+				<br>
+				<ul class="medium-block-grid-4">
+					<li><img class="left" width="46" src="http://lorempixel.com/92/92/people" alt="">
+					<p>Ryan Thomas</p></li>
+
+					<li><img class="left" width="46" src="http://lorempixel.com/92/92/people" alt="">
+					<p>Ryan Thomas</p></li>
+
+					<li><img class="left" width="46" src="http://lorempixel.com/92/92/people" alt="">
+					<p>Ryan Thomas</p></li>
+
+					<li><img class="left" width="46" src="http://lorempixel.com/92/92/people" alt="">
+					<p>Ryan Thomas</p></li>
+				</ul>
+			</div>
+			<div class="medium-4 columns">
+				{% include sidebar.html %}
+			</div>
+		</div>
+
+    </main> <!-- .main -->
+</div> <!-- .columns -->
