@@ -261,6 +261,50 @@ html, body {
     }
 }
 
+//=========================================
+// Team Listing
+//=========================================
+
+.team-listing {
+    // max-height: rem-calc(60);
+    // overflow: hidden;
+
+    @media #{$medium-up} {
+        max-height: rem-calc(90);
+    }
+
+    @media #{$large-up} {
+        max-height: rem-calc(60);
+    }
+
+    a {
+        @extend .transition;
+        display: inline-block;
+        color: $body-font-color;
+
+        &.hide {
+            display: none;
+        }
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
+
+    .text {
+       display: inline-block;
+    }
+
+    .img {
+        float: left;
+        margin: rem-calc(0 10 10 0);
+    }
+}
+
+//=========================================
+// Blog Panel
+//=========================================
+
 .blog-panel {
     position: relative;
     background: rgba($primary-color, 0.7);
@@ -500,6 +544,11 @@ html, body {
     background: #EEEEEE;
     padding: rem-calc(30 0 0 0);
 
+    a,
+    p {
+        font-size: rem-calc(16);
+    }
+
     a {
         @extend .transition;
         color: $body-font-color;
@@ -647,6 +696,10 @@ html, body {
     text-transform: uppercase;
     padding: rem-calc(5);
     line-height: 0;
+
+    &:hover {
+        color: white;
+    }
 }
 
 .sidebar .button {

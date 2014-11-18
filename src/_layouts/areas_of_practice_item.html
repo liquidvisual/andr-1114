@@ -4,6 +4,7 @@ sidebar_id: 3
 ---
 
 {% assign settings = site.data.settings %}
+{% assign people_array = "Ryan Thomas_Bill Bailey_Cosmo Kramer_Elvis Presley_John Smith_Jerry Seinfeld_Clark Kent_John Stewart_Ken Masters_Nicholas Brendon" | split: '_' %}
 
 <!-- MAIN -->
 <div class="columns">
@@ -17,21 +18,30 @@ sidebar_id: 3
 
 				<hr>
 
-				<h4><i class="fa fa-users"></i>&nbsp; Meet some of our personal injury team members <a href="#" class="micro-button right button tiny">See More <i class="fa fa-angle-down"></i></a></h4>
+				<div class="row collapse">
+					<div class="medium-9 columns">
+						<h4><i class="fa fa-users"></i>&nbsp; Meet some of our personal injury team members</h4>
+					</div>
+					<div class="medium-3 columns">
+						<a href="#" class="micro-button more-team-listing right button tiny">See More <i class="fa fa-angle-down"></i></a>
+					</div>
+				</div>
+
 				<br>
-				<ul class="medium-block-grid-4">
-					<li><img class="left" width="46" src="http://lorempixel.com/92/92/people" alt="">
-					<p>Ryan Thomas</p></li>
 
-					<li><img class="left" width="46" src="http://lorempixel.com/92/92/people" alt="">
-					<p>Ryan Thomas</p></li>
+				<div class="team-listing">
+					<ul class="small-block-grid-1 medium-block-grid-4">
+						{% for person in people_array %}
+							<li>
+								<a href="/our-people/person/" class="{% if forloop.index > 4 %}excess hide{% endif %}">
+									<img class="img" width="46" src="http://lorempixel.com/92/92/people?{{forloop.index}}" alt="...">
+									<span class="text">{{ person }}</span>
+								</a>
+							</li>
+						{% endfor %}
+					</ul>
+				</div> <!-- .team-listing -->
 
-					<li><img class="left" width="46" src="http://lorempixel.com/92/92/people" alt="">
-					<p>Ryan Thomas</p></li>
-
-					<li><img class="left" width="46" src="http://lorempixel.com/92/92/people" alt="">
-					<p>Ryan Thomas</p></li>
-				</ul>
 			</div>
 			<div class="medium-4 columns">
 				{% include sidebar.html %}

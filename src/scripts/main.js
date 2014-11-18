@@ -23,6 +23,18 @@ $(window).load(function() {
 //     // NProgress.done();
 // }
 
+// If NOT mobile or touch device, enhance with transition effects
+
+    if (!$('.touch').length) {
+        var wow = new WOW(
+          {
+            boxClass:     'wow',      // default
+            animateClass: 'animated', // default
+            offset:       0          // default
+          }
+        ).init();
+    }
+
 //-----------------------------------------------------------------
 // Kickstart Foundation / Touch Conditionals
 //-----------------------------------------------------------------
@@ -49,9 +61,11 @@ if (TOUCH_ENABLED) {
 // Footer
 //-----------------------------------------------------------------
 
-$('.content-drawer').click(function(){
+$('.content-drawer').click(function(e){
     var $this = $(this);
     var contentDrawer = $($this.attr('href'));
+
+    e.preventDefault();
 
     if (TOUCH_ENABLED) {
         contentDrawer.toggle();
@@ -59,6 +73,11 @@ $('.content-drawer').click(function(){
         contentDrawer.slideToggle();
         $("i", $this).toggleClass('fa-angle-down');
     }
+});
+
+$(".more-team-listing").click(function(e){
+    e.preventDefault();
+    $(".excess").toggleClass('hide animated fadeIn');
 });
 
 //-----------------------------------------------------------------

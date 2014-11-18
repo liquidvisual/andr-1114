@@ -36,7 +36,8 @@
         <div class="medium-6 medium-push-6 columns medium-text-right">
             <p><a href="#"><i class="fa fa-file"></i>&nbsp; DOWNLOAD OUR LEGAL SERVICES GUIDE &nbsp;<i class="fa fa-angle-right"></i></a></p>
         </div>
-        <div class="medium-6 medium-pull-6 columns">
+        {% comment %} IMPORTANT: This link is hidden outside of home. Is still in template though. {% endcomment %}
+        <div class="medium-6 medium-pull-6 columns {% unless page.url == '/' %} hide {% endunless %}">
             <p><a class="greyed-link content-drawer" href="#about-panel">About Andersons Solicitors &nbsp;<i class="fa fa-angle-up fa-angle-down"></i></a></p>
         </div>
     </div>
