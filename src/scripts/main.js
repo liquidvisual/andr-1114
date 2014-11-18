@@ -76,8 +76,12 @@ $('.content-drawer').click(function(e){
 });
 
 $(".more-team-listing").click(function(e){
+    var $this = $(this);
+
     e.preventDefault();
+
     $(".excess").toggleClass('hide animated fadeIn');
+    $("i", $this).toggleClass('fa-angle-down');
 });
 
 //-----------------------------------------------------------------
