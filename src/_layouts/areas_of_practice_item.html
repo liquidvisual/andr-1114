@@ -1,6 +1,6 @@
 ---
 layout: internal
-sidebar_id: 3
+side_nav_id: 3
 ---
 
 {% assign settings = site.data.settings %}
@@ -44,7 +44,14 @@ sidebar_id: 3
 
 			</div>
 			<div class="medium-4 columns">
-				{% include sidebar.html %}
+				<aside class="sidebar">
+				    <div class="row">
+				        <div class="large-10 large-offset-2 columns">
+				        	{% include snippets/side_nav.html exclude_top_level="true" %}
+				        	<a href="#" class="button"><i class="fa fa-chevron-circle-down"></i> Download our personal injury service guide</a>
+				        </div>
+				    </div>
+				</aside>
 			</div>
 		</div>
 

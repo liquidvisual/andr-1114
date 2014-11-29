@@ -1,9 +1,8 @@
 ---
 layout: internal
-sidebar_id: 3
+side_nav_id: 3
+hero_header_override: Our People
 ---
-
-{% assign settings = site.data.settings %}
 
 <!-- MAIN -->
 <div class="columns">
@@ -13,15 +12,15 @@ sidebar_id: 3
 
         <div class="row">
             <div class="medium-8 columns">
-                <div class="row collapse">
-                    <div class="medium-1 columns">
-                        <img width="100%" src="http://lorempixel.com/242/242/people?{{forloop.index}}" alt="">
+                <div class="row">
+                    <div class="medium-3 columns">
+                        <img width="100%" src="http://lorempixel.com/242/242/people?{{forloop.index}}" alt="...">
                     </div>
-                    <div class="medium-11 columns">
+                    <div class="medium-9 columns">
                         <a href="/our-people/person/"><h5>Partner</h5></a>
-                        <p>E: <a href="mailto:">bconnelly@andersons.com.au</a><br>
-                        P: 08 8447 4911<br>
-                        F: 08 8447 6284
+                        <p>E: <a href="mailto:">{{ "bconnelly@andersons.com.au" }}</a><br>
+                        P: {{ "08 8447 4911" }}<br>
+                        F: {{ "08 8447 6284" }}
                         </p>
                         <a href="button">Download vCard</a>
                     </div>
@@ -32,13 +31,20 @@ sidebar_id: 3
             </div> <!-- .columns -->
 
             <div class="medium-4 columns">
-                <h3><i class="fa fa-align-left"></i>&nbsp; Felix's practice areas</h3>
-                {% include sidebar.html %}
+                <aside class="sidebar">
+                    <div class="row">
+                        <div class="large-10 large-offset-2 columns">
+                            <h2><i class="fa fa-align-left"></i>&nbsp; {{ "Felix" }}'s practice areas</h2>
+                            {% include snippets/side_nav.html exclude_top_level="true" %}
+                            <div class="video">
+                                <iframe width="100%" height="230" src="//www.youtube.com/embed/ScMzIvxBSi4" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            <a href="#" class="button expand"><i class="fa fa-comment left"></i> See Blog Posts by {{"Felix"}} <i class="fa fa-angle-right right"></i></a>
+                        </div>
+                    </div>
+                </aside>
             </div>
         </div>
 
     </main> <!-- .main -->
 </div> <!-- .columns -->
-
-
-

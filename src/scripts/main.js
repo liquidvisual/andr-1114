@@ -25,15 +25,15 @@ $(window).load(function() {
 
 // If NOT mobile or touch device, enhance with transition effects
 
-    if (!$('.touch').length) {
-        var wow = new WOW(
-          {
-            boxClass:     'wow',      // default
-            animateClass: 'animated', // default
-            offset:       0          // default
-          }
-        ).init();
-    }
+    // if (!$('.touch').length) {
+    //     var wow = new WOW(
+    //       {
+    //         boxClass:     'wow',      // default
+    //         animateClass: 'animated', // default
+    //         offset:       0          // default
+    //       }
+    //     ).init();
+    // }
 
 //-----------------------------------------------------------------
 // Kickstart Foundation / Touch Conditionals

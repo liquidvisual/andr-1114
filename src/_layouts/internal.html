@@ -20,50 +20,32 @@ layout: master
                     </div>
                 </div> <!-- .columns -->
             </div> <!-- .row -->
-        </div> <!-- .hero-header -->
-    </section> <!-- .hero -->
+        </div> <!-- .lv-hero-header -->
+    </section> <!-- .lv-hero -->
 
     <!-- BREADCRUMBS -->
     <nav class="breadcrumbs-bar">
         <div class="row outer-row">
             <div class="columns">
-                {% include breadcrumbs.html %}
+                {% include snippets/breadcrumbs.html %}
             </div> <!-- .columns -->
         </div> <!-- .row -->
-    </nav> <!-- .breadcrumbs-wrapper -->
+    </nav> <!-- .breadcrumbs-bar -->
 
     <!-- CONTENT -->
     <section class="content">
         <div class="row outer-row">
             {{ content }}
-        </div> <!-- .row -->
+        </div>
     </section>
 
     <!-- Blog Panel -->
-    <div class="blog-panel-wrapper">
+    <section class="blog-section">
         <div class="row">
             <div class="columns">
-                <div class="blog-panel">
-                    <div class="inner">
-                        <h3><i class="fa fa-comment"></i> LawTalk Blog <a href="#">MORE BLOG POSTS <i class="fa fa-angle-right"></i></a></h3>
-
-                        <ul class="medium-block-grid-3">
-                            {% for i in (1..3) %}
-                            <li>
-                                <!-- TRUNCATION IS *VERY* IMPORTANT HERE -->
-                                <article class="blog-article">
-                                    <a>{{ "What do Medicare and Centrelink have to do with my compensation claim?" | truncate: 65 }} &nbsp;<i class="fa fa-angle-right"></i></a>
-                                    <date>August, 2014</date>
-                                </article>
-                            </li>
-                            {% endfor %}
-                        </ul>
-
-                    </div> <!-- .inner -->
-                    <a class="button expand text-right" href="#">More Blog Posts <i class="fa fa-angle-right"></i></a>
-                </div>
+                {% include blog_panel.html %}
             </div>
         </div>
-        </div> <!-- .blog-panel -->
+    </section> <!-- .blog-section -->
 
 </div> <!-- .internal -->

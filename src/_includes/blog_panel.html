@@ -1,0 +1,20 @@
+{% assign settings = site.data.settings %}
+{% assign blog_entries = site.pages | where: "type", "blog_item" %}
+
+<div class="blog-panel">
+    <div class="inner">
+        <h3><i class="fa fa-comment"></i> LawTalk Blog</h3>
+        <ul>
+            {% for item in (blog_entries) limit: 3 %}
+            <li>
+                <!-- TRUNCATION IS *VERY* IMPORTANT HERE -->
+                <article class="blog-article">
+                    <a href="{{ item.url }}">{{ item.title | truncate: 65 }} &nbsp;<i class="fa fa-angle-right"></i></a>
+                    <date>{{ item.date }}</date>
+                </article>
+            </li>
+            {% endfor %}
+        </ul>
+    </div> <!-- .inner -->
+    <a class="button expand text-right" href="/lawtalk-blog/">More Blog Posts <i class="fa fa-angle-right"></i></a>
+</div> <!-- .blog-panel -->

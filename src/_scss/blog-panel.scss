@@ -1,0 +1,147 @@
+@import "foundation/settings";
+@import "foundation/components/block-grid";
+/*
+    MAIN.CSS
+
+    - Last updated: 00.00.00
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+
+//=========================================
+// Blog Panel
+//=========================================
+
+.blog-panel {
+    position: relative;
+    background: rgba($primary-color, 0.7);
+    margin-top: rem-calc(30); // a bit hacky
+
+    @media #{$large-up} {
+        height: rem-calc(440);
+        margin-top: 0;
+    }
+
+    .inner {
+        padding: rem-calc(15 25 25 25);
+    }
+
+    ul {
+        @include block-grid(1);
+
+        @media #{$medium-up} {
+            @include block-grid(3);
+        }
+        @media #{$large-up} {
+            @include block-grid(1);
+        }
+    }
+
+    li {
+        padding-bottom: 0;
+    }
+
+    h3 {
+        position: relative;
+        color: white;
+        font-size: rem-calc(25);
+
+        i {
+            position: absolute; // speech bubble
+            top: rem-calc(-5);
+            right: 0;
+            font-size: rem-calc(35);
+        }
+    }
+
+    .button {
+        background: #CC253A;
+        padding-right: rem-calc(25);
+        text-transform: uppercase;
+        margin-bottom: 0;
+        font-size: rem-calc(12);
+        font-weight: bold;
+
+        @media #{$large-up} {
+            position: absolute;
+            bottom: 0;
+        }
+    }
+}
+
+.blog-article {
+    padding: rem-calc(15 0);
+    border-top: 1px solid lighten($primary-color, 10%);
+    line-height: 1.2;
+
+    a {
+        font-size: rem-calc(16);
+        color: white;
+        display: block;
+        margin-bottom: rem-calc(5);
+    }
+
+    date {
+        font-size: rem-calc(12);
+        color: lighten($primary-color, 25%);
+        text-transform: uppercase;
+    }
+}
+
+//=========================================
+// Internal Blog Panel
+//=========================================
+
+.internal .blog-panel {
+    background: inherit;
+    height: auto;
+
+    ul {
+        @media #{$large-up} {
+            @include block-grid(3);
+        }
+    }
+
+    .button {
+        position: absolute;
+        top: rem-calc(20);
+        right: 0;
+        width: auto;
+        background: none;
+        display: inline-block;
+        padding-right: rem-calc(15);
+    }
+
+    h3 {
+        border-bottom: 1px solid #474747;
+        padding-bottom: rem-calc(10);
+
+        a {
+            position: absolute;
+            top: rem-calc(15);
+            right: 0;
+            color: white;
+            font-size: rem-calc(13);
+
+            i {
+                font-size: rem-calc(13);
+            }
+        }
+    }
+
+    i {
+        position: static;
+        margin-right: rem-calc(10);
+    }
+}
+
+.internal .blog-article {
+    border: 0;
+
+    date {
+        color: #848383;
+    }
+}
+
