@@ -1,0 +1,148 @@
+@import "foundation/settings";
+/*
+    FOOTER.CSS
+
+    - updated: 03.12.14
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Footer Contact
+//-----------------------------------------------------------------
+
+.footer-contact {
+    background: #EEEEEE;
+    padding: rem-calc(30 0 0 0);
+
+    a, p {
+        font-size: rem-calc(16);
+        color: $dark-grey;
+    }
+
+    a:hover i,
+    a:hover {
+        color: $primary-color;
+    }
+
+    i {
+        @include transition();
+        color: #C0C0C0;
+    }
+
+    .office-links li {
+        padding-bottom: rem-calc(10);
+    }
+}
+
+//=========================================
+// Footer About
+//=========================================
+
+.footer-about {
+    background: #E7E6E6;
+    padding: rem-calc(30 0);
+
+    p {
+        margin-bottom: 0;
+    }
+
+    .greyed-link {
+        font-size: rem-calc(18);
+        font-weight: 600;
+        color: $dark-grey;
+    }
+}
+
+.footer-about-contents {
+    display: none;
+    background: #DDDDDD;
+    padding: rem-calc(30 0);
+
+    p {
+        font-size: rem-calc(13);
+        color: #707070;
+        color: $dark-grey;
+    }
+}
+
+//=========================================
+// Footer Sitemap
+//=========================================
+
+.footer-sitemap {
+    padding: rem-calc(22 0);
+    background: $primary-color;
+
+    @media #{$medium-up} {
+       height: rem-calc(76);
+    }
+
+    a {
+        font-size: rem-calc(13);
+        color: white;
+        text-transform: uppercase;
+
+        &:hover {
+            color: black;
+        }
+    }
+}
+
+.footer-sitemap-contents {
+    display: none;
+    background: #E42038;
+    padding: rem-calc(30 0);
+
+    ul {
+        font-size: rem-calc(13);
+
+        li {
+            margin-bottom: rem-calc(10);
+            line-height: 1.3;
+        }
+    }
+
+    h5 {
+        max-width: rem-calc(150);
+        // padding-bottom: rem-calc(20);
+        min-height: 70px;
+        margin-bottom: rem-calc(15);
+    }
+
+    h5, a {
+        color: white;
+    }
+}
+
+.sitemap-header-line {
+    position: relative;
+    &:after {
+        content: "";
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: $primary-color;
+    }
+}
+
+//=========================================
+// Footer Legal
+//=========================================
+
+.footer-legal {
+    height: rem-calc(80);
+    background: $primary-color;
+    padding-top: rem-calc(34);
+
+    .author-logo {
+        display: block;
+        font-size: rem-calc(14);
+        // color: #FD596C;
+        color: rgba(255, 255, 255, .4);
+
+        .text {
+            margin-right: rem-calc(5);
+        }
+    }
+}

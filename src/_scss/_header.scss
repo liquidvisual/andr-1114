@@ -1,0 +1,83 @@
+@import "foundation/settings";
+@import "mixins";
+/*
+    HEADER.CSS
+
+    - updated: 03.12.14
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+
+$header-height: rem-calc(160);
+$header-height-medium: rem-calc(170);
+$header-height-large: rem-calc(230);
+
+//-----------------------------------------------------------------
+// Header
+//-----------------------------------------------------------------
+
+.header {
+    position: relative;
+    height: $header-height;
+    padding: rem-calc(20 0);
+
+    @media #{$medium-up} {
+        // height: $header-height-medium;
+        padding: 0;
+    }
+
+    @media #{$large-up} {
+        height: $header-height-large;
+    }
+
+    .logo {
+        position: relative;
+
+        @media #{$medium-up} {
+            top: rem-calc(20);
+        }
+        @media #{$large-up} {
+            top: rem-calc(77); // magic number - line up with topbar
+        }
+    }
+}
+//=========================================
+// Phone
+//=========================================
+
+.header .phone {
+    position: relative;
+    top: rem-calc(20);
+    color: #626161;
+
+    i {
+        position: absolute;
+        top: rem-calc(10);
+        left: rem-calc(-25);
+        font-size: rem-calc(42);
+        line-height: 0;
+    }
+
+    &:hover {
+        color: $primary-color;
+    }
+}
+
+//=========================================
+// Hamburger
+//=========================================
+
+.header .hamburger {
+    @include hamburger($width: 30px, $thickness: 5px, $color: black);
+
+    top: rem-calc(-36); // magic
+    right: 15px;
+
+
+    @media #{$medium-up} {
+        top: rem-calc(125);
+    }
+}
+

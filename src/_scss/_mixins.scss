@@ -1,0 +1,77 @@
+@import "foundation/settings";
+/*
+    LIQUIDVISUAL MIXINS :: A Personal Framework
+
+    - updated: 03.12.14
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Mixins
+//-----------------------------------------------------------------
+
+@mixin transition() {
+    -webkit-transition: all .15s linear;
+       -moz-transition: all .15s linear;
+         -o-transition: all .15s linear;
+        -ms-transition: all .15s linear;
+            transition: all .15s linear;
+
+    -webkit-transition-property: opacity color background;
+       -moz-transition-property: opacity color background;
+         -o-transition-property: opacity color background;
+        -ms-transition-property: opacity color background;
+            transition-property: opacity color background;
+}
+
+// @mixin transition($transition-property: background, $transition-time: .15s, $method: linear) {
+//     -webkit-transition: $transition-property $transition-time $method;
+//        -moz-transition: $transition-property $transition-time $method;
+//         -ms-transition: $transition-property $transition-time $method;
+//          -o-transition: $transition-property $transition-time $method;
+//             transition: $transition-property $transition-time $method;
+// }
+
+//=========================================
+// Hamburger
+//=========================================
+
+@mixin hamburger($width: 16px, $thickness: 2px, $color: white) {
+    position: absolute;
+    top: 50%;
+    right: rem-calc(15);
+    display: block;
+    width: $width + 4;
+    height: $width;
+
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+
+    &:before,
+    &:after,
+    .hamburger-icon {
+        content: "";
+        position: absolute;
+        left: 0; // added
+        width: 100%;
+        height: $thickness;
+        background: $color;
+    }
+
+    &:before { top: 0; }
+    &:after  { bottom: 0; }
+
+    .hamburger-icon {
+        top: 50%;
+        margin-top: -$thickness/2;
+    }
+}
+
+html.mm-opening .hamburger:before,
+html.mm-opening .hamburger:after {
+    display: none;
+}
+
+.hamburger {
+    @include hamburger();
+}

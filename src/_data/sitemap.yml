@@ -3,6 +3,10 @@
 
 - title: About
   url: /about/
+  include_children_in_nav: true
+  children:
+    - title: Community Support
+      url: /community-support/
 
 - title: Our People
   url: /our-people/
@@ -90,9 +94,6 @@
       url: /areas-of-practice/criminal-and-police-matters/
     - title: Other Legal Services
       url: /areas-of-practice/other-legal-services/
-
-- title: Community Support
-  url: /community-support/
 
 - title: LawTalk Blog
   url: /lawtalk-blog/

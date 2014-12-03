@@ -1,0 +1,29 @@
+@import "foundation/settings";
+/*
+    SOCIAL-NETWORKS.CSS
+
+    - updated: 03.12.14
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Social Networks
+//-----------------------------------------------------------------
+
+.footer .social-networks a {
+
+    display: block;
+    width: rem-calc(30);
+    height: rem-calc(30);
+    font-size: rem-calc(22);
+    line-height: rem-calc(30);
+    text-align: center;
+    background: #484848;
+
+    i {
+        color: white;
+    }
+
+    &:hover {
+        background: $primary-color;
+    }
+}

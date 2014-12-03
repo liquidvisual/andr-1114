@@ -71,8 +71,8 @@ $('.content-drawer').click(function(e){
         contentDrawer.toggle();
     } else {
         contentDrawer.slideToggle();
-        $("i", $this).toggleClass('fa-angle-down');
     }
+    $("i", $this).toggleClass('fa-angle-down');
 });
 
 $(".more-team-listing").click(function(e){

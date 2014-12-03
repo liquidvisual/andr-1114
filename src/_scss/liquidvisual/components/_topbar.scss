@@ -1,7 +1,7 @@
 /*
     LIQUIDVISUAL TOPBAR :: A Personal Framework
 
-    - updated: 14.11.14
+    - updated: 03.11.14
     - liquidvisual.com
 
     - Notes -
@@ -19,36 +19,30 @@
 .topbar {
     z-index: 1;
     width: 100%;
+    text-align: right;
 }
 
 .topbar ul {
-    // margin-bottom: 0;
-
-    // background: red;
     margin: 0;
-    // margin-left: 2%;
-    // padding-bottom: rem-calc(10);
-    // padding-bottom: rem-calc(4);
+    font-size: rem-calc(17);
 
     @media #{$medium-up} {
         width: 100%;
-        display: table;
-        font-size: rem-calc(14);
-        // text-align: center;
+        // display: table;
+
     }
 
     @media #{$xlarge-up} {
-        font-size: rem-calc(17);
+
     }
 }
 
 .topbar li {
     display: inline-block;
-
-    vertical-align: middle;
+    // vertical-align: middle;
 
     @media #{$xlarge-up} {
-        display: table-cell;
+        // display: table-cell;
     }
 }
 
@@ -131,6 +125,7 @@
     border-top: 1px solid #D3D2D2;
     margin: 0;
     text-align: left;
+    transition: none;
 }
 
 .topbar .dropdown li:last-child a {
@@ -140,57 +135,6 @@
 .topbar .dropdown a:hover {
     background: #DC203E;
     color: white;
-}
-
-//=========================================
-// Hamburger
-//=========================================
-
-.hamburger {
-    position: absolute;
-    // visibility: hidden;
-    // top: 50%;
-    bottom: rem-calc(10);
-    right: rem-calc(15);
-    display: block;
-    width: rem-calc(28);
-    height: rem-calc(24);
-    z-index: 2;
-
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-
-    @media #{$medium-up} {
-        right: rem-calc(30);
-    }
-}
-
-.hamburger:before,
-.hamburger:after,
-.hamburger span {
-    content: '';
-    display: block;
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: rem-calc(4);
-    background: #201E1F;
-}
-.hamburger:before {
-    top: 0;
-}
-.hamburger:after {
-    bottom: 0;
-}
-.hamburger span {
-    top: 50%;
-    margin-top: rem-calc(-2);
-}
-
-html.mm-opening .hamburger:before,
-html.mm-opening .hamburger:after {
-    display: none;
 }
 
 //-----------------------------------------------------------------

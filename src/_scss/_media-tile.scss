@@ -1,0 +1,127 @@
+@import "foundation/settings";
+/*
+    MEDIA-TILE.CSS
+
+    - updated: 03.12.14
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Media Tile
+//-----------------------------------------------------------------
+
+.media-tile {
+    position: relative;
+    display: block;
+    min-height: rem-calc(98);
+
+    @media #{$medium-up} {
+        height: rem-calc(138);
+    }
+
+    background: rgba(0,0,0, 0.56);
+    overflow: hidden;
+
+    &:hover {
+        background: rgba(0,0,0, 0.7);
+    }
+}
+
+//=========================================
+// Thumbnail
+//=========================================
+
+.media-tile img {
+    width: rem-calc(86);
+
+    @media #{$medium-up} {
+        width: rem-calc(122);
+    }
+}
+
+//=========================================
+// Icon Arrow
+//=========================================
+
+.media-tile i {
+    position: absolute;
+    right: rem-calc(15);
+    bottom: rem-calc(10); // needs to line up with text
+    font-size: rem-calc(36);
+    color: #8F969A;
+}
+
+//=========================================
+// Text
+//=========================================
+
+.media-tile .text {
+    position: absolute;
+    bottom: 0;
+    display: inline-block;
+    padding: rem-calc(15 40 5 15);
+    // font-size: rem-calc(20);
+    font-weight: bold;
+    color: white;
+    line-height: 1.2;
+
+    // Optional
+    .desc {
+        padding-top: rem-calc(5); // special case
+        display: block;
+        font-weight: normal;
+        font-size: rem-calc(10);
+
+        @media #{$medium-up} {
+            font-size: rem-calc(14);
+        }
+    }
+
+    @media #{$xlarge-up} {
+        font-size: rem-calc(24);
+    }
+}
+
+//=========================================
+// Tagline
+//=========================================
+
+.media-tile .tagline {
+    display: block;
+    // color: lighten($midnight, 30%);
+    text-transform: uppercase;
+    font-size: rem-calc(12);
+    padding: rem-calc(5 0)
+}
+
+.no-touch .media-tile:hover {
+    // background: darken($midnight, 10%)
+}
+
+.no-touch .media-tile:hover i {
+    color: white;
+}
+
+//=========================================
+// Media Tiles
+//=========================================
+
+.media-tiles-light {
+    .media-tile {
+        background: #EFEFEF;
+
+        .text {
+            color: #404141;
+        }
+
+        i {
+            color: #C8C7C7;
+        }
+    }
+}
+
+/*  Bit of a hack */
+@media (max-width: 767px) {
+    .media-tiles li {
+        width: 100%;
+    }
+}

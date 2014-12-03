@@ -22,7 +22,9 @@ layout: master
 						<div class="large-9 columns">
 							<ul class="media-tiles medium-block-grid-2">
 				            	{% for item in (promo_practices) %}
-				                <li>{% include media_tile_image.html %}</li>
+				                <li>
+				                	{% include media_tile_image.html %}
+				                </li>
 				            	{% endfor %}
 		            		</ul>
 						</div> <!-- .large-9 -->
