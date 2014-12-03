@@ -76,6 +76,10 @@
         }
     }
 
+    @media #{$large-up} {
+        font-size: rem-calc(20);
+    }
+
     @media #{$xlarge-up} {
         font-size: rem-calc(24);
     }
