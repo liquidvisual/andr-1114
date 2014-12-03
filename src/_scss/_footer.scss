@@ -39,16 +39,29 @@
 
 .footer-about {
     background: #E7E6E6;
-    padding: rem-calc(30 0);
+    padding: rem-calc(30 0 10 0);
+
+    @media #{$medium-up} {
+        padding: rem-calc(30 0);
+    }
 
     p {
-        margin-bottom: 0;
+        font-size: rem-calc(12);
+
+        @media #{$medium-up} {
+            margin-bottom: 0;
+            font-size: rem-calc(16);
+        }
     }
 
     .greyed-link {
-        font-size: rem-calc(18);
+        font-size: rem-calc(16);
         font-weight: 600;
         color: $dark-grey;
+
+        @media #{$medium-up} {
+            font-size: rem-calc(18);
+        }
     }
 }
 
