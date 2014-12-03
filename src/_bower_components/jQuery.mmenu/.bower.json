@@ -1,7 +1,7 @@
 {
   "name": "jQuery.mmenu",
   "main": "src/js/jquery.mmenu.min.js",
-  "version": "4.5.7",
+  "version": "4.7.4",
   "homepage": "http://mmenu.frebsite.nl/",
   "authors": [
     "Fred Heusschen <info@frebsite.nl>"
@@ -28,13 +28,13 @@
   "dependencies": {
     "jquery": ">= 1.7.0"
   },
-  "_release": "4.5.7",
+  "_release": "4.7.4",
   "_resolution": {
     "type": "version",
-    "tag": "v4.5.7",
-    "commit": "ac79b660e3cea46a45ea98c46d97878a25d8d02c"
+    "tag": "v4.7.4",
+    "commit": "8269682e244706c7dc62831bc3d36358db7d6b5d"
   },
   "_source": "git://github.com/BeSite/jQuery.mmenu.git",
-  "_target": "~4.5.5",
+  "_target": "~4.7.4",
   "_originalSource": "jQuery.mmenu"
 }
