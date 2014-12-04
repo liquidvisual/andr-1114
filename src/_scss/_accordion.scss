@@ -2,7 +2,7 @@
 /*
     ACCORDION.CSS
 
-    - updated: 04.12.14
+    - updated: 05.12.14
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -29,17 +29,21 @@
     margin-bottom: 0;
 }
 
+.accordion .content {
+    margin-bottom: 1px;
+}
+
 .accordion-navigation > a {
     position: relative;
-    margin-bottom: 0;
+    margin-bottom: 1px;
     padding-right: rem-calc(42) !important;
 }
 
-.accordion-navigation i {
+.accordion-navigation .icon {
     position: absolute;
     top: 50%;
     right: rem-calc(15);
-    font-size: rem-calc(34);
+    // font-size: rem-calc(25);
     line-height: 0;
     color: $dark-grey;
 }

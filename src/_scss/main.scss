@@ -347,7 +347,7 @@ html, body {
 
 .side-box {
     background: $light-grey;
-    padding: rem-calc(20 30 30 30);
+    padding: rem-calc(20 25 25 25);
     margin-bottom: rem-calc(20);
 
     h3 {
@@ -438,16 +438,6 @@ a {
 
 .greyed-link {
     color: $body-font-color;
-}
-
-/* What gives, Webkit?! */
-.lv-super .accordion,
-.lv-super .accordion *,
-.lv-super .accordion a,
-.lv-super .tabs a,
-.lv-super .tabs-content .content ,
-.lv-super .tabs-content .content * {
-    outline: none !important;
 }
 
 //-----------------------------------------------------------------
