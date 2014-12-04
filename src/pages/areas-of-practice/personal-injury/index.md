@@ -1,5 +1,5 @@
 ---
-layout: areas_of_practice_item
+layout: internal/areas_of_practice_item
 title: Personal Injury
 permalink: /areas-of-practice/personal-injury/
 ---

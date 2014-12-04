@@ -2,9 +2,12 @@
 /*
     MEDIA-TILE.CSS
 
-    - updated: 03.12.14
+    - updated: 04.12.14
     - liquidvisual.com
 */
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
 //-----------------------------------------------------------------
 // Media Tile
 //-----------------------------------------------------------------
@@ -12,12 +15,6 @@
 .media-tile {
     position: relative;
     display: block;
-    min-height: rem-calc(98);
-
-    @media #{$medium-up} {
-        height: rem-calc(138);
-    }
-
     background: rgba(0,0,0, 0.56);
     overflow: hidden;
 
@@ -34,6 +31,10 @@
     width: rem-calc(86);
 
     @media #{$medium-up} {
+        width: rem-calc(96);
+    }
+
+    @media #{$large-up} {
         width: rem-calc(122);
     }
 }
@@ -58,11 +59,20 @@
     position: absolute;
     bottom: 0;
     display: inline-block;
-    padding: rem-calc(15 40 5 15);
-    // font-size: rem-calc(20);
-    font-weight: bold;
+    padding: rem-calc(15 40 15 15);
+
     color: white;
     line-height: 1.2;
+
+    h2 {
+        font-weight: bold;
+        margin-bottom: 0;
+        line-height: 1.2;
+        color: white;
+        @media #{$medium-up} {
+            font-size: rem-calc(25);
+        }
+    }
 
     // Optional
     .desc {
@@ -89,12 +99,15 @@
 // Tagline
 //=========================================
 
-.media-tile .tagline {
+.blog-item .tagline {
     display: block;
-    // color: lighten($midnight, 30%);
-    text-transform: uppercase;
-    font-size: rem-calc(12);
-    padding: rem-calc(5 0)
+    color: lighten($body-font-color, 15%);
+    font-size: rem-calc(16);
+    margin-bottom: rem-calc(15);
+}
+
+.blog-item .excerpt a {
+    display: inline-block;
 }
 
 .no-touch .media-tile:hover {

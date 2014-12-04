@@ -1,0 +1,20 @@
+{% assign archived_years = site.data.years %}
+
+<h3><i class="fa fa-clock-o"></i>&nbsp; Blog Archive</h3>
+
+<!-- Accordion Module -->
+<dl class="accordion" data-accordion>
+    {% for item in archived_years %}
+        {% assign id = item.title | downcase | replace: ' ', '-' %}
+        <dd class="accordion-navigation">
+            <a href="{{ id | prepend: "#"}}">{{ item.alias }} <i class="icon fa fa-angle-down"></i><i class="icon fa fa-angle-up"></i></a>
+            <div id="{{ id }}" class="content">
+                <ul class="no-bullet">
+                {% for item in item.children  %}
+                    <li><a href="{{ school.url }}">{{ item.title }} <i class="fa fa-angle-right"></i></a></li>
+                {% endfor %}
+                </ul>
+            </div> <!-- .content -->
+        </dd> <!-- .accordion-navigation -->
+    {% endfor %}
+</dl> <!-- .accordion -->

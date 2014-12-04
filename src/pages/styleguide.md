@@ -1,7 +1,7 @@
 ---
-layout: text_page
+layout: internal/text_page
 title: Styleguide
-permalink: /about/
+permalink: /styleguide/
 ---
 
 <!-- ************************************************************************************** -->

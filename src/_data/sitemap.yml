@@ -5,8 +5,34 @@
   url: /about/
   include_children_in_nav: true
   children:
+    - title: News
+      url: /about/news/
     - title: Community Support
-      url: /community-support/
+      url: /about/community-support/
+      include_children_in_nav: false
+      children:
+        - title: Australian Defence Force Reserves
+          url:
+        - title: Bike SA
+          url:
+        - title: Brain Injury Network SA (BINSA)
+          url:
+        - title: Families4Families
+          url:
+        - title: Housing Legal Clinic Welfare Rights
+          url:
+        - title: Motorcycle Riders Association SA
+          url:
+        - title: Paraquad SA
+          url:
+        - title: South Australian Amateur Football
+          url:
+        - title: South Australian National Football
+          url:
+        - title: Women in Business Member
+          url:
+    - title: Current Opportunities
+      url: /about/current-opportunities/
 
 - title: Our People
   url: /our-people/
@@ -15,21 +41,6 @@
   url: /areas-of-practice/
   include_children_in_nav: true
   children:
-    - title: Personal Injury
-      url: /areas-of-practice/personal-injury/
-      include_children_in_nav: false
-      children:
-        - title: Motor Vehicle Accidents
-          url: /areas-of-practice/personal-injury/motor-vehicle-accidents/
-        - title: Workplace Accidents
-          url: /areas-of-practice/personal-injury/workplace-accidents/
-        - title: Public Liability
-          url: /areas-of-practice/personal-injury/public-liability/
-        - title: Medical Negligence
-          url: /areas-of-practice/personal-injury/medical-negligence/
-        - title: Asbestosis and Dust Diseases
-          url: /areas-of-practice/personal-injury/asbestosis-and-dust-diseases/
-
     - title: Family Law
       url: /areas-of-practice/family-law/
       include_children_in_nav: false
@@ -44,6 +55,21 @@
           url: /areas-of-practice/family-law/living-arrangements-of-children/
         - title: Pre Nuptial Agreements
           url: /areas-of-practice/family-law/pre-nuptial-agreements/
+
+    - title: Personal Injury
+      url: /areas-of-practice/personal-injury/
+      include_children_in_nav: false
+      children:
+        - title: Motor Vehicle Accidents
+          url: /areas-of-practice/personal-injury/motor-vehicle-accidents/
+        - title: Workplace Accidents
+          url: /areas-of-practice/personal-injury/workplace-accidents/
+        - title: Public Liability
+          url: /areas-of-practice/personal-injury/public-liability/
+        - title: Medical Negligence
+          url: /areas-of-practice/personal-injury/medical-negligence/
+        - title: Asbestosis and Dust Diseases
+          url: /areas-of-practice/personal-injury/asbestosis-and-dust-diseases/
 
     - title: Employment and Industrial Law
       url: /areas-of-practice/employment-and-industrial-law/
@@ -92,6 +118,7 @@
 
     - title: Criminal and Police Matters
       url: /areas-of-practice/criminal-and-police-matters/
+
     - title: Other Legal Services
       url: /areas-of-practice/other-legal-services/
 
@@ -99,4 +126,15 @@
   url: /lawtalk-blog/
 
 - title: Contact
-  url: /contact/
+  url: /contact-us/
+  include_children_in_nav: false
+  children:
+    - title: Adelaide
+      url: "/contact-us/"
+    - title: Morphett Vale
+      url: "#morphett-vale"
+    - title: Murray Bridge
+      url: "#murray-bridge"
+    - title: Port Adelaide
+      url: "#port-adelaide"
+

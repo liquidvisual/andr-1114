@@ -123,6 +123,10 @@
 
     h5, a {
         color: white;
+
+        &:hover {
+            color: black;
+        }
     }
 }
 

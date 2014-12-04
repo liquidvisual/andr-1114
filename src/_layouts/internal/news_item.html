@@ -1,0 +1,28 @@
+---
+layout: internal
+hero_header_override: News
+side_nav_top_level_id: 1
+---
+
+{% assign stubbed_image_url = "http://lorempixel.com/400/300/nature" %}
+
+<!-- MAIN -->
+<div class="large-8 columns">
+    <main class="main">
+
+        <article class="blog-item">
+            <h1 class="section">{{ page.title }}</h1>
+            <h3 class="subheader"><i class="fa fa-calendar-o"></i>&nbsp; {{ page.date | date: "%A %d %b %Y" }}</h3>
+            <br>
+            {{ content }}
+        </article>
+
+    </main> <!-- .main -->
+</div> <!-- .columns -->
+
+<!-- SIDEBAR -->
+<div class="large-4 columns">
+    <aside class="sidebar">
+        {% include snippets/side_nav.html %}
+    </aside>
+</div>

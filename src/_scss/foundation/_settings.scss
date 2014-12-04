@@ -98,7 +98,7 @@ $font-family-sans-serif: "Lato", "Helvetica Neue", Helvetica, Roboto, Arial, san
 // We use these as default colors throughout
 $primary-color: #F72842;
 $secondary-color: #2E2B2C;
-// $alert-color: #f04124;
+$alert-color: #F84D57;
 // $success-color: #43AC6A;
 // $warning-color: #f08a24;
 // $info-color: #a0d3e8;
@@ -202,7 +202,7 @@ $xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (m
 
 // We use these to control header font styles
 // $header-font-family: $body-font-family;
-$header-font-weight: 600; //$font-weight-normal;
+$header-font-weight: 500; //$font-weight-normal;
 // $header-font-style: normal;
 // $header-font-color: $jet;
 // $header-line-height: 1.4;
@@ -219,16 +219,16 @@ $h3-font-size: rem-calc(19); //rem-calc(27);
 // $h6-font-size: 1rem;
 
 // We use these to control header size reduction on small screens
-$h1-font-reduction: rem-calc(4) !default;
-$h2-font-reduction: rem-calc(4) !default;
-$h3-font-reduction: 0; //rem-calc(5) !default;
-$h4-font-reduction: 0; //rem-calc(5) !default;
-$h5-font-reduction: 0 !default;
-$h6-font-reduction: 0 !default;
+// $h1-font-reduction: rem-calc(10) !default;
+// $h2-font-reduction: rem-calc(10) !default;
+// $h3-font-reduction: rem-calc(5) !default;
+// $h4-font-reduction: rem-calc(5) !default;
+// $h5-font-reduction: 0 !default;
+// $h6-font-reduction: 0 !default;
 
 // These control how subheaders are styled.
 // $subheader-line-height: 1.4;
-// $subheader-font-color: scale-color($header-font-color, $lightness: 35%);
+$subheader-font-color: #A39F9F; //scale-color($header-font-color, $lightness: 35%);
 // $subheader-font-weight: $font-weight-normal;
 // $subheader-top-margin: .2rem;
 // $subheader-bottom-margin: .5rem;
@@ -323,12 +323,12 @@ $paragraph-font-size: rem-calc(14); //1rem;
 
 // $include-html-accordion-classes: $include-html-classes;
 
-// $accordion-navigation-padding: rem-calc(16);
-// $accordion-navigation-bg-color: $silver  ;
+$accordion-navigation-padding: rem-calc(13);
+$accordion-navigation-bg-color: #E9E9E9; //$silver  ;
 // $accordion-navigation-hover-bg-color: scale-color($accordion-navigation-bg-color, $lightness: -5%);
 // $accordion-navigation-active-bg-color: scale-color($accordion-navigation-bg-color, $lightness: -3%);
 // $accordion-navigation-font-color: $jet;
-// $accordion-navigation-font-size: rem-calc(16);
+$accordion-navigation-font-size: rem-calc(14);
 // $accordion-navigation-font-family: $body-font-family;
 
 // $accordion-content-padding: $column-gutter/2;
@@ -635,10 +635,10 @@ $block-grid-default-spacing: rem-calc(13);
 // $input-bg-color: $white;
 // $input-focus-bg-color: scale-color($white, $lightness: -2%);
 // $input-border-color: scale-color($white, $lightness: -20%);
-// $input-focus-border-color: scale-color($white, $lightness: -40%);
+$input-focus-border-color: $primary-color; //scale-color($white, $lightness: -40%);
 // $input-border-style: solid;
 // $input-border-width: 1px;
-// $input-border-radius: $global-radius;
+$input-border-radius: 0; //$global-radius;
 // $input-disabled-bg: $gainsboro;
 // $input-disabled-cursor: $cursor-default-value;
 // $input-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
@@ -677,7 +677,7 @@ $block-grid-default-spacing: rem-calc(13);
 // $input-error-message-font-color-alt: $oil;
 
 // We use this to style the glowing effect of inputs when focused
-// $input-include-glowing-effect: true;
+$input-include-glowing-effect: false; //true;
 // $glowing-effect-fade-time: 0.45s;
 // $glowing-effect-color: $input-focus-border-color;
 

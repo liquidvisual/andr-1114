@@ -1,0 +1,8 @@
+{% assign lawtalk_categories = site.data.lawtalk_categories %}
+
+<h3><i class="fa fa-align-left"></i>&nbsp; LawTalk Categories</h3>
+<ul>
+    {% for item in lawtalk_categories %}
+    <li><a href="{{ item.url }}">{{ item.title }} <i class="fa fa-angle-right"></i></a></li>
+    {% endfor %}
+</ul>

@@ -34,9 +34,18 @@ $header-height-large: rem-calc(230);
 
     .logo {
         position: relative;
+        top: rem-calc(10);
+
+        img {
+            width: rem-calc(186);
+
+            @media #{$large-up} {
+                width: rem-calc(199);
+            }
+        }
 
         @media #{$medium-up} {
-            top: rem-calc(20);
+            top: rem-calc(30);
         }
         @media #{$large-up} {
             top: rem-calc(77); // magic number - line up with topbar
@@ -70,14 +79,14 @@ $header-height-large: rem-calc(230);
 //=========================================
 
 .header .hamburger {
-    @include hamburger($width: 30px, $thickness: 5px, $color: black);
+    @include hamburger($width: 30px, $thickness: 6px, $color: black);
 
-    top: rem-calc(-36); // magic
+    top: rem-calc(-26); // magic
     right: 15px;
 
 
     @media #{$medium-up} {
-        top: rem-calc(125);
+        top: rem-calc(117);
     }
 }
 

@@ -1,0 +1,64 @@
+---
+layout: internal
+hero_header_override: LawTalk Blog
+breadcrumbs: true
+---
+
+{% assign stubbed_image_url = "http://lorempixel.com/400/300/nature" %}
+{% assign legal_disclaimer = "Please note, this Blog is posted in Adelaide, South Australia by Andersons Solicitors. It relates to Australian Federal legislation. Andersons Solicitors is a medium sized law firm servicing metropolitan Adelaide and regional South Australia across all areas of law for individuals and businesses." %}
+
+<!-- MAIN -->
+<div class="large-8 columns">
+    <main class="main">
+
+        <article class="blog-item">
+            <h1>{{ page.title }}</h1>
+            <h3 class="subheader"><i class="fa fa-calendar-o"></i>&nbsp; {{ page.date | date: "%A %d %b %Y" }}</h3>
+            <br>
+            {{ content }}
+        </article>
+
+        <hr>
+
+        <div class="row">
+            <div class="medium-9 columns">
+                <div class="row">
+                    <div class="medium-4 columns">
+                        <img width="100%" src="http://lorempixel.com/260/194/people" alt="...">
+                    </div>
+                    <div class="medium-8 columns">
+                        Today's blog writer is Partner in <a href="#">{{ "Commercial Litigation" }}</a>:
+                        <h5><a href="">{{ "Felix Hoelscher" }}</a></h5>
+                        <a href="#" class="button small grey-button">See other blog posts by Felix &nbsp;<i class="fa fa-angle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <!-- Disclaimer box -->
+        <div class="disclaimer-box">
+            <i class="fa fa-info-circle"></i>
+            <p><em>{{ legal_disclaimer }}</em></p>
+        </div>
+
+    </main> <!-- .main -->
+</div> <!-- .columns -->
+
+<!-- SIDEBAR -->
+<div class="large-4 columns">
+    <aside class="sidebar is-slim">
+
+        <!-- LawTalk Categories -->
+        <div class="side-box">
+            {% include lawtalk_categories.html %}
+        </div>
+
+        <!-- Blog Archive -->
+        <div class="side-box">
+            {% include blog_archive.html %}
+        </div>
+
+    </aside>
+</div>

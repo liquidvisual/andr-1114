@@ -1,4 +1,4 @@
-{% assign sitemap = site.data.sitemap[3].children %}
+{% assign practice_areas = site.data.sitemap[3].children %}
 
 <!-- Footer Contact -->
 <section class="footer-contact">
@@ -81,9 +81,9 @@
         <div class="row outer-row">
             <div class="columns">
                 <ul class=" small-block-grid-1 medium-block-grid-3 large-block-grid-5">
-                    {% for item in sitemap | limit: 5 %}
+                    {% for item in practice_areas | limit: 5 %}
                     <li class="sitemap-header-line">
-                        <h5>{{ item.title }}</h5>
+                        <h5><a href="{{ item.url }}">{{ item.title }}</a></h5>
                         <ul class="no-bullet">
                             {% for item in item.children %}
                             <li><a href="#">{{ item.title }}</a></li>

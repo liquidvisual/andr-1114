@@ -1,0 +1,66 @@
+---
+layout: internal
+side_nav_top_level_id: 5
+---
+
+{% assign settings = site.data.settings %}
+
+<!-- MAIN -->
+<div class="large-8 columns">
+    <main class="main">
+
+        <!-- SEO Request -->
+        <div class="icon-list" itemscope itemtype="http://schema.org/Organization">
+            <div itemprop="name">
+                <h1 class="section">Andersons Solicitors Adelaide</h1>
+            </div>
+
+            <div class="row">
+                <div class="large-5 columns">
+
+                    <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                        <ul class="no-bullet">
+                            <li>
+                                <i class="icon fa fa-map-marker"></i>
+                                <span itemprop="streetAddress">69 Franklin St</span><br>
+                                <span itemprop="addressLocality">Adelaide</span>
+                                <span itemprop="addressRegion">South Australia</span>
+                                <span itemprop="postalCode">5000</span><br>
+                                <a href="#">View Map&nbsp;<i class="fa fa-angle-right"></i></a>
+                            </li>
+                            <li>
+                                <i class="icon fa fa-phone"></i>
+                                <span itemprop="telephone">08 8238 6666</span>
+                            </li>
+                            <li>
+                                <i class="icon fa fa-fax"></i>
+                                <span itemprop="fax">08 8238 6604</span>
+                            </li>
+                            <li>
+                                <i class="icon fa fa-envelope"></i>
+                                <span itemprop="email"><a href="#">{{ settings.email }}</a></span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div> <!-- .columns -->
+
+                <div class="large-7 columns">
+                    <img src="/img/content/newofficefranklinstreet.jpg" alt="">
+                </div>
+
+            </div> <!-- .row -->
+        </div> <!-- .icon-list -->
+
+        <!-- Contact Form: Pass title to it -->
+        {% include snippets/simple_form_traditional.html title="Contact us by email" %}
+
+    </main>
+</div>
+
+<!-- SIDEBAR -->
+<div class="large-4 columns">
+    <aside class="sidebar">
+        {% include snippets/side_nav.html exclude_top_level="true" %}
+    </aside>
+</div>

@@ -1,5 +1,5 @@
 ---
-layout: our_people_item
+layout: internal/our_people_item
 title: Felix Hoelscher
 permalink: /our-people/person/
 ---

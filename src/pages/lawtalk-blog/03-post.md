@@ -1,5 +1,5 @@
 ---
-layout: blog_item
+layout: internal/blog_item
 title: "Nothing's Finer Than Being in Your Diner"
 permalink: /lawtalk-blog/nothings-finer-than-being-in-your-diner/
 type: blog_item

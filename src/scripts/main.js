@@ -49,12 +49,12 @@ $(".hamburger").css({"visibility": "visible"}).bind(touchEvent, function() {
 if (TOUCH_ENABLED) {
     // Make Accordion jump to the top of the heading on mobile
     // http://foundation.zurb.com/forum/posts/1316-accordion-jump-to-top-when-active
-    /*$(document).foundation('accordion', {
+    $(document).foundation('accordion', {
         callback: function (el){
             var containerPos = $(el).parent().offset().top;
             $('html, body').animate({ scrollTop: containerPos }, 300);
         }
-    });*/
+    });
 }
 
 //-----------------------------------------------------------------

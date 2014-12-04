@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: internal/blog
 title: LawTalk Blog
 permalink: /lawtalk-blog/
 ---

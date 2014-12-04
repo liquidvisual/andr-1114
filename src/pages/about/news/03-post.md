@@ -1,9 +1,9 @@
 ---
-layout: internal/blog_item
-title: "What's the Deal with Airline Peanuts?"
-permalink: /lawtalk-blog/whats-the-deal-with-airline-peanuts/
-type: blog_item
-date: 04 October 2014
+layout: internal/news_item
+title: "Nothing's Finer Than Being in Your Diner"
+permalink: /about/news/lawtalk-blog/nothings-finer-than-being-in-your-diner/
+type: news_item
+date: 21 November 2014
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio repellat, nihil fuga provident ab delectus ex hic odit, eum ipsam a commodi impedit omnis fugiat maxime at necessitatibus, quasi eligendi!

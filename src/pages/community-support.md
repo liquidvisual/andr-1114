@@ -1,5 +1,5 @@
 ---
-layout: text_page
+layout: internal/text_page
 title: Community Support
 permalink: /community-support/
 ---

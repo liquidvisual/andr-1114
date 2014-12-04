@@ -1,8 +1,8 @@
 ---
-layout: internal/blog_item
+layout: internal/news_item
 title: "What's the Deal with Airline Peanuts?"
-permalink: /lawtalk-blog/whats-the-deal-with-airline-peanuts/
-type: blog_item
+permalink: /about/news/lawtalk-blog/whats-the-deal-with-airline-peanuts/
+type: news_item
 date: 04 October 2014
 ---
 
