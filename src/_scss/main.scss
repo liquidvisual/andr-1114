@@ -182,11 +182,6 @@ html, body {
     margin-bottom: rem-calc(34);
 }
 
-.blog-section {
-    background: $secondary-color;
-    padding: rem-calc(20 0);
-}
-
 //-----------------------------------------------------------------
 // Tabs
 //-----------------------------------------------------------------
@@ -333,7 +328,7 @@ html, body {
 
 .sidebar {
     @media #{$large-up} {
-        // padding-top: rem-calc(88);
+        padding-top: rem-calc(88);
     }
 
     @media #{$xlarge-up} {
@@ -382,11 +377,6 @@ html, body {
 // Template Buttons
 //-----------------------------------------------------------------
 
-.grey-button {
-    background: $mid-grey;
-    color: $dark-grey;
-}
-
 .lv-super .micro-button {
     background: #EFEFEF;
     color: #222;
@@ -426,6 +416,10 @@ html, body {
 // Special / Misc - Refactor Later
 //-----------------------------------------------------------------
 
+.image-right {
+    margin: rem-calc(0 0 25 25);
+}
+
 a {
     @include transition();
 }
@@ -448,6 +442,7 @@ a {
 //-----------------------------------------------------------------
 
 @import "accordion";
+@import "buttons";
 @import "header";
 @import "media-tile";
 @import "blog-panel";

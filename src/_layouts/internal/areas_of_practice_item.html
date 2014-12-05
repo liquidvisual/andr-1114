@@ -5,6 +5,7 @@ hero_header_override: Areas of Practice
 ---
 
 {% assign settings = site.data.settings %}
+{% assign sub_level = site.data.sitemap[3].children[1].children %}
 {% assign people_array = "Ryan Thomas_Bill Bailey_Cosmo Kramer_Elvis Presley_John Smith_Jerry Seinfeld_Clark Kent_John Stewart_Ken Masters_Nicholas Brendon" | split: '_' %}
 
 <!-- MAIN -->
@@ -14,17 +15,22 @@ hero_header_override: Areas of Practice
 		<h1 class="section">{{ page.title }}</h1>
 
 		<!-- IF THERE ARE DOWNLOAD ITEMS -->
-		<p><a href="#" class="button grey-button expand">Download our personal injury service guide</a></p>
+		<a href="#" class="button grey-button download-button expand">Download our personal injury service guide</a>
+		<a href="#" class="button grey-button download-button expand">Download our personal injury service guide</a>
 
-		<div class="right">
+		<br><br>
+
+		<div class="right image-right">
 			<img src="http://lorempixel.com/380/253/city" alt="...">
 			<p><a href="#" class="button grey-button expand">Personal Injury Blog Articles</a></p>
 		</div>
 
 		{{ content }}
 
-		{% for i in (1..5) %}
-			<div><a href="#" class="button grey-button expand">Download our personal injury service guide</a></div>
+		<br>
+
+		{% for item in sub_level %}
+			<a href="#" class="button grey-button expand">{{ item.title }}</a>
 		{% endfor %}
 
 		<hr>

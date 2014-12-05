@@ -126,9 +126,22 @@
     .media-tile {
         background: #EFEFEF;
 
-        .text {
-            color: #404141;
+        &:hover {
+            background: darken($light-grey, 40%);
+
+            .text h2, .desc {
+                color: white;
+            }
         }
+
+        .text h2 {
+            color: #404141;
+            font-size: rem-calc(20);
+        }
+
+         .desc {
+            color: #404141;
+         }
 
         i {
             color: #C8C7C7;

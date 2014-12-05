@@ -3,12 +3,24 @@
 /*
     BLOG-PANEL.CSS
 
-    - Last updated: 03.12.14
+    - Last updated: 05.12.14
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
 // Variables
 //-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Blog Section (Internal)
+//-----------------------------------------------------------------
+
+.blog-section {
+    background: $secondary-color;
+
+    @media #{$medium-up} {
+        padding: rem-calc(20 0);
+    }
+}
+
 //-----------------------------------------------------------------
 // Blog Panel
 //-----------------------------------------------------------------
@@ -32,6 +44,13 @@
 .internal .blog-panel {
     background: inherit;
     height: auto;
+
+    .inner {
+        padding: 0;
+        @media #{$medium-up} {
+            padding: rem-calc(15 25 25 25);
+        }
+    }
 }
 
 //=========================================
@@ -127,14 +146,19 @@
     }
 }
 
+// Internal
 .internal .blog-panel .button {
-    position: absolute;
-    top: rem-calc(20);
-    right: 0;
-    width: auto;
     background: none;
-    display: inline-block;
-    padding-right: rem-calc(15);
+
+    @media #{$medium-up} {
+        position: absolute;
+        top: rem-calc(20);
+        right: rem-calc(10);
+        width: auto;
+        background: none;
+        display: inline-block;
+        padding-right: rem-calc(15);
+    }
 }
 
 //=========================================

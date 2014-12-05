@@ -1,0 +1,47 @@
+@import "foundation/settings";
+/*
+    BUTTONS.CSS
+
+    - updated: 05.12.14
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Buttons
+//-----------------------------------------------------------------
+
+.lv-super .grey-button {
+    position: relative;
+    text-align: left;
+    padding: rem-calc(16 35 16 16);
+    background: $mid-grey;
+    color: $dark-grey;
+    margin-bottom: rem-calc(8);
+
+    &:hover {
+        background: darken($mid-grey, 10%);
+    }
+
+    &:after {
+        font-family: 'FontAwesome';
+        content: "\f105";
+        position: absolute;
+        top: 50%;
+        margin-top: rem-calc(-18);
+        right: rem-calc(15);
+        font-size: rem-calc(34);
+    }
+}
+
+.lv-super .download-button {
+    &:before {
+        font-family: 'FontAwesome';
+        content: "\f13a";
+        line-height: 1;
+        font-size: rem-calc(30);
+        color: #2E2C2D;
+        margin-right: rem-calc(10);
+    }
+}
