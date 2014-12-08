@@ -182,6 +182,12 @@ html, body {
     margin-bottom: rem-calc(34);
 }
 
+.contact-section {
+    @media #{$large-up} {
+        padding-right: rem-calc(20);
+    }
+}
+
 //-----------------------------------------------------------------
 // Tabs
 //-----------------------------------------------------------------
@@ -260,6 +266,17 @@ html, body {
     }
 }
 
+.contact-box {
+    background: $primary-color;
+    padding: rem-calc(20 30);
+    color: white;
+    margin-bottom: rem-calc(8);
+
+    a, i {
+        color: white;
+    }
+}
+
 .disclaimer-box {
     padding: rem-calc(20);
     border: 1px solid #DDDDDD;
@@ -328,7 +345,7 @@ html, body {
 
 .sidebar {
     @media #{$large-up} {
-        padding-top: rem-calc(88);
+        // padding-top: rem-calc(88);
     }
 
     @media #{$xlarge-up} {
@@ -377,34 +394,24 @@ html, body {
 // Template Buttons
 //-----------------------------------------------------------------
 
-.lv-super .micro-button {
-    background: #EFEFEF;
-    color: #222;
-    text-transform: uppercase;
-    padding: rem-calc(5);
-    line-height: 0;
 
-    &:hover {
-        color: white;
-    }
-}
 
-.sidebar .button {
-    background: #D8D5D5;
-    color: #2E2D2D;
-    text-align: left;
-    padding: rem-calc(20 15);
+// .sidebar .button {
+//     background: #D8D5D5;
+//     color: #2E2D2D;
+//     text-align: left;
+//     padding: rem-calc(20 15);
 
-    &:hover {
-        color: white;
-    }
+//     &:hover {
+//         color: white;
+//     }
 
-    i {
-        // font-size: rem-calc(45);
-        font-size: rem-calc(25);
-        margin-right: rem-calc(10);
-    }
-}
+//     i {
+//         // font-size: rem-calc(45);
+//         font-size: rem-calc(25);
+//         margin-right: rem-calc(10);
+//     }
+// }
 
 //-----------------------------------------------------------------
 // Forms
@@ -418,6 +425,7 @@ html, body {
 
 .image-right {
     margin: rem-calc(0 0 25 25);
+    float: right;
 }
 
 a {
@@ -444,6 +452,7 @@ a {
 @import "accordion";
 @import "buttons";
 @import "header";
+@import "media-block";
 @import "media-tile";
 @import "blog-panel";
 @import "footer";

@@ -1,8 +1,10 @@
 ---
-layout: internal/areas_of_practice_item
+layout: internal/practices_item_lvl_02
 title: Motor Vehicle Accidents
 permalink: /areas-of-practice/personal-injury/motor-vehicle-accidents/
 ---
+
+### Important information relating to the date of your injury from the motor vehicle accident
 
 Unfortunately many Australians are injured every day as a result of accidents that may entitle them to personal injury compensation; workplace injuries including WorkCover, Comcare and Military Compensation claims, motor vehicle accidents, motorbike accidents, bicycle accidents, public liability including slips and falls in public places, medical negligence and faulty products are sadly, common occurrence.
 

@@ -8,21 +8,24 @@ hero_header_override: Areas of Practice
 {% assign sub_level = site.data.sitemap[3].children[1].children %}
 {% assign people_array = "Ryan Thomas_Bill Bailey_Cosmo Kramer_Elvis Presley_John Smith_Jerry Seinfeld_Clark Kent_John Stewart_Ken Masters_Nicholas Brendon" | split: '_' %}
 
-<!-- MAIN -->
-<div class="large-8 columns">
-    <main class="main">
-
+<div class="row outer-row">
+	<div class="columns">
 		<h1 class="section">{{ page.title }}</h1>
+	</div>
+</div> <!-- .outer-row -->
+
+<div class="row outer-row">
+	<div class="large-8 columns">
 
 		<!-- IF THERE ARE DOWNLOAD ITEMS -->
-		<a href="#" class="button grey-button download-button expand">Download our personal injury service guide</a>
-		<a href="#" class="button grey-button download-button expand">Download our personal injury service guide</a>
-
-		<br><br>
+		<div class="section">
+			<a href="#" class="button grey-button download-button expand">Download our personal injury service guide</a>
+			<a href="#" class="button grey-button download-button expand">Download our personal injury service guide</a>
+		</div>
 
 		<div class="right image-right">
 			<img src="http://lorempixel.com/380/253/city" alt="...">
-			<p><a href="#" class="button grey-button expand">Personal Injury Blog Articles</a></p>
+			<p><a href="#" class="button grey-button blog-button expand">Personal Injury Blog Articles</a></p>
 		</div>
 
 		{{ content }}
@@ -59,13 +62,13 @@ hero_header_override: Areas of Practice
 			</ul>
 		</div> <!-- .team-listing -->
 
-    </main> <!-- .main -->
-</div> <!-- .columns -->
+	</div> <!-- .columns -->
 
-<!-- SIDEBAR -->
-<div class="large-4 columns">
-	<aside class="sidebar">
-		{% include snippets/side_nav.html %}
-		<a href="#" class="button grey-button"><i class="fa fa-chevron-circle-down"></i> Download our personal injury service guide</a>
-	</aside>
-</div>
+	<!-- SIDEBAR -->
+	<div class="large-4 columns">
+		<aside class="sidebar">
+			{% include snippets/side_nav.html %}
+		</aside>
+	</div>
+
+</div> <!-- .outer-row -->

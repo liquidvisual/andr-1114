@@ -1,8 +1,8 @@
 # Used for blog archiving
 # Alias is used because of glitch with numbers with accordion
 
-- title: twenty-fourteen
-  alias: "2014"
+- title: "2014"
+  id: twenty-fourteen
   children:
     - title: November
     - title: October
@@ -13,8 +13,8 @@
     - title: May
     - title: April
 
-- title: twenty-thirteen
-  alias: "2013"
+- title: "2014"
+  id: twenty-thirteen
   children:
     - title: August
     - title: July

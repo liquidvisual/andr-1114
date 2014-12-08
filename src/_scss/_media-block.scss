@@ -1,0 +1,61 @@
+@import "foundation/settings";
+/*
+    MEDIA-BLOCK.CSS
+
+    - updated: 08.12.14
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Media Tile
+//-----------------------------------------------------------------
+
+.media {
+    display: table;
+
+    .media-img, .media-body {
+        @media #{$medium-up} {
+            display: table-cell;
+            vertical-align: top;
+        }
+    }
+
+    .media-img {
+        margin: 0; // failsafe
+        padding-bottom: rem-calc(20);
+
+        @media #{$medium-up} {
+            padding: rem-calc(0 20 20 0);
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .media-body {
+        color: $body-font-color;
+
+        p {
+            margin-bottom: 0; // let HR decide its own padding
+        }
+
+        .media-link {
+            display: inline-block;
+            color: $primary-color;
+        }
+    }
+}
+
+//-----------------------------------------------------------------
+// Tagline
+//-----------------------------------------------------------------
+
+.media-tagline {
+    display: block;
+    color: lighten($body-font-color, 15%);
+    margin-bottom: rem-calc(15);
+}
+

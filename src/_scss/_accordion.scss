@@ -2,7 +2,7 @@
 /*
     ACCORDION.CSS
 
-    - updated: 05.12.14
+    - updated: 08.12.14
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -17,7 +17,9 @@
 .lv-super .accordion *,
 .lv-super .accordion a,
 .lv-super .tabs-content .content,
-.lv-super .tabs a {
+.lv-super .tabs a,
+.lv-super .tabs *,
+.lv-super {
     outline: none !important;
 }
 
@@ -25,28 +27,32 @@
 // Accordion Module
 //=========================================
 
-.accordion {
+.accordion,
+.accordion .content {
     margin-bottom: 0;
 }
 
-.accordion .content {
-    margin-bottom: 1px;
+.accordion-navigation {
+    padding-bottom: 6px;
 }
 
 .accordion-navigation > a {
     position: relative;
-    margin-bottom: 1px;
-    padding-right: rem-calc(42) !important;
+    padding-right: rem-calc(42);
 }
 
 .accordion-navigation .icon {
     position: absolute;
     top: 50%;
     right: rem-calc(15);
-    // font-size: rem-calc(25);
+    font-size: rem-calc(34);
     line-height: 0;
     color: $dark-grey;
 }
+
+//=========================================
+// Up / Down Arrows
+//=========================================
 
 /* Up/Down Arrows */
 .accordion-navigation.active .fa-angle-down {
@@ -60,4 +66,18 @@
 
 .accordion-navigation .fa-angle-up {
     display: none;
+}
+
+//=========================================
+// Sidebar Context (generally smaller)
+//=========================================
+
+.sidebar .accordion .content {
+    margin-bottom: 1px;
+}
+
+.sidebar .accordion-navigation > a {
+    position: relative;
+    margin-bottom: 1px;
+    padding-right: rem-calc(42) !important;
 }

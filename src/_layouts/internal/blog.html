@@ -2,53 +2,58 @@
 layout: internal
 ---
 
+{% assign lawtalk_categories = site.data.lawtalk_categories %}
 {% assign blog = site.pages | where: "type", "blog_item" %}
 {% assign stubbed_image_url = "/img/content/nature.jpg" %}
 
-<!-- MAIN http://lorempixel.com/424/282/nature? -->
-<div class="large-8 columns">
-    <main class="main">
+<div class="row outer-row">
 
-        {% for item in blog %}
-        <article class="blog-item">
-            <div class="row">
-                <div class="medium-push-12 large-9 large-push-3 columns">
-                    <a href="{{ item.url }}"><h2>{{ item.title }}</h2></a>
-                    <p class="tagline">{{ item.date | date: "%A %d %b %Y" }}</p>
-                    <p class="excerpt">{{ item.content | strip_html | truncate: 150 }} &nbsp;<a href="{{ item.permalink }}" class="primary-color">Read More &nbsp;<i class="fa fa-angle-right"></i></a></p>
-               </div>
-               <div class="medium-pull-12 large-3 large-pull-9 columns">
-                   <a href="{{ item.url }}" class="img"><img width="100%" src="{{ stubbed_image_url }}" alt="..."></a>
-               </div>
-           </div>
-        </article>
-        <hr>
-        <a href="{{ item.url | prepend: site.baseurl }}"></a>
-        {% endfor %}
+	<div class="large-8 columns">
 
-        <!-- Pagination Controls -->
-        {% include snippets/pagination.html %}
+		{% for item in blog %}
+			<article class="media media-article">
+				<a href="{{ item.url }}">
+					<figure class="media-img">
+						<img width="212" src="http://placehold.it/424x282" alt="...">
+					</figure>
+					<div class="media-body">
+						<h2>{{ item.title }}</h2>
+						<date class="media-tagline">{{ item.date | date: "%A %d %b %Y" }}</date>
+						<p>{{ item.content | strip_html | truncate: 150 }} &nbsp;
+						<span class="media-link">Read More &nbsp;<i class="fa fa-angle-right"></i></span></p>
+					</div>
+				</a>
+			</article>
 
-    </main> <!-- .main -->
-</div> <!-- .columns -->
+			<hr>
+			<a href="{{ item.url | prepend: site.baseurl }}"></a>
+		{% endfor %}
 
-<div class="large-4 columns">
-    <aside class="sidebar is-slim">
-       <p>
-           In this section you will find regular and interesting articles on topical issues and relevant changes in the legal world from commercial and business topics, through to specific issues with family law legislation, a variety of personal injury law articles and your rights with criminal law matters, just to name a few.</p>
-           <p> If you would like us to prepare an article on a very specific topic within an area of practice, please email your request to <a href="mailto:marketing@andersons.com.au">marketing@andersons.com.au</a>
-       </p>
-       <br>
+		<!-- Pagination Controls -->
+		{% include snippets/pagination.html %}
 
-        <!-- LawTalk Categories -->
-        <div class="side-box">
-            {% include lawtalk_categories.html %}
-        </div>
+	</div> <!-- .columns -->
 
-        <!-- Blog Archive -->
-        <div class="side-box">
-            {% include blog_archive.html %}
-        </div>
+	<!-- SIDEBAR -->
+	<div class="large-4 columns">
+		<aside class="sidebar is-slim">
+			<p>
+			In this section you will find regular and interesting articles on topical issues and relevant changes in the legal world from commercial and business topics, through to specific issues with family law legislation, a variety of personal injury law articles and your rights with criminal law matters, just to name a few.</p>
+			<p> If you would like us to prepare an article on a very specific topic within an area of practice, please email your request to <a href="mailto:marketing@andersons.com.au">marketing@andersons.com.au</a>
+			</p>
 
-    </aside>
-</div>
+			<br>
+
+			<!-- LawTalk Categories -->
+			<div class="side-box">
+				{% include lawtalk_categories.html %}
+			</div>
+
+			<!-- Blog Archive -->
+			<div class="side-box">
+				{% include blog_archive.html %}
+			</div>
+		</aside>
+	</div>
+
+</div> <!-- .outer-row -->

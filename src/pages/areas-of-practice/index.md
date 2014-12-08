@@ -1,5 +1,5 @@
 ---
-layout: internal/areas_of_practice
+layout: internal/practices
 title: Areas of Practice
 permalink: /areas-of-practice/
 ---

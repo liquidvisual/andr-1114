@@ -2,14 +2,30 @@
 /*
     BUTTONS.CSS
 
-    - updated: 05.12.14
+    - updated: 08.12.14
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
 // Variables
 //-----------------------------------------------------------------
 //-----------------------------------------------------------------
-// Buttons
+// Micro Button
+//-----------------------------------------------------------------
+
+.lv-super .micro-button {
+    background: #EFEFEF;
+    color: #222;
+    text-transform: uppercase;
+    padding: rem-calc(5);
+    line-height: 0;
+
+    &:hover {
+        color: white;
+    }
+}
+
+//-----------------------------------------------------------------
+// Grey Buttons
 //-----------------------------------------------------------------
 
 .lv-super .grey-button {
@@ -24,24 +40,64 @@
         background: darken($mid-grey, 10%);
     }
 
+    &:before,
     &:after {
-        font-family: 'FontAwesome';
-        content: "\f105";
         position: absolute;
+        left: rem-calc(15);
         top: 50%;
         margin-top: rem-calc(-18);
-        right: rem-calc(15);
+        font-family: 'FontAwesome';
         font-size: rem-calc(34);
+    }
+
+    &:after {
+        content: "\f105";
+        left: auto;
+        right: rem-calc(15);
     }
 }
 
+//=========================================
+// Download Button
+//=========================================
+
 .lv-super .download-button {
+    padding: rem-calc(16 35 16 60);
+
     &:before {
-        font-family: 'FontAwesome';
         content: "\f13a";
-        line-height: 1;
-        font-size: rem-calc(30);
+        margin-top: rem-calc(-17); // magic
+        font-size: rem-calc(34);
         color: #2E2C2D;
-        margin-right: rem-calc(10);
     }
 }
+
+//=========================================
+// Blog Button
+//=========================================
+
+.lv-super .blog-button {
+    padding: rem-calc(16 35 16 60);
+
+    &:before {
+        content: "\f075";
+        font-size: rem-calc(34);
+        color: #2E2C2D;
+    }
+}
+
+//=========================================
+// Video Button
+//=========================================
+
+.lv-super .video-button {
+    padding: rem-calc(16 35 16 60);
+
+    &:before {
+        content: "\f144";
+        font-size: rem-calc(34);
+        color: #2E2C2D;
+    }
+}
+
+

@@ -2,17 +2,24 @@
 layout: internal
 ---
 
-<!-- MAIN -->
-<div class="large-8 columns">
-    <main class="main">
-        <h2 class="section">{{ page.title }}</h2>
-        {{ content}}
-    </main>
-</div>
+<div class="row outer-row">
+	<div class="columns">
+		<h2 class="section">{{ page.title }}</h2>
+	</div>
+</div> <!-- .outer-row -->
 
-<!-- SIDEBAR -->
-<div class="large-4 columns">
-    <aside class="sidebar">
-        {% include snippets/side_nav.html %}
-    </aside>
-</div>
+<div class="row outer-row">
+	<div class="large-8 columns">
+
+		{{ content}}
+
+	</div>
+	<div class="large-4 columns">
+
+	    <!-- SIDEBAR -->
+	    <aside class="sidebar">
+	        {% include snippets/side_nav.html %}
+	    </aside>
+
+	</div>
+</div> <!-- .outer-row -->

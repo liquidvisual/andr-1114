@@ -1,0 +1,42 @@
+---
+layout: internal
+side_nav_top_level_id: 3
+hero_header_override: Areas of Practice
+---
+
+{% assign settings = site.data.settings %}
+{% assign accordion = site.data.accordion %}
+
+<div class="row outer-row">
+	<div class="columns">
+		<div class="section">
+			<h1>Motor Vehicle Accidents</h1>
+			<h2 class="subheader">{{ page.title }}</h2>
+		</div>
+	</div>
+</div> <!-- .outer-row -->
+
+<div class="row outer-row section">
+	<div class="large-8 columns">
+
+		<!-- IF THERE ARE DOWNLOAD ITEMS -->
+		<div class="section">
+			<a href="#" class="button grey-button download-button expand">Download our guide: Injured in a motor vehicle accident prior to 1 July 2013</a>
+		</div>
+
+		{{ content }}
+
+		<br>
+
+		{% include snippets/accordion.html data=site.data.faqs %}
+
+	</div> <!-- .columns -->
+
+	<!-- SIDEBAR -->
+	<div class="large-4 columns">
+		<aside class="sidebar">
+			{% include snippets/side_nav.html %}
+		</aside>
+	</div>
+
+</div> <!-- .outer-row -->
