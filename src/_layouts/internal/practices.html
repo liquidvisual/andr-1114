@@ -3,7 +3,7 @@ layout: internal
 ---
 
 {% assign settings = site.data.settings %}
-{% assign promo_practices = site.data.promo_practices %}
+{% assign popular_practices = site.data.popular_practices %}
 
 <div class="section">
     <div class="row outer-row">
@@ -17,7 +17,7 @@ layout: internal
         <div class="large-8 columns">
             <aside class="sidebar">
                 <ul class="media-tiles media-tiles-light medium-block-grid-2">
-                    {% for item in (promo_practices) %}
+                    {% for item in popular_practices %}
                     <li>{% include media_tile_image.html %}</li>
                     {% endfor %}
                 </ul>

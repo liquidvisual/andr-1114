@@ -4,24 +4,29 @@
 
     - Notes -
 
-    When 'side_nav_id' is passed, data is pulled from requested node in /data/sitemap.yml creating second level nav.
+    When 'top_level_id' is passed, data is pulled from requested node in /data/sitemap.yml creating nav list.
     Optional: 'exclude_top_level' can be passed through the include, skipping the top level of the side nav.
 
     Basic Output:
 
         <ul>
             <li class="active"><a href="/">Home</a></li>
-            <li class="nested"><a href="/some-link/"> - Some Link</a></li>
-            <li class="nested"><a href="/some-link/"> - Some Link</a></li>
-            <li class="nested"><a href="/some-link/"> - Some Link</a></li>
+            <li><a href="/some-link/"> - Some Link</a></li>
+            <li><a href="/some-link/"> - Some Link</a>
+                <ul>
+                    <li><a href="/">Nested Link</a></li>
+                </ul>
+            </li>
+            <li><a href="/some-link/"> - Some Link</a></li>
         </ul>
 -->
 {% endcomment %}
 
 {% assign sitemap = site.data.sitemap %}
+{% assign exclude_top_level = include.exclude_top_level %}
 {% assign top_level_id = page.side_nav_top_level_id %}
 {% assign top_level_node = sitemap[top_level_id] %}
-{% assign exclude_top_level = include.exclude_top_level %}
+{% assign second_level_id = page.side_nav_second_level_id %}
 
 {% if top_level_id %}
 
@@ -40,10 +45,10 @@
             <a href="{{ item.url }}"> {{ item.title }}</a>
 
             {% comment %} THIRD LEVEL {% endcomment %}
-            {% if item.children and item.url == page.url %}
+            {% if item.children and forloop.index == second_level_id %}
             <ul class="no-bullet">
                 {% for item in item.children %}
-                    <li class="{% include snippets/is_active.html current_path="news" %}">
+                    <li class="{% if item.url == page.url %} active {% endif %}">
                         <a href="{{ item.url }}">- {{ item.title }}</a>
                     </li>
                 {% endfor %}

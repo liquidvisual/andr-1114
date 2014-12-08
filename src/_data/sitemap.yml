@@ -32,7 +32,7 @@
         - title: Women in Business Member
           url: "#"
     - title: Current Opportunities
-      url: /about/current-opportunities/
+      url: #/about/current-opportunities/
 
 - title: Our People
   url: /our-people/
@@ -42,19 +42,19 @@
   include_children_in_nav: true
   children:
     - title: Family Law
-      url: /areas-of-practice/family-law/
+      url: #/areas-of-practice/family-law/
       include_children_in_nav: false
       children:
         - title: Divorce
-          url: /areas-of-practice/family-law/divorce/
+          url: #/areas-of-practice/family-law/divorce/
         - title: Glossary of Common Family Law Terms
-          url: /areas-of-practice/family-law/glossay-of-common-family-law-terms/
+          url: #/areas-of-practice/family-law/glossay-of-common-family-law-terms/
         - title: Intervention Orders
-          url: /areas-of-practice/family-law/intervention-orders/
+          url: #/areas-of-practice/family-law/intervention-orders/
         - title: Living Arrangements of Children
-          url: /areas-of-practice/family-law/living-arrangements-of-children/
+          url: #/areas-of-practice/family-law/living-arrangements-of-children/
         - title: Pre Nuptial Agreements
-          url: /areas-of-practice/family-law/pre-nuptial-agreements/
+          url: #/areas-of-practice/family-law/pre-nuptial-agreements/
 
     - title: Personal Injury
       url: /areas-of-practice/personal-injury/
@@ -63,78 +63,78 @@
         - title: Motor Vehicle Accidents
           url: /areas-of-practice/personal-injury/motor-vehicle-accidents/
         - title: Workplace Accidents
-          url: /areas-of-practice/personal-injury/workplace-accidents/
+          url: #/areas-of-practice/personal-injury/workplace-accidents/
         - title: Public Liability
-          url: /areas-of-practice/personal-injury/public-liability/
+          url: #/areas-of-practice/personal-injury/public-liability/
         - title: Medical Negligence
-          url: /areas-of-practice/personal-injury/medical-negligence/
+          url: #/areas-of-practice/personal-injury/medical-negligence/
         - title: Asbestosis and Dust Diseases
-          url: /areas-of-practice/personal-injury/asbestosis-and-dust-diseases/
+          url: #/areas-of-practice/personal-injury/asbestosis-and-dust-diseases/
 
     - title: Employment and Industrial Law
-      url: /areas-of-practice/employment-and-industrial-law/
+      url: #/areas-of-practice/employment-and-industrial-law/
       include_children_in_nav: false
       children:
         - title: Breach of Workplace Rights
-          url: /areas-of-practice/employment-and-industrial-law/breach-of-workplace-rights/
+          url: #/areas-of-practice/employment-and-industrial-law/breach-of-workplace-rights/
         - title: Discrimination in the Workplace
-          url: /areas-of-practice/employment-and-industrial-law/discrimination-in-the-workplace/
+          url: #/areas-of-practice/employment-and-industrial-law/discrimination-in-the-workplace/
         - title: Enterprise Bargaining
-          url: /areas-of-practice/employment-and-industrial-law/enterprise-bargaining/
+          url: #/areas-of-practice/employment-and-industrial-law/enterprise-bargaining/
         - title: Minimum Standards - the 10 National Employment Standards (NES)
-          url: /areas-of-practice/employment-and-industrial-law/minium-standards-the-10-national-employment-standards-nes
+          url: #/areas-of-practice/employment-and-industrial-law/minium-standards-the-10-national-employment-standards-nes
         - title: Redundancy and Redundancy Entitlements
-          url: /areas-of-practice/employment-and-industrial-law/redundancy-and-redundancy-entitlements/
+          url: #/areas-of-practice/employment-and-industrial-law/redundancy-and-redundancy-entitlements/
 
     - title: Wills and Estates
-      url: /areas-of-practice/wills-and-estates/
+      url: #/areas-of-practice/wills-and-estates/
       include_children_in_nav: false
       children:
         - title: Your Will
-          url: /areas-of-practice/wills-and-estates/your-will/
+          url: #/areas-of-practice/wills-and-estates/your-will/
         - title: Can I use a DIY Will Kit?
-          url: /areas-of-practice/wills-and-estates/can-i-use-a-diy-will-kit/
+          url: #/areas-of-practice/wills-and-estates/can-i-use-a-diy-will-kit/
         - title: Contesting a Will
-          url: /areas-of-practice/wills-and-estates/contesting-a-will/
+          url: #/areas-of-practice/wills-and-estates/contesting-a-will/
         - title: Asset Protection and Estate Planning
-          url: /areas-of-practice/wills-and-estates/asset-protection-and-estate-planning/
+          url: #/areas-of-practice/wills-and-estates/asset-protection-and-estate-planning/
         - title: Family Trusts
-          url: /areas-of-practice/wills-and-estates/family-trusts/
+          url: #/areas-of-practice/wills-and-estates/family-trusts/
 
     - title: Commercial and Business Law
-      url: /areas-of-practice/commercial-and-business-law/
+      url: #/areas-of-practice/commercial-and-business-law/
       include_children_in_nav: false
       children:
         - title: Business Services
-          url: /areas-of-practice/commercial-and-business-law/business-services/
+          url: #/areas-of-practice/commercial-and-business-law/business-services/
         - title: Commercial Litigation
-          url: /areas-of-practice/commercial-and-business-law/commercial-litigation/
+          url: #/areas-of-practice/commercial-and-business-law/commercial-litigation/
         - title: Debt Collection
-          url: /areas-of-practice/commercial-and-business-law/debt-collection/
+          url: #/areas-of-practice/commercial-and-business-law/debt-collection/
         - title: Residential Building Disputes
-          url: /areas-of-practice/commercial-and-business-law/residential-building-disputes/
+          url: #/areas-of-practice/commercial-and-business-law/residential-building-disputes/
         - title: Personal Commercial Services and Conveyancing
-          url: /areas-of-practice/commercial-and-business-law/personal-commercial-services-and-conveyancing/
+          url: #/areas-of-practice/commercial-and-business-law/personal-commercial-services-and-conveyancing/
 
     - title: Criminal and Police Matters
-      url: /areas-of-practice/criminal-and-police-matters/
+      url: #/areas-of-practice/criminal-and-police-matters/
 
     - title: Other Legal Services
-      url: /areas-of-practice/other-legal-services/
+      url: #/areas-of-practice/other-legal-services/
 
 - title: LawTalk Blog
   url: /lawtalk-blog/
 
 - title: Contact
-  url: /contact-us/
-  include_children_in_nav: false
+  url: /contact/
+  include_children_in_nav: true
   children:
     - title: Adelaide
-      url: "/contact-us/"
+      url: /contact/
     - title: Morphett Vale
-      url: "#morphett-vale"
+      url: #/contact/
     - title: Murray Bridge
-      url: "#murray-bridge"
+      url: #/contact/
     - title: Port Adelaide
-      url: "#port-adelaide"
+      url: #/contact/
 

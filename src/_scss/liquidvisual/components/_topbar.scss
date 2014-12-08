@@ -1,7 +1,7 @@
 /*
     LIQUIDVISUAL TOPBAR :: A Personal Framework
 
-    - updated: 03.11.14
+    - updated: 09.12.14
     - liquidvisual.com
 
     - Notes -
@@ -106,6 +106,10 @@
     width: rem-calc(300);
     background: #DCDBDB;
     margin: 0;
+}
+
+.topbar > ul > li:last-child .dropdown {
+    right: 0;
 }
 
 /* Third level nesting */

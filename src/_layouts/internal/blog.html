@@ -2,31 +2,15 @@
 layout: internal
 ---
 
-{% assign lawtalk_categories = site.data.lawtalk_categories %}
 {% assign blog = site.pages | where: "type", "blog_item" %}
-{% assign stubbed_image_url = "/img/content/nature.jpg" %}
 
 <div class="row outer-row">
-
 	<div class="large-8 columns">
 
+		<!-- News Articles -->
 		{% for item in blog %}
-			<article class="media media-article">
-				<a href="{{ item.url }}">
-					<figure class="media-img">
-						<img width="212" src="http://placehold.it/424x282" alt="...">
-					</figure>
-					<div class="media-body">
-						<h2>{{ item.title }}</h2>
-						<date class="media-tagline">{{ item.date | date: "%A %d %b %Y" }}</date>
-						<p>{{ item.content | strip_html | truncate: 150 }} &nbsp;
-						<span class="media-link">Read More &nbsp;<i class="fa fa-angle-right"></i></span></p>
-					</div>
-				</a>
-			</article>
-
+			{% include media_article.html %}
 			<hr>
-			<a href="{{ item.url | prepend: site.baseurl }}"></a>
 		{% endfor %}
 
 		<!-- Pagination Controls -->

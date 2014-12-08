@@ -28,19 +28,19 @@ side_nav_top_level_id: 5
                             <ul class="no-bullet">
                                 <li>
                                     <i class="icon fa fa-map-marker"></i>
-                                    <span itemprop="streetAddress">69 Franklin St</span><br>
-                                    <span itemprop="addressLocality">Adelaide</span>
-                                    <span itemprop="addressRegion">South Australia</span>
-                                    <span itemprop="postalCode">5000</span><br>
-                                    <a href="#">View Map&nbsp;<i class="fa fa-angle-right"></i></a>
+                                    <span itemprop="streetAddress">{{ "69 Franklin St" }} </span><br>
+                                    <span itemprop="addressLocality">{{ "Adelaide" }}</span>,
+                                    <span itemprop="addressRegion">{{ "South Australia" }} </span>
+                                    <span itemprop="postalCode">{{ "5000" }} </span><br>
+                                    <a href="{{ settings.google_map }}">View Map&nbsp;<i class="fa fa-angle-right"></i></a>
                                 </li>
                                 <li>
                                     <i class="icon fa fa-phone"></i>
-                                    <span itemprop="telephone">08 8238 6666</span>
+                                    <span itemprop="telephone">{{ settings.phone }}</span>
                                 </li>
                                 <li>
                                     <i class="icon fa fa-fax"></i>
-                                    <span itemprop="fax">08 8238 6604</span>
+                                    <span itemprop="fax">{{ settings.fax }}</span>
                                 </li>
                                 <li>
                                     <i class="icon fa fa-envelope"></i>
@@ -50,7 +50,7 @@ side_nav_top_level_id: 5
                         </div> <!-- .itemprop -->
                     </div> <!-- .columns -->
                     <div class="medium-7 columns">
-                        <a href="{{ settings.google_map }}"><img width="100%" src="/img/content/newofficefranklinstreet.jpg" alt="Office Map"></a>
+                        <a target="_blank" href="{{ settings.google_map }}"><img width="100%" src="{{ "/img/content/newofficefranklinstreet.jpg" }}" alt="Office Map"></a>
                     </div>
                 </div> <!-- .row -->
             </div> <!-- .section -->

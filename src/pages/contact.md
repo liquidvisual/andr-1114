@@ -1,7 +1,7 @@
 ---
-layout: internal/contact_us
+layout: internal/contact
 title: Contact
-permalink: /contact-us/
+permalink: /contact/
 ---
 
 <!--- This child document initializes the page in Jekyll. -->
