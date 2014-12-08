@@ -1,7 +1,8 @@
 ---
 layout: internal/text_page
-title: About
+title: About Andersons Solicitors
 permalink: /about/
+hero_header_override: About
 side_nav_top_level_id: 1
 ---
 

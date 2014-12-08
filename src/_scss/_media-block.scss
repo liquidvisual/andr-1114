@@ -45,6 +45,7 @@
         .media-link {
             display: inline-block;
             color: $primary-color;
+            // word-break: break-word;
         }
     }
 }
@@ -58,4 +59,8 @@
     color: lighten($body-font-color, 15%);
     margin-bottom: rem-calc(15);
 }
+
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
 

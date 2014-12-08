@@ -7,7 +7,7 @@ hero_header_override: Areas of Practice
 
 {% assign settings = site.data.settings %}
 {% assign sub_level = site.data.sitemap[3].children[1].children %}
-{% assign people_array = "Ryan Thomas_Bill Bailey_Cosmo Kramer_Elvis Presley_John Smith_Jerry Seinfeld_Clark Kent_John Stewart_Ken Masters_Nicholas Brendon" | split: '_' %}
+{% assign people = site.data.people %}
 
 <div class="row outer-row">
 	<div class="columns">
@@ -52,11 +52,11 @@ hero_header_override: Areas of Practice
 
 		<div class="team-listing">
 			<ul class="small-block-grid-1 medium-block-grid-4">
-				{% for person in people_array %}
+				{% for person in people %}
 					<li>
 						<a href="/our-people/person/" class="{% if forloop.index > 4 %}excess hide{% endif %}">
-							<img class="img" width="46" src="http://lorempixel.com/92/92/people?{{forloop.index}}" alt="...">
-							<span class="text">{{ person }}</span>
+							<img class="img" width="50" src="http://placehold.it/332x250" alt="...">
+							<span class="text">{{ person.title }}</span>
 						</a>
 					</li>
 				{% endfor %}

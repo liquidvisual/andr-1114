@@ -1,8 +1,0 @@
-{% assign people_array = "Ryan Thomas_Bill Bailey_Cosmo Kramer_Elvis Presley_John Smith_Jerry Seinfeld_Clark Kent_John Stewart_Ken Masters_Nicholas Brendon" | split: '_' %}
-
-<h3><i class="fa fa-users"></i>&nbsp; Browse our People</h3>
-<ul>
-    {% for item in people_array %}
-    <li><a href="/our-people/person/">{{ item }} <i class="fa fa-angle-right"></i></a></li>
-    {% endfor %}
-</ul>

@@ -2,6 +2,7 @@
 layout: internal/text_page
 title: Community Support
 permalink: /about/community-support/
+hero_header_override: About
 side_nav_top_level_id: 1
 ---
 

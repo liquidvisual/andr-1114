@@ -29,13 +29,13 @@ sidebar_id: 3
                             <div class="media-block">
                                 <div class="row collapse">
                                     <div class="medium-5 columns">
-                                        <img width="100%" src="http://lorempixel.com/242/242/people?{{forloop.index}}" alt="">
+                                        <img width="100%" src="http://lorempixel.com/332/250/people?{{forloop.index}}" alt="">
                                     </div>
                                     <div class="medium-7 columns">
                                         <a href="{{ "/our-people/person/" }}"><h5>{{ item.title }} &nbsp;<i class="fa fa-angle-right"></i></h5></a>
-                                        <p>E: <a href="mailto:">bconnelly@andersons.com.au</a><br>
-                                        P: 08 8447 4911<br>
-                                        F: 08 8447 6284
+                                        <p><a href="mailto:{{item.email}}">{{item.email}}</a><br>
+                                        P: {{ item.phone }}<br>
+                                        F: {{ item.fax }}
                                         </p>
                                     </div>
                                 </div>
