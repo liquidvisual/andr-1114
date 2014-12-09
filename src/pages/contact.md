@@ -1,6 +1,7 @@
 ---
 layout: internal/contact
 title: Contact
+hero_header_override: Contact
 permalink: /contact/
 ---
 

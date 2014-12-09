@@ -121,10 +121,12 @@ html, body {
 .internal .lv-hero {
     min-height: rem-calc(170);
 
-    .lv-hero-header h1 {
+    .lv-hero-header h1,
+    .lv-hero-header h2 {
         position: relative;
         top: rem-calc(90);
         color: white;
+        font-size: $h1-font-size;
     }
 }
 

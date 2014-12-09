@@ -30,6 +30,11 @@
             }
         }
 
+        &.active-parent > a {
+            background: lighten($secondary-color, 10%);
+            color: white !important; // refactor
+        }
+
         &.active > a {
             background: $secondary-color;
             color: white !important; // refactor

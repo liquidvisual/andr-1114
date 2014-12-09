@@ -27,6 +27,7 @@
 {% assign top_level_id = page.side_nav_top_level_id %}
 {% assign top_level_node = sitemap[top_level_id] %}
 {% assign second_level_id = page.side_nav_second_level_id %}
+{% assign third_level_id = page.side_nav_third_level_id %}
 
 {% if top_level_id %}
 
@@ -41,14 +42,14 @@
 
         {% comment %} SECOND LEVEL {% endcomment %}
         {% for item in top_level_node.children %}
-        <li class="{% if item.url == page.url %} active {% endif %}">
+        <li class="{% if forloop.index == second_level_id %} active-parent {% endif %}{% if item.url == page.url %} active {% endif %}">
             <a href="{{ item.url }}"> {{ item.title }}</a>
 
             {% comment %} THIRD LEVEL {% endcomment %}
             {% if item.children and forloop.index == second_level_id %}
             <ul class="no-bullet">
                 {% for item in item.children %}
-                    <li class="{% if item.url == page.url %} active {% endif %}">
+                    <li class="{% if item.url == page.url or forloop.index == third_level_id %} active {% endif %}">
                         <a href="{{ item.url }}">- {{ item.title }}</a>
                     </li>
                 {% endfor %}

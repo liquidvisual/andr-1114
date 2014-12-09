@@ -10,6 +10,13 @@ layout: master
             <div class="row outer-row">
                 <div class="columns">
                     <div class="animated fadeInLeft">
+
+                    <!-- Third level pages will have H2s for SEO -->
+                    {% if page.child_page %}
+                        <h2>
+                            {{ page.hero_header_override }}
+                        </h2>
+                    {% else %}
                         <h1>
                             {% if page.hero_header_override %}
                                 {{ page.hero_header_override }}
@@ -17,6 +24,8 @@ layout: master
                                 {{ page.title }}
                             {% endif %}
                         </h1>
+                    {% endif %}
+
                     </div>
                 </div> <!-- .columns -->
             </div> <!-- .row -->
