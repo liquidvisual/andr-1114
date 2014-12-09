@@ -8,7 +8,7 @@ date: 21 November 2014
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio repellat, nihil fuga provident ab delectus ex hic odit, eum ipsam a commodi impedit omnis fugiat maxime at necessitatibus, quasi eligendi!
 
-<span class="image-right"><img src="http://lorempixel.com/380/253/nature" alt="..."></span>
+<span class="image-right"><img src="http://placehold.it/380x253" alt="..."></span>
 
 ## Sub Heading (h2)
 

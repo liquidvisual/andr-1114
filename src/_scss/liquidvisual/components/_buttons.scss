@@ -30,7 +30,7 @@ $button-bg-active: darken($button-bg-hover, 2%) !default;
 //-----------------------------------------------------------------
 
 .button:active:not(.disabled) {
-	box-shadow: inset 0px 2px 5px rgba(0,0,0,0.2);
+	//box-shadow: inset 0px 2px 5px rgba(0,0,0,0.2);
 	// text-shadow: rgba(255,255,255,0.25) 0px 1px 0;
 }
 

@@ -391,6 +391,9 @@ html, body {
     margin: 0;
 }
 
+.side-box h4 {
+    margin-bottom: rem-calc(16);
+}
 
 a {
     @include transition();

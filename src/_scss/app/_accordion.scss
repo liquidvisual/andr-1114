@@ -2,7 +2,7 @@
 /*
     ACCORDION.CSS
 
-    - updated: 08.12.14
+    - updated: 09.12.14
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -76,8 +76,17 @@
     margin-bottom: 1px;
 }
 
+.sidebar .accordion-navigation {
+    padding-bottom: 0;
+}
+
 .sidebar .accordion-navigation > a {
     position: relative;
     margin-bottom: 1px;
-    padding-right: rem-calc(42) !important;
+    padding: rem-calc(8 42 8 15);
+    font-size: rem-calc(14);
+}
+
+.sidebar .accordion-navigation .icon {
+    font-size: rem-calc(20);
 }
