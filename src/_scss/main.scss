@@ -110,8 +110,9 @@ html, body {
         margin-bottom: rem-calc(30);
         font-weight: 600;
         color: white;
+        font-size: rem-calc(25);
 
-        @media #{$medium-up} {
+        @media #{$large-up} {
             font-size: rem-calc(33);
         }
     }
@@ -348,8 +349,9 @@ html, body {
     padding: rem-calc(20 25 25 25);
     margin-bottom: rem-calc(20);
 
-    h3 {
+    h3, h4, h5 {
         margin: rem-calc(0 0 20 0);
+        font-weight: bold;
     }
 
     ul {
@@ -410,14 +412,17 @@ a {
     }
 }
 
-.fa-angle-up,
-.fa-angle-down {
+.footer .fa-angle-up,
+.footer .fa-angle-down {
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
     font-size: rem-calc(25);
-    line-height: 0.4;
 }
 
 .greyed-link {
     color: $body-font-color;
+    position: relative;
 }
 
 .media-link {

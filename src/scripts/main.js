@@ -13,12 +13,17 @@ var TOUCH_ENABLED = $(".touch").length;
 
 $(document).ready(function() {
     NProgress.start(); // Start preloader bar
-    removeHover(); // Remove hover on touch
 });
 
 $(window).load(function() {
     NProgress.done();
 });
+
+//-----------------------------------------------------------------
+// Remove Hover library on Touch
+//-----------------------------------------------------------------
+
+removeHover(); // Remove hover on touch
 
 //-----------------------------------------------------------------
 // Kickstart Foundation / Touch Conditionals
@@ -49,6 +54,7 @@ if (TOUCH_ENABLED) {
 $('.content-drawer').click(function(e){
     var $this = $(this);
     var contentDrawer = $($this.attr('href'));
+    var icon = $("i", $this);
 
     e.preventDefault();
 
@@ -57,7 +63,9 @@ $('.content-drawer').click(function(e){
     } else {
         contentDrawer.slideToggle();
     }
-    $("i", $this).toggleClass('fa-angle-down');
+    icon.toggleClass('fa-angle-down');
+
+    if (!icon.hasClass('fa-angle-down')) $.scrollTo($this.offset(), 500);
 });
 
 //-----------------------------------------------------------------

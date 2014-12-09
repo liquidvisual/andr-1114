@@ -1,0 +1,6 @@
+<h5><i class="fa fa-users"></i>&nbsp; Browse our People</h5>
+<ul>
+    {% for item in people_array %}
+    <li><a href="/our-people/person/">{{ item.title }} <i class="fa fa-angle-right"></i></a></li>
+    {% endfor %}
+</ul>

@@ -130,6 +130,7 @@
     margin: 0;
     text-align: left;
     transition: none;
+    font-size: rem-calc(16);
 }
 
 .topbar .dropdown li:last-child a {
@@ -137,8 +138,8 @@
 }
 
 .topbar .dropdown a:hover {
-    background: #DC203E;
-    color: white;
+    background: #BFBBBB;
+    // color: white;
 }
 
 //-----------------------------------------------------------------

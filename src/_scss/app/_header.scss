@@ -10,8 +10,8 @@
 // Variables
 //-----------------------------------------------------------------
 
-$header-height: rem-calc(160);
-$header-height-medium: rem-calc(170);
+$header-height: rem-calc(140);
+$header-height-medium: rem-calc(160);
 $header-height-large: rem-calc(230);
 
 //-----------------------------------------------------------------
@@ -24,7 +24,7 @@ $header-height-large: rem-calc(230);
     padding: rem-calc(20 0);
 
     @media #{$medium-up} {
-        // height: $header-height-medium;
+        height: $header-height-medium;
         padding: 0;
     }
 
@@ -34,10 +34,14 @@ $header-height-large: rem-calc(230);
 
     .logo {
         position: relative;
-        top: rem-calc(10);
+        top: rem-calc(5);
 
         img {
-            width: rem-calc(186);
+            width: rem-calc(160);
+
+            @media #{$medium-up} {
+                width: rem-calc(186);
+            }
 
             @media #{$large-up} {
                 width: rem-calc(199);
@@ -68,10 +72,6 @@ $header-height-large: rem-calc(230);
         font-size: rem-calc(42);
         line-height: 0;
     }
-
-    &:hover {
-        color: $primary-color;
-    }
 }
 
 //=========================================
@@ -79,14 +79,13 @@ $header-height-large: rem-calc(230);
 //=========================================
 
 .header .hamburger {
-    @include hamburger($width: 30px, $thickness: 6px, $color: black);
+    @include hamburger($width: 26px, $thickness: 5px, $color: black);
 
     top: rem-calc(-26); // magic
     right: 15px;
 
-
     @media #{$medium-up} {
-        top: rem-calc(117);
+        top: rem-calc(120);
     }
 }
 

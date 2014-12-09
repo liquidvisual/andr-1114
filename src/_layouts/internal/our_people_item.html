@@ -67,13 +67,7 @@ child_page: true
         <div class="large-3 columns">
             <aside class="sidebar">
                 <div class="side-box">
-
-                    <h4><i class="fa fa-users"></i>&nbsp; Browse our People</h4>
-                    <ul>
-                        {% for item in people_array %}
-                        <li><a href="/our-people/person/">{{ item.title }} <i class="fa fa-angle-right"></i></a></li>
-                        {% endfor %}
-                    </ul>
+                    {% include browse_people_sidebar.html %}
                 </div>
             </aside>
         </div>

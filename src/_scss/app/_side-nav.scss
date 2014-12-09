@@ -39,6 +39,11 @@
             background: $secondary-color;
             color: white !important; // refactor
         }
+
+        &.active a:hover,
+        &.active-parent a:hover {
+            background: $secondary-color;
+        }
     }
 }
 

@@ -2,7 +2,7 @@
 /*
     BUTTONS.CSS
 
-    - updated: 08.12.14
+    - updated: 09.12.14
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -13,7 +13,7 @@
 //-----------------------------------------------------------------
 
 .lv-super .micro-button {
-    background: #EFEFEF;
+    background: $light-grey;
     color: #222;
     text-transform: uppercase;
     padding: rem-calc(5);
@@ -25,7 +25,7 @@
     }
 
     &:hover {
-        color: white;
+        background: darken($light-grey, 10%);
     }
 }
 
@@ -105,4 +105,20 @@
     }
 }
 
+//=========================================
+// Drop Link
+//=========================================
+
+.lv-super .content-drawer {
+    position: relative;
+    padding-right: rem-calc(16);
+
+    i {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        margin-top: rem-calc(-12);
+        // line-height: 1;
+    }
+}
 
