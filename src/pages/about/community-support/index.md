@@ -1,10 +1,13 @@
 ---
-layout: internal/text_page
+layout: internal/text_page_with_article
 title: Community Support
 permalink: /about/community-support/
 hero_header_override: About
 side_nav_top_level_id: 1
+side_nav_second_level_id: 2
 ---
+
+### Our Ongoing Community Support
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam nihil aperiam consequuntur. Soluta illum voluptatibus esse, quasi quia, inventore repellat, odit molestiae fugiat reprehenderit nostrum amet quaerat quas optio natus iure ut dolorem quam voluptate nesciunt itaque tempora omnis. Numquam eligendi praesentium eius officiis expedita illo, obcaecati doloribus harum dolor quo ex! Quos dolore quia ipsa eveniet provident sint rem illo, aspernatur
 

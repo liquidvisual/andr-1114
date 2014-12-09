@@ -9,30 +9,34 @@ hero_header_override: Areas of Practice
 {% assign sub_level = site.data.sitemap[3].children[1].children %}
 {% assign people = site.data.people %}
 
-<div class="row outer-row">
-	<div class="columns">
-		<h1 class="section">{{ page.title }}</h1>
-	</div>
-</div> <!-- .outer-row -->
+<div class="section">
+	<div class="row outer-row">
+		<div class="columns">
+			<h1>{{ page.title }}</h1>
+		</div>
+	</div> <!-- .outer-row -->
+</div> <!-- .section -->
 
 <div class="row outer-row">
 	<div class="large-8 columns">
 
-		<!-- IF THERE ARE DOWNLOAD ITEMS -->
+		<!-- IF THERE ARE DOWNLOAD ITEMS - ADHOC EXAMPLE -->
 		<div class="section">
-			<a href="#" class="button grey-button download-button expand">Download our personal injury service guide</a>
-			<a href="#" class="button grey-button download-button expand">Download our personal injury service guide</a>
+			{% for i in (1..2) %}
+				<a href="#" target="_blank" class="button grey-button download-button expand">Download our personal injury service guide</a>
+			{% endfor %}
 		</div>
 
-		<div class="right image-right">
-			<img src="http://lorempixel.com/380/253/city" alt="...">
-			<p><a href="#" class="button grey-button blog-button expand">Personal Injury Blog Articles</a></p>
-		</div>
+		<!-- Image & Content -->
+		<div class="section">
+			<div class="right image-right">
+				<img width="380" src="http://placehold.it/380x253/" alt="...">
+				<p><a href="#" class="button grey-button blog-button expand">Personal Injury Blog Articles</a></p>
+			</div>
+			{{ content }}
+		</div> <!-- .section -->
 
-		{{ content }}
-
-		<br>
-
+		<!-- Second Level -->
 		{% for item in sub_level %}
 			<a href="#" class="button grey-button expand">{{ item.title }}</a>
 		{% endfor %}
@@ -54,6 +58,7 @@ hero_header_override: Areas of Practice
 			<ul class="small-block-grid-1 medium-block-grid-4">
 				{% for person in people %}
 					<li>
+						<!-- IMPORTANT: Take notice of loop logic below -->
 						<a href="/our-people/person/" class="{% if forloop.index > 4 %}excess hide{% endif %}">
 							<img class="img" width="50" src="http://placehold.it/332x250" alt="...">
 							<span class="text">{{ person.title }}</span>

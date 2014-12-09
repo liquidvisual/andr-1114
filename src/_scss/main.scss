@@ -1,25 +1,17 @@
 @import "foundation/settings";
 @import "foundation/components/block-grid";
-@import "mixins";
+@import "app/mixins";
 /*
     MAIN.CSS
 
-    - Last updated: 04.12.14
+    - Last updated: 09.12.14
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
 // Variables
 //-----------------------------------------------------------------
 
-// $header-height-small: rem-calc(109);
-// $header-height-medium: rem-calc(133); //rem-calc(146);
-// $header-background-color: white;
-// $navigation-height: rem-calc(60);
-// $banner-background-color: #1B9AED;
-// $banner-button-background-color: $button-bg-color;
-// $footer-height: rem-calc(74);
 $page-padding: rem-calc(40);
-// $dark-green: #041B20;
 $vertical-spacing: rem-calc(20);
 $dark-grey: #484848;
 $mid-grey: #D8D5D5;
@@ -87,12 +79,10 @@ html, body {
 // Navigation
 //-----------------------------------------------------------------
 
-.navigation {
-    .topbar{
-        @media #{$medium-up} {
-            position: absolute;
-            bottom: rem-calc(26);
-        }
+.navigation .topbar {
+    @media #{$medium-up} {
+        position: absolute;
+        bottom: rem-calc(26);
     }
 }
 
@@ -304,8 +294,6 @@ html, body {
 //=========================================
 
 .team-listing {
-    // max-height: rem-calc(60);
-    // overflow: hidden;
 
     @media #{$medium-up} {
         max-height: rem-calc(90);
@@ -344,10 +332,6 @@ html, body {
 //-----------------------------------------------------------------
 
 .sidebar {
-    @media #{$large-up} {
-        // padding-top: rem-calc(88);
-    }
-
     @media #{$xlarge-up} {
         padding-left: rem-calc(40);
 
@@ -393,26 +377,6 @@ html, body {
 //-----------------------------------------------------------------
 // Template Buttons
 //-----------------------------------------------------------------
-
-
-
-// .sidebar .button {
-//     background: #D8D5D5;
-//     color: #2E2D2D;
-//     text-align: left;
-//     padding: rem-calc(20 15);
-
-//     &:hover {
-//         color: white;
-//     }
-
-//     i {
-//         // font-size: rem-calc(45);
-//         font-size: rem-calc(25);
-//         margin-right: rem-calc(10);
-//     }
-// }
-
 //-----------------------------------------------------------------
 // Forms
 //-----------------------------------------------------------------
@@ -423,13 +387,22 @@ html, body {
 // Special / Misc - Refactor Later
 //-----------------------------------------------------------------
 
-.image-right {
-    margin: rem-calc(0 0 25 25);
-    float: right;
+.no-margin {
+    margin: 0;
 }
+
 
 a {
     @include transition();
+}
+
+.image-right {
+    margin: rem-calc(0 0 25 25);
+    float: right;
+
+    @media #{$small-only} {
+        width: 100%;
+    }
 }
 
 .fa-angle-up,
@@ -442,6 +415,17 @@ a {
     color: $body-font-color;
 }
 
+.media-link {
+    word-break: break-all;
+}
+
+// For Headings
+.underline {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: rem-calc(15);
+    margin-bottom: rem-calc(30);
+}
+
 //-----------------------------------------------------------------
 // IE8
 //-----------------------------------------------------------------
@@ -449,15 +433,15 @@ a {
 // Themes
 //-----------------------------------------------------------------
 
-@import "accordion";
-@import "buttons";
-@import "header";
-@import "media-block";
-@import "media-tile";
-@import "blog-panel";
-@import "footer";
-@import "side-nav";
-@import "social-networks";
+@import "app/accordion";
+@import "app/buttons";
+@import "app/header";
+@import "app/media-block";
+@import "app/media-tile";
+@import "app/blog-panel";
+@import "app/footer";
+@import "app/side-nav";
+@import "app/social-networks";
 
 //=========================================
 //

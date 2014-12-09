@@ -1,5 +1,5 @@
 /*
-    MAIN SCRIPTS - Last updated: 00-00-00
+    MAIN SCRIPTS - Last updated: 09-12-14
 */
 //-----------------------------------------------------------------
 // Variables
@@ -13,27 +13,12 @@ var TOUCH_ENABLED = $(".touch").length;
 
 $(document).ready(function() {
     NProgress.start(); // Start preloader bar
+    removeHover(); // Remove hover on touch
 });
 
 $(window).load(function() {
     NProgress.done();
 });
-
-// window.onload = function(){
-//     // NProgress.done();
-// }
-
-// If NOT mobile or touch device, enhance with transition effects
-
-    // if (!$('.touch').length) {
-    //     var wow = new WOW(
-    //       {
-    //         boxClass:     'wow',      // default
-    //         animateClass: 'animated', // default
-    //         offset:       0          // default
-    //       }
-    //     ).init();
-    // }
 
 //-----------------------------------------------------------------
 // Kickstart Foundation / Touch Conditionals
@@ -58,7 +43,7 @@ if (TOUCH_ENABLED) {
 }
 
 //-----------------------------------------------------------------
-// Footer
+// Content Drawer - used for toggling visibility of items (sitemap etc)
 //-----------------------------------------------------------------
 
 $('.content-drawer').click(function(e){
@@ -75,6 +60,10 @@ $('.content-drawer').click(function(e){
     $("i", $this).toggleClass('fa-angle-down');
 });
 
+//-----------------------------------------------------------------
+// Toggle Team Listing
+//-----------------------------------------------------------------
+
 $(".more-team-listing").click(function(e){
     var $this = $(this);
 
@@ -88,7 +77,7 @@ $(".more-team-listing").click(function(e){
 // <= IE8 Caution Message
 //-----------------------------------------------------------------
 
-//$('.lv-alert .close-btn').click(function(){$(this).parent().hide();});
+$('.lv-alert .close-btn').click(function(){$(this).parent().hide();});
 
 //-----------------------------------------------------------------
 // +++ HELPERS +++

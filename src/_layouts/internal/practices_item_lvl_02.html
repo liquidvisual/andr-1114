@@ -17,26 +17,30 @@ hero_header_override: Areas of Practice
 <div class="row outer-row">
 	<div class="large-8 columns">
 
-		<!-- IF THERE ARE DOWNLOAD ITEMS -->
+		<!-- IF THERE ARE DOWNLOAD ITEMS - ADHOC EXAMPLE -->
 		<div class="section">
-			<a href="#" class="button grey-button download-button expand">Download our personal injury service guide</a>
-			<a href="#" class="button grey-button download-button expand">Download our personal injury service guide</a>
+			{% for i in (1..2) %}
+				<a href="#" target="_blank" class="button grey-button download-button expand">Download our personal injury service guide</a>
+			{% endfor %}
 		</div>
 
-		{{ content }}
-
-		<br>
-
-		<!-- IF THERE ARE LINK ITEMS -->
 		<div class="section">
-			<a href="/areas-of-practice/personal-injury/motor-vehicle-accidents/for-those-injured-in-accidents-before-1-july-2013/" class="button grey-button expand">Injured before 1 July 2013</a>
-			<a href="/areas-of-practice/personal-injury/motor-vehicle-accidents/for-those-injured-in-accidents-before-1-july-2013/" class="button grey-button expand">Injured after 30 June 2013</a>
+			{{ content }}
+		</div>
+
+		<!-- IF THERE ARE LINK ITEMS - ADHOC EXAMPLE -->
+		<div class="section">
+			{% for i in (1..2) %}
+				<a href="/areas-of-practice/personal-injury/motor-vehicle-accidents/for-those-injured-in-accidents-before-1-july-2013/" class="button grey-button expand">Injured before 1 July 2013</a>
+			{% endfor %}
 		</div>
 
 		<!-- Additional Text -->
 		<div class="section">
 			<p>More content can appear below the buttons. For any assistance or advice about your workplace kinjury entitlements, contact a member of the Andersons personal injury law team.</p>
 		</div>
+
+		<br>
 
 		{% include snippets/simple_form_traditional.html title="To discuss your motor vehicle claim contact us below" %}
 

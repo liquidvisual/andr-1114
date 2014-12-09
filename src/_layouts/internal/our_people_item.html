@@ -5,6 +5,7 @@ hero_header_override: Our People
 ---
 
 {% assign people_array = site.data.people %}
+{% assign stubbed_image_url = "http://placehold.it/332x250" %}
 
 <div itemscope itemtype="http://schema.org/Person">
 
@@ -12,7 +13,7 @@ hero_header_override: Our People
     <div class="section">
         <div class="row outer-row">
             <div class="columns">
-                <h1 itemprop="name">{{ page.title }}</h1>
+                <h1 class="no-margin" itemprop="name">{{ page.title }}</h1>
                 <h2 class="subheader" itemprop="jobtitle">{{ "Partner" }}</h2>
             </div>
         </div>
@@ -24,29 +25,44 @@ hero_header_override: Our People
 
             <div class="section contact-section">
 
-                <img width="100%" src="http://lorempixel.com/332/250/people?{{forloop.index}}" itemprop="image" alt="...">
+                <img width="100%" src="{{ stubbed_image_url }}" itemprop="image" alt="...">
 
                 <div class="contact-box">
                     <!-- <div itemscope itemtype="http://schema.org/Organization"><span itemprop="name">Andersons Solicitors</span></div> -->
-                    <i class="fa fa-envelope"></i>&nbsp; <span itemprop="email"><a href="mailto:felix@andersons.com.au">felix@andersons.com.au</a></span><br>
-                    <i class="fa fa-phone"></i>&nbsp; <span itemprop="telephone">08 8447 4911</span><br>
-                    <i class="fa fa-fax"></i>&nbsp; <span itemprop="fax">08 8447 6284</span><br>
+                    <i class="fa fa-envelope"></i>&nbsp; <span itemprop="email"><a href="mailto:{{"felix@andersons.com.au"}}">{{ "felix@andersons.com.au" }}</a></span><br>
+                    <i class="fa fa-phone"></i>&nbsp; <span itemprop="telephone">{{ "08 8447 4911" }}</span><br>
+                    <i class="fa fa-fax"></i>&nbsp; <span itemprop="fax">{{ "08 8447 6284" }}</span><br>
                     <i class="fa fa-list-alt"></i>&nbsp; <a href="button">Download vCard <i class="fa fa-angle-right"></i></a>
                 </div>
 
-                <a href="#" class="button expand grey-button blog-button">See Blog Posts by {{ "Felix "}}</a>
-                <a href="#" class="button expand grey-button video-button">Video - Meet Felix Hoelscher</a>
+                <a href="#url-here" class="button expand grey-button blog-button">See Blog Posts by {{ "Felix "}}</a>
+                <a href="#url-here" class="button expand grey-button video-button">Video - Meet Felix Hoelscher</a>
 
             </div> <!-- .contact-section -->
 
         </div> <!-- .columns -->
         <div class="large-5 columns">
 
-            {{ content }}
+            <!-- Specialties -->
+            <div class="section">
+                <h3 class="underline">{{ "Felix" }} Specialises in</h3>
+
+                <!-- wysiwyg -->
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur vitae eius aliquid dolorem repellat quae voluptatem perferendis iste minima iure quaerat cumque illo nisi molestiae, eaque similique. Deserunt, vitae, incidunt.</p>
+            </div> <!-- .section -->
+
+            <!-- About Person -->
+            <div class="section">
+                <h3 class="underline">About {{ "Felix" }}</h3>
+
+                <!-- wysiwyg -->
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus voluptates cum vitae vero quasi ipsum aspernatur est nobis, debitis totam nisi, id doloremque tenetur aliquid odio deleniti architecto error temporibus</p>
+            </div> <!-- .section -->
 
             <br>
-
         </div>
+
+        <!-- SIDEBAR -->
         <div class="large-3 columns">
             <aside class="sidebar">
                 <div class="side-box">
@@ -60,6 +76,6 @@ hero_header_override: Our People
                 </div>
             </aside>
         </div>
-    </div>
 
+    </div> <!-- .outer-row -->
 </div> <!-- itemscope -->

@@ -1,3 +1,12 @@
+{% comment %}
+<!--
+    Updated: 09.12.14
+    Notes: Accordion is passed the YML data file in the include. It then loops through the
+    nodes and creates the output.
+    ** IF ** the nodes have children, it will display them as a list, instead of plain body text.
+-->
+{% endcomment %}
+
 {% assign items = include.data %}
 
 <!-- Accordion Module -->

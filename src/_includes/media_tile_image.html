@@ -1,13 +1,17 @@
+{% assign stubbed_image_url = "http://placehold.it/244x276" %}
+
 <a class="media-tile image-tile" href="{{ item.url }}">
-    <img width="122" src="http://lorempixel.com/122/138/nature?{{ forloop.index }}" alt="...">
+    <img width="122" src="{{ stubbed_image_url }}" alt="...">
     <div class="text">
         <h2>{{ item.title }}</h2>
 
+		<!-- Optional -->
         {% if item.description %}
         <span class="desc">
             {{ item.description }}
         </span>
         {% endif %}
+
     </div>
     <i class="fa fa-angle-right"></i>
 </a>

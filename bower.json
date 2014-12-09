@@ -11,7 +11,8 @@
     "magnific-popup": "https://github.com/dimsemenov/Magnific-Popup.git#master",
     "nprogress": "~0.1.6",
     "WOW": ">=0.1.9",
-    "sass-burger": "~1.1.1"
+    "sass-burger": "~1.1.1",
+    "remove-hover": "~0.1.0"
   },
   "devDependencies": {}
 }

@@ -1,0 +1,43 @@
+---
+layout: internal
+---
+
+<div class="row outer-row">
+	<div class="columns">
+		<h2 class="section">{{ page.title }}</h2>
+	</div>
+</div> <!-- .outer-row -->
+
+<div class="row outer-row">
+	<div class="large-8 columns">
+
+		<div class="section">
+			{{ content}}
+		</div>
+
+		<!-- Instructions: with these pages - the 'november charity section' for example, will just display the content from one of the sub-pages from the right-side nav. This will just be specified by a checkbox in the CMS.​ So each of the sub-pages under community support will just be basic content with an image. -->
+
+		<article class="side-box">
+			<h2>November 2014 Charity of the Month - it's Movember time!</h2>
+
+			<span class="image-right">
+				<img src="http://placehold.it/306x176" alt="...">
+			</span>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione eveniet praesentium architecto molestiae nesciunt magni neque pariatur fuga laborum facere aliquam sapiente quos incidunt accusamus odio dolorem sunt alias, totam.</p>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id possimus distinctio magni, impedit dolore reiciendis placeat quam inventore dolorem at minus dolor, aspernatur repudiandae sit maxime eaque sed delectus optio.</p>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, commodi accusantium distinctio in saepe eius minima reprehenderit quos blanditiis molestias hic optio numquam deleniti, vero voluptates error vel deserunt asperiores!</p>
+		</article>
+
+	</div>
+	<div class="large-4 columns">
+
+	    <!-- SIDEBAR -->
+	    <aside class="sidebar">
+	        {% include snippets/side_nav.html %}
+	    </aside>
+
+	</div>
+</div> <!-- .outer-row -->

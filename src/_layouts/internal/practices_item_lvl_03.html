@@ -8,28 +8,32 @@ hero_header_override: Areas of Practice
 {% assign settings = site.data.settings %}
 {% assign accordion = site.data.accordion %}
 
-<div class="row outer-row">
-	<div class="columns">
-		<div class="section">
-			<h1>Motor Vehicle Accidents</h1>
+<div class="section">
+	<div class="row outer-row">
+		<div class="columns">
+			<h1 class="no-margin">Motor Vehicle Accidents</h1>
 			<h2 class="subheader">{{ page.title }}</h2>
 		</div>
-	</div>
-</div> <!-- .outer-row -->
+	</div> <!-- .outer-row -->
+</div>
 
 <div class="row outer-row section">
 	<div class="large-8 columns">
 
-		<!-- IF THERE ARE DOWNLOAD ITEMS -->
+		<!-- IF THERE ARE DOWNLOAD ITEMS - ADHOC EXAMPLE -->
 		<div class="section">
-			<a href="#" class="button grey-button download-button expand">Download our guide: Injured in a motor vehicle accident prior to 1 July 2013</a>
+			{% for i in (1..1) %}
+				<a target="_blank" href="#" class="button grey-button download-button expand">Download our guide: Injured in a motor vehicle accident prior to 1 July 2013</a>
+			{% endfor %}
 		</div>
 
-		{{ content }}
+		<div class="section">
+			{{ content }}
+		</div>
 
-		<br>
-
-		{% include snippets/accordion.html data=site.data.faqs %}
+		<div class="section">
+			{% include snippets/accordion.html data=site.data.faqs %}
+		</div>
 
 	</div> <!-- .columns -->
 

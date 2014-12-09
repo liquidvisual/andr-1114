@@ -1,23 +1,35 @@
-# Used for blog archiving
-# Alias is used because of glitch with numbers with accordion
+# Blog archives
 
 - title: "2014"
   id: twenty-fourteen
   children:
     - title: November
+      url: "#"
     - title: October
+      url: "#"
     - title: September
+      url: "#"
     - title: August
+      url: "#"
     - title: July
+      url: "#"
     - title: June
+      url: "#"
     - title: May
+      url: "#"
     - title: April
+      url: "#"
 
 - title: "2014"
   id: twenty-thirteen
   children:
     - title: August
+      url: "#"
     - title: July
+      url: "#"
     - title: June
+      url: "#"
     - title: May
+      url: "#"
     - title: April
+      url: "#"
