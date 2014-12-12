@@ -37,6 +37,7 @@
 
     .media-body {
         color: $body-font-color;
+        max-width: 768px;
 
         p {
             margin-bottom: 0; // let HR decide its own padding
