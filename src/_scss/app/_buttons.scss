@@ -23,10 +23,11 @@
         font-size: rem-calc(16);
         line-height: 0.5;
     }
+}
 
-    &:hover {
-        background: darken($light-grey, 10%);
-    }
+// Hovers
+.no-touch .lv-super .micro-button:hover {
+    background: darken($light-grey, 10%);
 }
 
 //-----------------------------------------------------------------
@@ -40,10 +41,6 @@
     background: $mid-grey;
     color: $dark-grey;
     margin-bottom: rem-calc(8);
-
-    &:hover {
-        background: darken($mid-grey, 10%);
-    }
 
     &:before,
     &:after {
@@ -60,6 +57,11 @@
         left: auto;
         right: rem-calc(15);
     }
+}
+
+// Hovers
+.no-touch .lv-super .grey-button:hover {
+    background: darken($mid-grey, 10%);
 }
 
 //=========================================
@@ -121,4 +123,3 @@
         // line-height: 1;
     }
 }
-

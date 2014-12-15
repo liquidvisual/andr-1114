@@ -27,6 +27,10 @@ html, body {
     }
 }
 
+ol ol ul, ol ul ul, ul ol ul, ul ul ul {
+    list-style: circle;
+}
+
 //=========================================
 // Snap Grid
 //
@@ -125,9 +129,15 @@ html, body {
     .lv-hero-header h1,
     .lv-hero-header h2 {
         position: relative;
-        top: rem-calc(90);
+        top: rem-calc(100);
         color: white;
-        font-size: $h1-font-size;
+        font-size: rem-calc(28);
+
+        @media #{$medium-up} {
+            font-size: $h1-font-size;
+            top: rem-calc(90);
+        }
+
     }
 }
 
@@ -297,7 +307,6 @@ html, body {
 //=========================================
 
 .team-listing {
-
     @media #{$medium-up} {
         max-height: rem-calc(90);
     }
@@ -307,27 +316,26 @@ html, body {
     }
 
     a {
-
         display: inline-block;
         color: $body-font-color;
 
         &.hide {
             display: none;
         }
-
-        &:hover {
-            color: $primary-color;
-        }
     }
 
     .text {
-       display: inline-block;
+       // display: inline-block;
     }
 
     .img {
         float: left;
         margin: rem-calc(0 10 10 0);
     }
+}
+
+.no-touch .team-listing a:hover {
+    color: $primary-color;
 }
 
 //-----------------------------------------------------------------
@@ -348,7 +356,9 @@ html, body {
     background: $light-grey;
     padding: rem-calc(20 25 25 25);
     margin-bottom: rem-calc(20);
+}
 
+.sidebar .side-box {
     h3, h4, h5 {
         margin: rem-calc(0 0 20 0);
         font-weight: bold;
@@ -365,11 +375,12 @@ html, body {
 
     a {
         color: $dark-grey;
-
-        &:hover {
-            color: $primary-color;
-        }
     }
+}
+
+// Hovers
+.no-touch .sidebar .side-box a:hover {
+    color: $primary-color;
 }
 
 //-----------------------------------------------------------------

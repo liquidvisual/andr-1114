@@ -26,10 +26,11 @@
     @media #{$large-up} {
         min-height: rem-calc(138);
     }
+}
 
-    &:hover {
-        background: rgba(0,0,0, 0.7);
-    }
+// Hovers
+.no-touch .media-tile:hover {
+    background: rgba(0,0,0, 0.7);
 }
 
 //=========================================
@@ -78,6 +79,7 @@
         margin-bottom: 0;
         line-height: 1.2;
         color: white;
+
         @media #{$medium-up} {
             font-size: rem-calc(25);
         }
@@ -135,14 +137,6 @@
     .media-tile {
         background: #EFEFEF;
 
-        &:hover {
-            background: darken($light-grey, 40%);
-
-            .text h2, .desc {
-                color: white;
-            }
-        }
-
         .text h2 {
             color: #404141;
             font-size: rem-calc(20);
@@ -155,6 +149,19 @@
         i {
             color: #C8C7C7;
         }
+    }
+}
+
+// Not sure why the JS library isn't picking this up
+.no-touch .media-tiles-light .media-tile:hover {
+    background: darken($light-grey, 40%);
+
+    .text h2 {
+        color: white;
+    }
+
+    .desc {
+        color: white;
     }
 }
 

@@ -23,11 +23,6 @@
             margin-bottom: 1px;
             color: white;
             background: $primary-color;
-
-            &:hover {
-                background: darken($primary-color, 10%);
-                color: white;
-            }
         }
 
         &.active-parent > a {
@@ -39,12 +34,18 @@
             background: $secondary-color;
             color: white !important; // refactor
         }
-
-        &.active a:hover,
-        &.active-parent a:hover {
-            background: $secondary-color;
-        }
     }
+}
+
+.no-touch .lv-super .side-nav li a:hover {
+    background: darken($primary-color, 10%);
+    color: white;
+}
+
+// Hovers
+.no-touch .lv-super .side-nav li.active a:hover,
+.no-touch .lv-super .side-nav li.active-parent a:hover {
+    background: $secondary-color;
 }
 
 //=========================================
