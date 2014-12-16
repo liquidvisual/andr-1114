@@ -428,6 +428,14 @@ div.recaptcha_input_area input {
     line-height: 0 !important;
 }
 
+// Stop captcha breaking page on mobile
+#recaptcha_widget_div {
+    @media #{$small-only} {
+        max-width: 254px !important;
+        overflow-x: scroll;
+    }
+}
+
 //-----------------------------------------------------------------
 // Animations
 //-----------------------------------------------------------------
