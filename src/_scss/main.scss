@@ -395,6 +395,37 @@ ol ol ul, ol ul ul, ul ol ul, ul ul ul {
 //-----------------------------------------------------------------
 // Forms
 //-----------------------------------------------------------------
+
+.sent-confirmation {
+    background-color: #65d167;
+    color: #fff;
+    padding: 20px;
+}
+
+//=========================================
+// Captcha
+//=========================================
+
+div.recaptcha_input_area input {
+    height: 17px;
+}
+
+#recaptcha_area, #recaptcha_table {
+    line-height: 0!important;
+    table-layout: auto;
+}
+
+#recaptcha_table input {
+    display: inline-block;
+}
+
+.recaptchatable,
+#recaptcha_area tr,
+#recaptcha_area td,
+#recaptcha_area th {
+    line-height: 0 !important;
+}
+
 //-----------------------------------------------------------------
 // Animations
 //-----------------------------------------------------------------
