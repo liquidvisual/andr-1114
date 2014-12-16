@@ -50,7 +50,7 @@
             <ul class="no-bullet">
                 {% for item in item.children %}
                     <li class="{% if item.url == page.url or forloop.index == third_level_id %} active {% endif %}">
-                        <a href="{{ item.url }}">- {{ item.title }}</a>
+                        <a href="{{ item.url }}">{{ item.title }}</a>
                     </li>
                 {% endfor %}
             </ul>
