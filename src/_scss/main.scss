@@ -124,20 +124,22 @@ ol ol ul, ol ul ul, ul ol ul, ul ul ul {
 
 // Internal
 .internal .lv-hero {
-    min-height: rem-calc(170);
+    // min-height: rem-calc(170);
 
     .lv-hero-header h1,
     .lv-hero-header h2 {
-        position: relative;
-        top: rem-calc(100);
+        // position: relative;
+        // top: rem-calc(100);
+        margin: 0;
+        padding: rem-calc(25 0);
         color: white;
         font-size: rem-calc(28);
 
         @media #{$medium-up} {
             font-size: $h1-font-size;
-            top: rem-calc(90);
+            // top: rem-calc(90);
+            padding: rem-calc(90 0 20 0);
         }
-
     }
 }
 
