@@ -30,6 +30,12 @@
 .accordion,
 .accordion .content {
     margin-bottom: 0;
+
+    h2 {
+        @media #{$medium-up} {
+            font-size: rem-calc(22);
+        }
+    }
 }
 
 .accordion-navigation {
