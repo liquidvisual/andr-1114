@@ -32,8 +32,10 @@ removeHover(); // Remove hover on touch
 var touchEvent = TOUCH_ENABLED ? "touchstart" : "click";
 
 //Trigger hamburger by touch on mobile - this eliminates glitch with FastClick.js
-$(".hamburger").css({"visibility": "visible"}).bind(touchEvent, function() {
-    $("#off-canvas-menu").trigger("open.mm");
+$(".hamburger").css({"visibility": "visible"}).bind(touchEvent, function(e) {
+    e.preventDefault();
+    $("#off-canvas-menu").removeClass('hide').trigger("open.mm");
+    console.log("The hamburger is triggering");
 });
 
 if (TOUCH_ENABLED) {
