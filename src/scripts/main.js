@@ -29,13 +29,12 @@ removeHover(); // Remove hover on touch
 // Kickstart Foundation / Touch Conditionals
 //-----------------------------------------------------------------
 
-var touchEvent = TOUCH_ENABLED ? "touchstart" : "click";
+//var touchEvent = TOUCH_ENABLED ? "touchstart" : "click"; // Keep as reference
 
-//Trigger hamburger by touch on mobile - this eliminates glitch with FastClick.js
-$(".hamburger").css({"visibility": "visible"}).bind(touchEvent, function(e) {
+// Trigger hamburger
+$(".header-mobile-menu").bind("click", function(e) {
     e.preventDefault();
     $("#off-canvas-menu").removeClass('hide').trigger("open.mm");
-    console.log("The hamburger is triggering");
 });
 
 if (TOUCH_ENABLED) {

@@ -78,14 +78,14 @@ $header-height-large: rem-calc(230);
 // Hamburger
 //=========================================
 
-.header .hamburger {
+.header-mobile-menu .hamburger {
     @include hamburger($width: 26px, $thickness: 5px, $color: black);
 
     top: rem-calc(-26); // magic
     right: 15px;
+    cursor: pointer;
 
     @media #{$medium-up} {
         top: rem-calc(120);
     }
 }
-
