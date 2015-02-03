@@ -28,6 +28,9 @@
 
         @media #{$medium-up} {
             padding: rem-calc(0 20 20 0);
+
+            // Fix problem of unpredictable text. Unfortunately have to specify width instead of letting it be driven by image and content
+            width: rem-calc(212); // optimal viewing size
         }
 
         img {
@@ -37,7 +40,7 @@
 
     .media-body {
         color: $body-font-color;
-        max-width: 768px;
+        // max-width: 768px; This didn't work for tiny headings and paragraphs
 
         p {
             margin-bottom: 0; // let HR decide its own padding
