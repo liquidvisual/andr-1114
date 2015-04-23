@@ -24,7 +24,8 @@
 
 .topbar ul {
     margin: 0;
-    font-size: rem-calc(17);
+    // font-size: rem-calc(17);
+    font-size: rem-calc(16); // added 8.04.15
 
     @media #{$medium-up} {
         width: 100%;

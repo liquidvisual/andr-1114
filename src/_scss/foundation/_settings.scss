@@ -155,13 +155,15 @@ $small-breakpoint:   40em;
 $medium-breakpoint:  48em;
 $large-breakpoint:   64em;
 $xlarge-breakpoint:  70.625em;
-$xxlarge-breakpoint: 70.688em;
+// $xxlarge-breakpoint:  70.625em;
+$xxlarge-breakpoint: 86.875em; // 1562
 
 $small-range: (0em, 47.938em);   // 0-767
 $medium-range: (48em, 63.938em); // 768 - 1023
 $large-range: (64em, 70.563em);  // 1024 - 1129
 $xlarge-range: (70.625em); // 1130
-$xxlarge-range: (70.625em); // 1130
+// $xxlarge-range: (70.625em); // 1130
+$xxlarge-range: (86.875em); // 1562
 
 $screen: "only screen";
 

@@ -1,0 +1,85 @@
+---
+layout: internal
+side_nav_top_level_id: 3
+side_nav_second_level_id: 2
+hero_header_override: Areas of Practice
+child_page: true
+---
+
+{% assign settings = site.data.settings %}
+{% assign sub_level = site.data.sitemap[3].children[1].children %}
+{% assign people = site.data.people %}
+
+<div class="section">
+	<div class="row outer-row">
+		<div class="columns">
+			<h1>{{ page.title }}</h1>
+		</div>
+	</div> <!-- .outer-row -->
+</div> <!-- .section -->
+
+<div class="row outer-row">
+	<div class="large-8 columns">
+
+		<!-- Image & Content -->
+		<div class="section">
+			<div class="image-left">
+				<img width="380" src="http://placehold.it/380x253/" alt="...">
+			</div>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div> <!-- .section -->
+
+		<hr>
+
+	</div> <!-- .columns -->
+
+	<!-- SIDEBAR -->
+	<div class="large-4 columns">
+		<aside class="sidebar">
+
+			<h3 class="button sidebar-heading expand">You may be interested in...</h3>
+
+			<a href="#" target="_blank" class="button grey-button expand">Related link goes here</a>
+			<a href="#" target="_blank" class="button grey-button expand">Link with a longer title can go here, Lorem ipsum dolor sit amet, consectetuer elit</a>
+			<a href="#" target="_blank" class="button grey-button expand">Related link goes here</a>
+			<a href="#" target="_blank" class="button grey-button expand">Related link goes here</a>
+
+			<br><br><br>
+
+			<div class="button sidebar-heading no-margin expand">
+				<h3>Get in touch</h3>
+				<p>Phone {{settings.phone}} or fill out the form below and one of our team will contact you.</p>
+			</div>
+
+			{% include snippets/simple_form.html %}
+
+		</aside>
+	</div>
+
+</div> <!-- .outer-row -->

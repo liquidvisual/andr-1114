@@ -47,7 +47,7 @@ ol ol ul, ol ul ul, ul ol ul, ul ul ul {
     @media (min-width: $medium-breakpoint)  { max-width: $medium-breakpoint + 5.000em; }
     @media (min-width: $large-breakpoint)   { max-width: $large-breakpoint  + 5.000em; }
     @media (min-width: $xlarge-breakpoint)  { max-width: $xlarge-breakpoint + 5.000em; }
-    // @media (min-width: $xxlarge-breakpoint)  { max-width: $xxlarge-breakpoint + 5.000em; }
+    @media (min-width: $xxlarge-breakpoint)  { max-width: $xxlarge-breakpoint + 5.000em; }
 }
 
 //Add side padding to the page above small
@@ -443,7 +443,30 @@ div.recaptcha_input_area input {
 // Special / Misc - Refactor Later
 //-----------------------------------------------------------------
 
-.no-margin {
+.lv-super .sidebar-heading {
+    text-align: left;
+    padding: rem-calc(20 15);
+    margin-bottom: rem-calc(8);
+    cursor: default;
+
+    h1, h2, h3, h4, h5, h6 {
+        color: white;
+        margin-top: 0;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+}
+
+.lv-super .sidebar-form {
+    border: 1px solid #ddd;
+    border-top: 0;
+    padding: rem-calc(20 15);
+}
+
+.no-margin,
+.lv-super .sidebar-heading.no-margin {
     margin: 0;
 }
 
@@ -455,10 +478,18 @@ a {
     @include transition();
 }
 
+.image-left {
+    margin: rem-calc(0 25 25 0);
+    float: left;
+}
+
 .image-right {
     margin: rem-calc(0 0 25 25);
     float: right;
+}
 
+.image-left,
+.image-right {
     @media #{$small-only} {
         width: 100%;
     }
@@ -487,6 +518,26 @@ a {
     padding-bottom: rem-calc(15);
     margin-bottom: rem-calc(30);
 }
+
+//=========================================
+// Jono Styles
+//=========================================
+
+/* ReCaptcha Iframe FIX */
+iframe { display: none; }
+header iframe,
+section iframe,
+footer iframe,
+div iframe { display:inline; }
+
+// .section > ul,
+// .section > ol { margin-left: 2.1rem; }
+
+.news2column { width: 100%; border: 0;}
+.news2column td { width: 50%; vertical-align:top; padding-left: 2rem; padding-right: 0; }
+.news2column td:first-child { padding-right: 2rem; padding-left: 0;}
+.news2column td img{ width: 100%; }
+.news2column td p{ font-size: 120%; }
 
 //-----------------------------------------------------------------
 // IE8
