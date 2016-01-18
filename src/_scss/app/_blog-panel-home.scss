@@ -22,13 +22,9 @@
         padding: rem-calc(15 25 0 25); // removed bottom
     }
 
-    @media #{$large-up} {
-        height: rem-calc(440);
+    @media #{$xlarge-up} {
         margin-top: 0;
-    }
-
-    @media #{$xxlarge-up} {
-        height: rem-calc(494);
+        height: rem-calc(494); // magic sweet spot
     }
 }
 
@@ -38,16 +34,17 @@
 // Entries hidden at various breakpoints
 //-----------------------------------------------------------------
 
-.blog-panel-blog ul li:nth-child(3),
-.blog-panel-news ul li:nth-child(n+2) {
-    @media #{$large-up} {
-        display: none;
+.blog-panel-blog {
+    @media #{$medium-up} {
+        width: 62%;
+    }
+    @media #{$xlarge-up} {
+        width: auto;
     }
 }
 
-.blog-panel-blog ul li:nth-child(n+3),
-.blog-panel-news ul li:nth-child(n+2) {
-    @media #{$small-only} {
+.blog-panel-blog ul li:nth-child(3) {
+    @media #{$medium-up} {
         display: none;
     }
 }
@@ -57,7 +54,6 @@
 //-----------------------------------------------------------------
 
 .blog-panel-home .blog-panel-news {
-
     position: relative;
     left: -23px;
     width: calc(100% + 23px * 2);
@@ -65,14 +61,35 @@
     background: #CC253A;
 
     //=========================================
+    // Portrait
+    //=========================================
+
+    @media #{$medium-up} {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: auto;
+        width: 36%;
+        overflow: hidden;
+    }
+
+    //=========================================
     // Landscape
     //=========================================
 
     @media #{$large-up} {
-        position: absolute;
-        bottom: 0;
-        left: 0;
+
+    }
+
+    //=========================================
+    // Desktop
+    //=========================================
+
+    @media #{$xlarge-up} {
         width: 100%;
+        top: auto;
+        bottom: 0;
     }
 
     //=========================================
@@ -80,25 +97,10 @@
     //=========================================
 
     h3 {
-        @media (min-width: 1024px) and (max-width: 1389px) { // hacky
-            border-bottom: 0;
-            padding: 0;
-        }
-
         .fa {
             top: 5px;
             right: -10px;
             font-size: rem-calc(29);
-        }
-    }
-
-    //=========================================
-    // Hide entries where it can't fit
-    //=========================================
-
-    ul, .button {
-        @media (min-width: 1024px) and (max-width: 1389px) { // hacky
-            display: none;
         }
     }
 
@@ -131,8 +133,8 @@
 
 .blog-panel-home ul {
     @include block-grid(1);
-    @media #{$medium-up} { @include block-grid(3); }
-    @media #{$large-up}  { @include block-grid(1); }
+    @media #{$medium-up} { @include block-grid(2); }
+    @media #{$xlarge-up}  { @include block-grid(1); }
 
     li {
         padding-bottom: 0;

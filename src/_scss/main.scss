@@ -65,13 +65,13 @@ ol ol ul, ol ul ul, ul ol ul, ul ul ul {
 
 // to close the gap on the promo-tiles and blog panel
 .collapse-left {
-    @media #{$large-up} {
+    @media #{$xlarge-up} {
         padding-left: 0;
     }
 }
 
 .collapse-right {
-    @media #{$large-up} {
+    @media #{$xlarge-up} {
         padding-right: 0;
     }
 }
