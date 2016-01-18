@@ -47,6 +47,11 @@
     @media #{$large-up} {
         width: rem-calc(122);
     }
+
+    // New added to fit news pane (18.01.16)
+    @media #{$xxlarge-up} {
+        width: rem-calc(138);
+    }
 }
 
 //=========================================

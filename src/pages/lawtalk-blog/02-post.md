@@ -1,6 +1,6 @@
 ---
 layout: internal/blog_item
-title: "What's the Deal with Airline Peanuts?"
+title: "What's the Deal with Airline Peanuts? On two lines."
 permalink: /lawtalk-blog/whats-the-deal-with-airline-peanuts/
 type: blog_item
 date: 04 October 2014

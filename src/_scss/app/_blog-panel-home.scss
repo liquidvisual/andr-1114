@@ -1,7 +1,7 @@
 @import "foundation/settings";
 @import "foundation/components/block-grid";
 /*
-    BLOG-PANEL.CSS
+    BLOG-PANEL-HOME.CSS
 
     - Last updated: 18.01.16
     - hello@liquidvisual.com
@@ -10,45 +10,117 @@
 // Variables
 //-----------------------------------------------------------------
 //-----------------------------------------------------------------
-// Blog Section (Internal)
-//-----------------------------------------------------------------
-
-.blog-section {
-    background: $secondary-color;
-
-    @media #{$medium-up} {
-        padding: rem-calc(20 0);
-    }
-}
-
-//-----------------------------------------------------------------
 // Blog Panel
 //-----------------------------------------------------------------
 
-.blog-panel {
+.blog-panel-home {
     position: relative;
     background: rgba($primary-color, 0.7);
     margin-top: rem-calc(30); // a bit hacky
 
     .inner {
-        padding: rem-calc(15 25 25 25);
+        padding: rem-calc(15 25 0 25); // removed bottom
     }
 
     @media #{$large-up} {
         height: rem-calc(440);
         margin-top: 0;
     }
+
+    @media #{$xxlarge-up} {
+        height: rem-calc(494);
+    }
 }
 
-// Internal
-.internal .blog-panel {
-    background: inherit;
-    height: auto;
+//-----------------------------------------------------------------
+// News and Blog
+//
+// Entries hidden at various breakpoints
+//-----------------------------------------------------------------
 
-    .inner {
-        padding: 0;
-        @media #{$medium-up} {
-            padding: rem-calc(15 25 25 25);
+.blog-panel-blog ul li:nth-child(3),
+.blog-panel-news ul li:nth-child(n+2) {
+    @media #{$large-up} {
+        display: none;
+    }
+}
+
+.blog-panel-blog ul li:nth-child(n+3),
+.blog-panel-news ul li:nth-child(n+2) {
+    @media #{$small-only} {
+        display: none;
+    }
+}
+
+//-----------------------------------------------------------------
+// Blog Panel News (NEW)
+//-----------------------------------------------------------------
+
+.blog-panel-home .blog-panel-news {
+
+    position: relative;
+    left: -23px;
+    width: calc(100% + 23px * 2);
+    padding: rem-calc(15 25 25 25);
+    background: #CC253A;
+
+    //=========================================
+    // Landscape
+    //=========================================
+
+    @media #{$large-up} {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    //=========================================
+    // Heading
+    //=========================================
+
+    h3 {
+        @media (min-width: 1024px) and (max-width: 1389px) { // hacky
+            border-bottom: 0;
+            padding: 0;
+        }
+
+        .fa {
+            top: 5px;
+            right: -10px;
+            font-size: rem-calc(29);
+        }
+    }
+
+    //=========================================
+    // Hide entries where it can't fit
+    //=========================================
+
+    ul, .button {
+        @media (min-width: 1024px) and (max-width: 1389px) { // hacky
+            display: none;
+        }
+    }
+
+    //=========================================
+    // Text
+    //=========================================
+
+    h3, p {
+        margin-bottom: 0;
+    }
+
+    p {
+        font-size: rem-calc(13);
+        font-weight: bold;
+        line-height: 1.5;
+        color: lighten($primary-color, 25%);
+    }
+
+    .blog-article {
+        @media #{$large-up} {
+            border-bottom: 0;
+            padding-bottom: 0;
         }
     }
 }
@@ -57,7 +129,7 @@
 // Block Grid
 //-----------------------------------------------------------------
 
-.blog-panel ul {
+.blog-panel-home ul {
     @include block-grid(1);
     @media #{$medium-up} { @include block-grid(3); }
     @media #{$large-up}  { @include block-grid(1); }
@@ -68,16 +140,9 @@
 }
 
 // Homepage - divider is vertically centered
-.homepage .blog-panel li {
+.homepage .blog-panel-home li {
     @media #{$medium-up} {
         padding-bottom: 0;
-    }
-}
-
-// Internal
-.internal .blog-panel ul {
-    @media #{$large-up} {
-        @include block-grid(3);
     }
 }
 
@@ -85,7 +150,7 @@
 // Header - Speech Bubble Icon
 //-----------------------------------------------------------------
 
-.blog-panel h3 {
+.blog-panel-home h3 {
     position: relative;
     font-size: rem-calc(25);
     color: white;
@@ -106,61 +171,28 @@
     }
 }
 
-.internal .blog-panel i {
-    position: static;
-}
-
-//-----------------------------------------------------------------
-// Internal
-//-----------------------------------------------------------------
-
-.internal .blog-panel h3 {
-    border-bottom: 1px solid #474747;
-    padding-bottom: rem-calc(10);
-
-    a {
-        position: absolute;
-        top: rem-calc(15);
-        right: 0;
-        color: white;
-        font-size: rem-calc(13);
-
-        i {
-            font-size: rem-calc(13);
-        }
-    }
-}
-
 //=========================================
 // Blog Panel Button
 //=========================================
 
-.blog-panel .button {
-    background: #CC253A;
-    padding-right: rem-calc(25);
+.blog-panel-home .button {
+    background: transparent !important;
+    // background: #CC253A;
+    // padding-right: rem-calc(25);
+    padding: rem-calc(17 0 26 0);
     text-transform: uppercase;
     margin-bottom: 0;
     font-size: rem-calc(12);
     font-weight: bold;
-
-    @media #{$large-up} {
-        position: absolute;
-        bottom: 0;
-    }
 }
 
-// Internal
-.internal .blog-panel .button {
-    background: none;
+.blog-panel-news .button {
+    padding-bottom: 0;
 
-    @media #{$medium-up} {
-        position: absolute;
-        top: rem-calc(20);
-        right: rem-calc(10);
-        width: auto;
-        background: none;
-        display: inline-block;
-        padding-right: rem-calc(15);
+    // Not included in news pane on desktop
+
+    @media #{$large-up} {
+        display: none;
     }
 }
 
@@ -196,24 +228,10 @@
     }
 }
 
-.blog-panel li:last-child .blog-article {
+.blog-panel-home li:last-child .blog-article {
     // border-bottom: 0;
-}
-
-// Internal
-.internal .blog-article {
-    border: 0;
-
-    date {
-        color: #848383;
-    }
 }
 
 //=========================================
 //
 //=========================================
-
-
-
-
-

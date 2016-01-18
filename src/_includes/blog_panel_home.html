@@ -1,0 +1,42 @@
+{% assign settings = site.data.settings %}
+{% assign blog_entries = site.pages | where: "type", "blog_item" %}
+
+<div class="blog-panel-home">
+	<div class="inner">
+
+		<!-- BLOG PANE -->
+		<div class="blog-panel-blog">
+			<a href="/lawtalk-blog/"><h3><i class="fa fa-comment"></i> LawTalk Blog</h3></a>
+			<ul>
+				{% for item in blog_entries limit: 3 %}
+					<li>
+						<!-- TRUNCATE (Max 65 chars) -->
+						<article class="blog-article">
+							<a href="{{ item.url }}">{{ item.title | truncate: 65 }} &nbsp;<i class="fa fa-angle-right"></i></a>
+							<date>{{ item.date }}</date>
+						</article>
+					</li>
+				{% endfor %}
+			</ul>
+			<a class="button expand text-right" href="/lawtalk-blog/">More Blog Posts <i class="fa fa-angle-right"></i></a>
+		</div>
+
+		<!-- NEWS PANE -->
+		<div class="blog-panel-news">
+			<a href="/news/"><h3><i class="fa fa-newspaper-o"></i> Latest News</h3></a>
+			<ul>
+				{% for item in blog_entries limit: 3 %}
+					<li>
+						<!-- TRUNCATE (Max 65 chars) -->
+						<article class="blog-article">
+							<a href="{{ item.url }}">{{ item.title | truncate: 65 }} &nbsp;<i class="fa fa-angle-right"></i></a>
+							{{ item.content | truncate: 65 }}
+						</article>
+					</li>
+				{% endfor %}
+			</ul>
+			<a class="button expand text-right" href="/news/">More News <i class="fa fa-angle-right"></i></a>
+		</div>
+
+	</div> <!-- .inner -->
+</div> <!-- .blog-panel-home -->

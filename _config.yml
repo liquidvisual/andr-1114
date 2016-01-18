@@ -5,6 +5,8 @@
 
 name: yeoman-jekyll-foundation-test
 
+mode: dev-mode
+
 # Grunt handles images and assets.
 exclude: ['img', 'css', 'scripts', 'fonts',
           '**.png', '**.jpg', '**.jpeg', '**.gif', '**.webp', '**.svg', '**.ico']
