@@ -120,7 +120,7 @@
     }
 
     .blog-article {
-        @media #{$large-up} {
+        @media #{$medium-up} {
             border-bottom: 0;
             padding-bottom: 0;
         }
@@ -211,7 +211,7 @@
         border: 0;
     }
 
-    @media #{$large-up} {
+    @media #{$xlarge-up} {
         border-bottom: 1px solid lighten($primary-color, 10%);
     }
 
