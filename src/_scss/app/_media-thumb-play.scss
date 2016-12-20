@@ -1,0 +1,88 @@
+@import "foundation/settings";
+/*
+    MEDIA-THUMB-PLAY.CSS
+
+    - updated: 20.12.16
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// MEDIA PLAY
+//-----------------------------------------------------------------
+
+.media-thumb {
+    position: relative !important;
+    margin: rem-calc(0 0 46 0); // override F5
+    cursor: pointer;
+    background: #484445;
+
+    a {
+        display: block;
+    }
+
+    .img {
+        opacity: 0.92;
+        transition: opacity ease 300ms;
+    }
+
+    .media-thumb-caption {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding: rem-calc(15 20);
+        font-weight: bold;
+        background: rgba(black, 0.6);
+        color: white;
+        cursor: pointer;
+        pointer-events: none;
+    }
+
+    &:hover .img {
+        opacity: 1;
+    }
+}
+
+//-----------------------------------------------------------------
+// PLAY ICON
+//-----------------------------------------------------------------
+
+.media-thumb-play {
+
+    .fa-youtube-play {
+        position: absolute;
+        top: calc(50% - 70px/2 - 10px);
+        width: 100%;
+        text-align: center;
+        font-size: rem-calc(70);
+        color: $primary-color;
+        z-index: 1;
+        transition: color 300ms ease;
+
+        @media #{$large-only} {
+            top: 5px;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 14px;
+            left: calc(50% - 20px);
+            width: 40px;
+            height: 40px;
+            background: white;
+            border-radius: 100%;
+            z-index: -1;
+        }
+    }
+}
+
+//=========================================
+//
+//=========================================
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+

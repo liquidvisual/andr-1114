@@ -306,11 +306,24 @@ button {
     top: 1px;
   }
 }
+
+// Added by request 23.02.15
 .mfp-close-btn-in {
   .mfp-close {
-    color: $mfp-inner-close-icon-color;
+    color: $mfp-inner-close-icon-color !important;
+    // font-size: rem-calc(40);
+    cursor: pointer;
+
+    &:after {
+      content: "Close";
+      font-size: rem-calc(16);
+      position: relative;
+      top: -4px;
+      padding-left: 2px;
+    }
   }
 }
+
 .mfp-image-holder,
 .mfp-iframe-holder {
   .mfp-close {
@@ -648,40 +661,40 @@ button {
 
 .mfp-arrow:before,
 .mfp-arrow .mfp-b {
-	border-top-width: 21px;
-	border-bottom-width: 21px;
+  border-top-width: 21px;
+  border-bottom-width: 21px;
 }
 
 .mfp-arrow-left:before,
 .mfp-arrow-left .mfp-b {
-	margin-left: 25px;
-	border-right: 27px solid $primary-color; /* this */
+  margin-left: 25px;
+  border-right: 27px solid $primary-color; /* this */
 }
 
 .mfp-arrow-right:before,
 .mfp-arrow-right .mfp-b {
-	border-left: 27px solid $primary-color;
+  border-left: 27px solid $primary-color;
 }
 
 /* inner arrows */
 
 .mfp-arrow:after,
 .mfp-arrow .mfp-a {
-	border-top-width: 17px;
-	border-bottom-width: 17px;
-	top: 4px;
+  border-top-width: 17px;
+  border-bottom-width: 17px;
+  top: 4px;
 }
 
 .mfp-arrow-left:after,
 .mfp-arrow-left .mfp-a {
-	border-right: 22px solid white; /* this inner 17 */
-	margin-left: 28px;
+  border-right: 22px solid white; /* this inner 17 */
+  margin-left: 28px;
 }
 
 .mfp-arrow-right:after,
 .mfp-arrow-right .mfp-a {
-	border-left: 22px solid white;
-	margin-left: 37px;
+  border-left: 22px solid white;
+  margin-left: 37px;
 }
 
 .mfp-arrow-left { left: 0; }

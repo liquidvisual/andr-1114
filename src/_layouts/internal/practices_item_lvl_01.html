@@ -37,6 +37,17 @@ child_page: true
 			{{ content }}
 		</div> <!-- .section -->
 
+		<!-- POPUP VIDEO -->
+		<figure class="media-thumb media-thumb-muted media-thumb-play hidden-for-large-up">
+			<a class="popup-youtube" href="https://www.youtube.com/watch?v=VwbM7H_e4Lg" title="Play">
+				<i class="fa fa-youtube-play"></i>
+				<span class="img">
+					<img width="100%" src="http://placehold.it/402x250" alt="Video Thumbnail">
+				</span>
+			</a>
+			<figcaption class="media-thumb-caption">The four steps to property settlement etc etc etc etc etc etc etc etc</figcaption>
+		</figure>
+
 		<!-- Second Level -->
 		{% for item in sub_level %}
 			<a href="#" class="button grey-button expand">{{ item.title }}</a>
@@ -74,6 +85,18 @@ child_page: true
 	<!-- SIDEBAR -->
 	<div class="large-4 columns">
 		<aside class="sidebar">
+
+			<!-- POPUP VIDEO -->
+			<figure class="media-thumb media-thumb-muted media-thumb-play hidden-for-medium-down">
+				<a class="popup-youtube" href="https://www.youtube.com/watch?v=VwbM7H_e4Lg" title="Play">
+					<i class="fa fa-youtube-play"></i>
+					<span class="img">
+						<img width="100%" src="http://placehold.it/402x250" alt="Video Thumbnail">
+					</span>
+				</a>
+				<figcaption class="media-thumb-caption">The four steps to property settlement etc etc etc etc etc etc etc etc</figcaption>
+			</figure>
+
 			{% include snippets/side_nav.html %}
 		</aside>
 	</div>
