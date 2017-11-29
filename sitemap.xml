@@ -1,148 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  
-  
-  <url>
-    <loc>/about/news/thats-pie-country-they-do-a-lot-of-baking-up-there/</loc>
-    <lastmod>2016-12-20T11:42:17+11:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>/lawtalk-blog/thats-pie-country-they-do-a-lot-of-baking-up-there/</loc>
-    <lastmod>2016-12-20T11:42:17+11:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>/about/news/lawtalk-blog/whats-the-deal-with-airline-peanuts/</loc>
-    <lastmod>2016-12-20T11:42:17+11:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>/lawtalk-blog/whats-the-deal-with-airline-peanuts/</loc>
-    <lastmod>2016-12-20T11:42:17+11:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>/about/news/lawtalk-blog/nothings-finer-than-being-in-your-diner/</loc>
-    <lastmod>2016-12-20T11:42:17+11:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>/lawtalk-blog/nothings-finer-than-being-in-your-diner/</loc>
-    <lastmod>2016-12-20T11:42:17+11:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>/contact/</loc>
-    <lastmod>2016-12-20T11:42:17+11:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>/areas-of-practice/personal-injury/motor-vehicle-accidents/for-those-injured-in-accidents-before-1-july-2013/</loc>
-    <lastmod>2016-12-20T11:42:17+11:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>/areas-of-practice/personal-injury/</loc>
-    <lastmod>2016-12-20T11:42:17+11:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>/lawtalk-blog/</loc>
-    <lastmod>2016-12-20T11:42:17+11:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>/about/</loc>
-    <lastmod>2016-12-20T11:42:17+11:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>/</loc>
-    <lastmod>2016-12-20T11:42:17+11:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
-  <url>
-    <loc>/about/community-support/</loc>
-    <lastmod>2016-12-20T11:42:17+11:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>/about/news/</loc>
-    <lastmod>2016-12-20T11:42:17+11:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>/areas-of-practice/</loc>
-    <lastmod>2016-12-20T11:42:17+11:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>/landing/</loc>
-    <lastmod>2016-12-20T11:42:17+11:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>/areas-of-practice/personal-injury/motor-vehicle-accidents/</loc>
-    <lastmod>2016-12-20T11:42:17+11:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>/our-people/person/</loc>
-    <lastmod>2016-12-20T11:42:17+11:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>/our-people/</loc>
-    <lastmod>2016-12-20T11:42:17+11:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>/styleguide/</loc>
-    <lastmod>2016-12-20T11:42:17+11:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  
-  
+<url>
+<loc>/lawtalk-blog/thats-pie-country-they-do-a-lot-of-baking-up-there/</loc>
+</url>
+<url>
+<loc>/about/news/thats-pie-country-they-do-a-lot-of-baking-up-there/</loc>
+</url>
+<url>
+<loc>/lawtalk-blog/whats-the-deal-with-airline-peanuts/</loc>
+</url>
+<url>
+<loc>/about/news/lawtalk-blog/whats-the-deal-with-airline-peanuts/</loc>
+</url>
+<url>
+<loc>/lawtalk-blog/nothings-finer-than-being-in-your-diner/</loc>
+</url>
+<url>
+<loc>/about/news/lawtalk-blog/nothings-finer-than-being-in-your-diner/</loc>
+</url>
+<url>
+<loc>/contact/</loc>
+</url>
+<url>
+<loc>/areas-of-practice/personal-injury/motor-vehicle-accidents/for-those-injured-in-accidents-before-1-july-2013/</loc>
+</url>
+<url>
+<loc>/about/news/</loc>
+</url>
+<url>
+<loc>/about/</loc>
+</url>
+<url>
+<loc>/areas-of-practice/</loc>
+</url>
+<url>
+<loc>/about/community-support/</loc>
+</url>
+<url>
+<loc>/</loc>
+</url>
+<url>
+<loc>/areas-of-practice/personal-injury/</loc>
+</url>
+<url>
+<loc>/lawtalk-blog/</loc>
+</url>
+<url>
+<loc>/landing/</loc>
+</url>
+<url>
+<loc>/areas-of-practice/personal-injury/motor-vehicle-accidents/</loc>
+</url>
+<url>
+<loc>/our-people/person/</loc>
+</url>
+<url>
+<loc>/our-people/</loc>
+</url>
+<url>
+<loc>/styleguide/</loc>
+</url>
 </urlset>
