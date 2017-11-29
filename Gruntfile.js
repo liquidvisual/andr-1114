@@ -24,7 +24,7 @@ module.exports = function (grunt) {
       app: 'src',
       dist: 'dist',
       assets: 'dist/assets',
-      port: '9292',
+      port: '9000',
       // git: 'git@github.com:liquidvisual/andr-1114.git',
       git: 'https://github.com/liquidvisual/andr-1114.git',
       // IMPORTANT: Set a baseurl on line 364
@@ -74,7 +74,7 @@ module.exports = function (grunt) {
           codeSync: true,
           // Open the site in Chrome & Firefox
           // browser: ["google chrome", "firefox"]
-          port: 9292,
+          port: '<%= yeoman.port %>',
           host: '0.0.0.0',
           server: {
             baseDir: [

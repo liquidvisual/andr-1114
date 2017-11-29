@@ -1,7 +1,7 @@
 /*
     LIQUIDVISUAL TOPBAR :: A Personal Framework
 
-    - updated: 09.12.14
+    - updated: 29.11.17, 09.12.14
     - liquidvisual.com
 
     - Notes -
@@ -11,15 +11,10 @@
 // Variables
 //-----------------------------------------------------------------
 
-
-//-----------------------------------------------------------------
-// Variables
-//-----------------------------------------------------------------
-
 .topbar {
-    z-index: 1;
     width: 100%;
     text-align: right;
+    z-index: 2;
 }
 
 .topbar ul {
@@ -29,50 +24,29 @@
 
     @media #{$medium-up} {
         width: 100%;
-        // display: table;
-
-    }
-
-    @media #{$xlarge-up} {
-
     }
 }
 
 .topbar li {
     display: inline-block;
-    // vertical-align: middle;
-
-    @media #{$xlarge-up} {
-        // display: table-cell;
-    }
+    position: relative;
 }
 
-// .topbar li.has-dropdown a:after {
-//     content: "\f0d7";
-//     font-family: "FontAwesome";
-//     padding-left: rem-calc(5);
-// }
-
 .topbar a {
-    @extend .transition;
     display: block;
-    text-align: center;
     padding: rem-calc(10 15);
-    // color: $body-font-color;
+    text-align: center;
     color: #404141;
+    transition: all .2s linear;
 }
 
 .topbar a:active,
 .topbar .active > a {
-    // background: darken($secondary-color, 10%);
     background: #EFEEEE;
-    // border-radius: $global-radius;
 }
 
 .no-touch .topbar a:hover {
-    // background: #222;
     background: #DCDBDB;
-    // background: rgba(0, 0, 0, .5);
 }
 
 //=========================================
@@ -96,9 +70,10 @@
 }
 
 .topbar .dropdown {
-    @extend .transition;
+    transition: all .2s linear;
     display: block;
     position: absolute;
+    top: 0;
     opacity: 0;
     height: 0; // so hit areas aren't triggered
     overflow: hidden; // so hit areas aren't triggered
@@ -144,19 +119,5 @@
 }
 
 //-----------------------------------------------------------------
-// Transitions
+//
 //-----------------------------------------------------------------
-
-.transition {
-    -webkit-transition: all .2s linear;
-       -moz-transition: all .2s linear;
-         -o-transition: all .2s linear;
-        -ms-transition: all .2s linear;
-            transition: all .2s linear;
-
-    -webkit-transition-property: opacity, color, background;
-       -moz-transition-property: opacity, color, background;
-         -o-transition-property: opacity, color, background;
-        -ms-transition-property: opacity, color, background;
-            transition-property: opacity, color, background;
-}
