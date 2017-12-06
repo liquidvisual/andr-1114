@@ -3,14 +3,14 @@
 /*
     HEADER.CSS
 
-    - updated: 03.12.14
+    - updated: 06.12.17, 03.12.14
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
 // Variables
 //-----------------------------------------------------------------
 
-$header-height: rem-calc(140);
+$header-height: rem-calc(180);
 $header-height-medium: rem-calc(160);
 $header-height-large: rem-calc(230);
 
@@ -34,11 +34,11 @@ $header-height-large: rem-calc(230);
 
     .logo {
         position: relative;
-        top: rem-calc(5);
+        top: rem-calc(50);
         transition: none;
 
         img {
-            width: rem-calc(160);
+            width: rem-calc(150);
 
             @media #{$medium-up} {
                 width: rem-calc(186);
@@ -61,9 +61,39 @@ $header-height-large: rem-calc(230);
 // Phone
 //=========================================
 
+// Hack to overcome Foundation's awful decision to set columns to be relative
+.is-special-static {
+    position: static;
+    @media #{$medium-up} {
+        position: relative;
+    }
+}
+
+.header-phone {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: rem-calc(40);
+    line-height: rem-calc(38);
+    padding: rem-calc(0 15);
+    background: #edeeef;
+    text-align: right;
+
+    @media #{$medium-up} {
+        position: relative;
+        height: auto;
+        top: rem-calc(20);
+        padding: 0;
+        background: none;
+    }
+}
+
+//=========================================
+
 .header .phone {
     position: relative;
-    top: rem-calc(20);
+    // top: rem-calc(20);
     color: #626161;
 
     i {
@@ -82,8 +112,9 @@ $header-height-large: rem-calc(230);
 .header-mobile-menu .hamburger {
     @include hamburger($width: 26px, $thickness: 5px, $color: black);
 
-    top: rem-calc(-26); // magic
-    right: 15px;
+    top: rem-calc(140); // magic
+    // top: rem-calc(-26); // magic
+    right: rem-calc(15);
     cursor: pointer;
 
     @media #{$medium-up} {

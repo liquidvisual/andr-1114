@@ -7,20 +7,21 @@
 {% assign logo = "/img/content/logo.png" %}
 
 <div class="row outer-row">
+
     <div class="medium-6 columns">
         <a class="logo" href="/" title="{{ settings.seo_title }}" itemprop="url">
         <img width="199" src="{{ logo }}" alt="{{ settings.company_title }}" itemprop="logo"></a>
     </div>
-    <div class="medium-6 columns text-right">
+    <div class="medium-6 columns text-right is-special-static">
 
-        <!-- Phone -->
-        <div class="show-for-medium-up">
+        <!-- PHONE -->
+        <div class="header-phone">
             <a href="tel:{{ settings.phone }}" class="phone">
                 <i class="fa fa-mobile fa-rotate-270"></i>&nbsp; FREE CALL {{ settings.phone }}
             </a>
         </div>
 
-        <!-- Hamburger -->
+        <!-- HAMBURGER -->
         <div class="header-mobile-menu hide-for-large-up">
             <span class="hamburger"><span class="hamburger-icon"></span></span>
         </div>
