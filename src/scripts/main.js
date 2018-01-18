@@ -116,6 +116,22 @@ $(document).keypress(function(event) {
     }
     return true;
 });
+
+//-----------------------------------------------------------------
+// HEADER PHONE TOPBAR DRAW (18.01.18)
+//-----------------------------------------------------------------
+
+$('[data-header-body-trigger]').click(function(e){
+    var $this = $(this);
+    var $icon = $(".fa-angle-down", $this);
+
+    e.preventDefault();
+
+    $('[data-header-body]').toggleClass('is-open');
+
+    $icon.toggleClass('fa-flip-vertical');
+});
+
 //==================================================
 //
 //==================================================

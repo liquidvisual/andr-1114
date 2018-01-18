@@ -3,7 +3,7 @@
 /*
     HEADER.CSS
 
-    - updated: 06.12.17, 03.12.14
+    - updated: 03.12.14, 06.12.17, 18.01.18
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -11,17 +11,18 @@
 //-----------------------------------------------------------------
 
 $header-height: rem-calc(180);
-$header-height-medium: rem-calc(160);
-$header-height-large: rem-calc(230);
+$header-height-medium: rem-calc(200); //rem-calc(160);
+$header-height-large: rem-calc(260); //rem-calc(230);
 
 //-----------------------------------------------------------------
-// Header
+// HEADER [LOCKED]
 //-----------------------------------------------------------------
 
 .header {
     position: relative;
     height: $header-height;
     padding: rem-calc(20 0);
+    // z-index: 10; // [LOCKED] - over nav
 
     @media #{$medium-up} {
         height: $header-height-medium;
@@ -31,93 +32,197 @@ $header-height-large: rem-calc(230);
     @media #{$large-up} {
         height: $header-height-large;
     }
+}
+
+//-----------------------------------------------------------------
+// HEADER TOP (MOBILE)
+//-----------------------------------------------------------------
+
+.header-top {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: #eeeeee;
+    text-align: right;
+    z-index: 10;
+
+    //=========================================
+    // HEADER TOP BTN (TRIGGER FOR BODY DRAWER)
+    //=========================================
+
+    .header-top-btn {
+        padding: rem-calc(8 0);
+        font-size: rem-calc(16);
+        cursor: pointer;
+
+        .fa-phone {
+            font-size: rem-calc(22);
+            margin-right: rem-calc(5);
+            line-height: 0;
+        }
+
+        .fa-angle-down {
+            position: relative;
+            top: rem-calc(3);
+            font-size: rem-calc(30);
+            line-height: 0;
+            transition: all 200ms ease;
+        }
+    }
+}
+
+//-----------------------------------------------------------------
+// HEADER BODY (LINKS)
+//-----------------------------------------------------------------
+
+.header-body {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: rem-calc(65 0 10 0);
+    background: #e6e6e6;
+    transform: translateY(-100%);
+    transition: transform 300ms ease;
+    z-index: 5;
+
+    // JS ADDS THIS CLASS
+    &.is-open {
+        transform: translateY(0);
+    }
+
+    @media #{$xlarge-up} {
+        transform: translateY(0);
+    }
+
+    @media #{$xlarge-up} {
+        display: flex;
+        align-items: center;
+        padding: rem-calc(18 0);
+    }
+
+    //=========================================
+    // COLUMNS
+    //=========================================
+
+    > .row > .columns {
+        @media #{$xlarge-up} {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    //=========================================
+    // ICON BEFORE LINKS
+    //=========================================
+
+    .fa-phone {
+        margin-right: rem-calc(15);
+        font-size: rem-calc(22);
+    }
+
+    //=========================================
+    // PHONE LINK
+    //=========================================
+
+    .phone-links {
+        @media #{$xlarge-up} {
+            width: 70%;
+        }
+
+        @media #{$xxlarge-up} {
+            width: 100%;
+        }
+    }
+
+    .phone-link {
+        display: block;
+        margin-bottom: rem-calc(15);
+        font-size: rem-calc(14);
+        color: #626161;
+
+        @media #{$xlarge-up} {
+            display: inline-block;
+            margin: rem-calc(0 25 0 0);
+            font-size: rem-calc(13); // good enough
+        }
+
+        @media #{$xxlarge-up} {
+            font-size: rem-calc(14);
+        }
+
+        &:hover {
+            color: darken(#626161, 10%);
+        }
+    }
+
+    //=========================================
+    // BRAND SA - [LOCKED]
+    //=========================================
+
+    .logo-sa {
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+
+        @media #{$xlarge-up} {
+            position: absolute !important; // stupid foundation
+            top: rem-calc(-2);
+            right: rem-calc(15);
+        }
+
+        img {
+            position: relative;
+            margin-right: rem-calc(12);
+            top: -4px;
+            width: rem-calc(88);
+        }
+    }
+}
+
+//-----------------------------------------------------------------
+// HEADER BOTTOM
+//-----------------------------------------------------------------
+
+.header-bottom {
+
+    //=========================================
+    // LOGO
+    //=========================================
 
     .logo {
         position: relative;
         top: rem-calc(50);
         transition: none;
 
+        @media #{$medium-up} { top: rem-calc(70); }
+        @media #{$large-up}  { top: rem-calc(108); } // magic number - line up with topbar
+
         img {
             width: rem-calc(150);
-
-            @media #{$medium-up} {
-                width: rem-calc(186);
-            }
-
-            @media #{$large-up} {
-                width: rem-calc(199);
-            }
+            @media #{$medium-up} { width: rem-calc(186); }
+            @media #{$large-up}  { width: rem-calc(199); }
         }
+    }
+
+    //=========================================
+    // HAMBURGER [LOCKED]
+    //=========================================
+
+    .header-mobile-menu .hamburger {
+        @include hamburger($width: 26px, $thickness: 5px, $color: black);
+        top: rem-calc(-10);
+        right: rem-calc(15);
+        cursor: pointer;
 
         @media #{$medium-up} {
-            top: rem-calc(30);
-        }
-        @media #{$large-up} {
-            top: rem-calc(77); // magic number - line up with topbar
+            top: rem-calc(120);
         }
     }
 }
+
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
 //=========================================
-// Phone
+//
 //=========================================
-
-// Hack to overcome Foundation's awful decision to set columns to be relative
-.is-special-static {
-    position: static;
-    @media #{$medium-up} {
-        position: relative;
-    }
-}
-
-.header-phone {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: rem-calc(40);
-    line-height: rem-calc(38);
-    padding: rem-calc(0 15);
-    background: #edeeef;
-    text-align: right;
-
-    @media #{$medium-up} {
-        position: relative;
-        height: auto;
-        top: rem-calc(20);
-        padding: 0;
-        background: none;
-    }
-}
-
-//=========================================
-
-.header .phone {
-    position: relative;
-    // top: rem-calc(20);
-    color: #626161;
-
-    i {
-        position: absolute;
-        top: rem-calc(10);
-        left: rem-calc(-25);
-        font-size: rem-calc(42);
-        line-height: 0;
-    }
-}
-
-//=========================================
-// Hamburger
-//=========================================
-
-.header-mobile-menu .hamburger {
-    @include hamburger($width: 26px, $thickness: 5px, $color: black);
-
-    top: rem-calc(140); // magic
-    // top: rem-calc(-26); // magic
-    right: rem-calc(15);
-    cursor: pointer;
-
-    @media #{$medium-up} {
-        top: rem-calc(120);
-    }
-}

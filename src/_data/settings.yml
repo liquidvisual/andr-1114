@@ -20,3 +20,25 @@ google_map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3271.168285643
 
 # Google Analytics
 google_analytics: "UA-XXXXXXXX-X"
+
+# OFFICES
+offices:
+  - title: Adelaide
+    address: "[INSERT ADDRESS HERE]"
+    phone: 8238 6666
+    email: "[INSERT EMAIL HERE]"
+
+  - title: Port Adelaide
+    address: "[INSERT ADDRESS HERE]"
+    phone: 8447 4911
+    email: "[INSERT EMAIL HERE]"
+
+  - title: Morphett Vale
+    address: "[INSERT ADDRESS HERE]"
+    phone: 8384 3990
+    email: "[INSERT EMAIL HERE]"
+
+  - title: Murray Bridge
+    address: "[INSERT ADDRESS HERE]"
+    phone: 8532 3141
+    email: "[INSERT EMAIL HERE]"

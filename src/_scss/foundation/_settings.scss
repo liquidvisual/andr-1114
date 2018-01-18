@@ -185,6 +185,13 @@ $xlarge-only: "#{$screen} and (min-width:#{lower-bound($xlarge-range)}) and (max
 $xxlarge-up: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)})";
 $xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (max-width:#{upper-bound($xxlarge-range)})";
 
+// ADDED. How did Foundation not have this?! --
+$medium-down: "#{$screen} and (max-width:#{lower-bound($medium-range)})";
+$large-down: "#{$screen} and (max-width:#{lower-bound($large-range)})";
+$xlarge-down: "#{$screen} and (max-width:#{lower-bound($xlarge-range)})";
+$xxlarge-down: "#{$screen} and (max-width:#{lower-bound($xxlarge-range)})";
+//---
+
 // // Store breakpoints in html for JS
 // //
 // // JS will use for dev tools

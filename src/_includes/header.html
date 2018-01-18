@@ -4,27 +4,65 @@
 {% endcomment %}
 
 {% assign settings = site.data.settings %}
+{% assign offices = settings.offices %}
 {% assign logo = "/img/content/logo.png" %}
 
-<div class="row outer-row">
-
-    <div class="medium-6 columns">
-        <a class="logo" href="/" title="{{ settings.seo_title }}" itemprop="url">
-        <img width="199" src="{{ logo }}" alt="{{ settings.company_title }}" itemprop="logo"></a>
+<!-- HEADER TOP BTN -->
+<div class="header-top hide-for-xlarge-up">
+    <div class="row outer-row">
+        <div class="columns">
+            <div class="header-top-btn" data-header-body-trigger>
+                <i class="fa fa-phone"></i> GIVE US A CALL &nbsp;<i class="fa fa-angle-down"></i>
+            </div>
+        </div>
     </div>
-    <div class="medium-6 columns text-right is-special-static">
+</div>
 
-        <!-- PHONE -->
-        <div class="header-phone">
-            <a href="tel:{{ settings.phone }}" class="phone">
-                <i class="fa fa-mobile fa-rotate-270"></i>&nbsp; FREE CALL {{ settings.phone }}
+<!-- HEADER BODY -->
+<div class="header-body" data-header-body>
+    <div class="row outer-row">
+        <div class="columns">
+
+            <!-- ICON -->
+            <i class="fa fa-phone hidden-for-large-down"></i>
+
+            <!-- PHONE LINKS -->
+            <div class="phone-links text-right xlarge-text-left">
+                {% for item in offices %}
+                    <a class="phone-link" href="tel:{{ item.phone }}">
+                        <b>{{ item.title | upcase }}</b>&nbsp; {{ item.phone }}
+                    </a>
+                {% endfor %}
+            </div>
+
+            <!-- LOGO SA -->
+            <div class="logo-sa hidden-for-large-down">
+                <img src="/img/content/logo-sa-1@2x.png" alt="South Australia logo">
+                <span class="text">100% South Australian</span>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- HEADER BOTTOM -->
+<div class="header-bottom">
+    <div class="row outer-row">
+        <div class="medium-8 columns">
+
+            <!-- LOGO -->
+            <a class="logo" href="/" title="{{ settings.seo_title }}" itemprop="url">
+                <img width="199" src="{{ logo }}" alt="{{ settings.company_title }}" itemprop="logo">
             </a>
-        </div>
 
-        <!-- HAMBURGER -->
-        <div class="header-mobile-menu hide-for-large-up">
-            <span class="hamburger"><span class="hamburger-icon"></span></span>
         </div>
+        <div class="medium-4 columns text-right fill-3">
 
+            <!-- HAMBURGER -->
+            <div class="header-mobile-menu hide-for-large-up">
+                <span class="hamburger"><span class="hamburger-icon"></span></span>
+            </div>
+
+        </div>
     </div>
 </div>
