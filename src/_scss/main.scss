@@ -546,6 +546,8 @@ div iframe { display:inline; }
 // Themes
 //-----------------------------------------------------------------
 
+@import "../_bower_components/flickity/dist/flickity"; // added 24.07.18
+
 @import "app/accordion";
 @import "app/buttons";
 @import "app/header";
@@ -557,6 +559,7 @@ div iframe { display:inline; }
 @import "app/footer";
 @import "app/side-nav";
 @import "app/social-networks";
+@import "app/testimonials";
 
 //=========================================
 //

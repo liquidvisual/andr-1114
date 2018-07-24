@@ -12,7 +12,8 @@
     "nprogress": "~0.1.6",
     "WOW": ">=0.1.9",
     "sass-burger": "~1.1.1",
-    "remove-hover": "~0.1.0"
+    "remove-hover": "~0.1.0",
+    "flickity": "^2.1.2"
   },
   "devDependencies": {}
 }

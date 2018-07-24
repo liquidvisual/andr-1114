@@ -1,0 +1,201 @@
+@import "foundation/settings";
+/*
+    CARD-SLIDER.CSS
+
+    - Last updated: 24.07.18
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// SECTION TESTIMONIALS
+//-----------------------------------------------------------------
+
+.section-testimonials {
+    padding: rem-calc(30 0 30 0);
+
+    h4, .h4 {
+        margin-bottom: rem-calc(25);
+        font-size: rem-calc(20);
+        font-weight: bold;
+        color: #484848; // spec
+    }
+}
+
+//-----------------------------------------------------------------
+// CARD CELL
+//-----------------------------------------------------------------
+
+.card-cell {
+    padding: rem-calc(0 5);
+
+    @media #{$medium-up} {
+        padding: rem-calc(0 15);
+    }
+}
+
+//-----------------------------------------------------------------
+// BUBBLE
+//-----------------------------------------------------------------
+
+.testimonial-bubble {
+    position: relative;
+    // min-height: rem-calc(140);
+    padding: rem-calc(25 30 30 25);
+    margin-bottom: rem-calc(22);
+    border-radius: 10px;
+    background: #373332;
+    font-size: rem-calc(14);
+    color: white;
+
+    // SPEECH COMMAS
+    &:before,
+    &:after {
+        position: absolute;
+        font-size: rem-calc(96);
+        font-weight: bold;
+        line-height: 1;
+        color: rgba(white, 0.15);
+    }
+
+    &:before {
+        left: rem-calc(12);
+        top: rem-calc(5);
+        content: '“';
+    }
+
+    &:after {
+        right: rem-calc(12);
+        bottom: rem-calc(-40);
+        content: '”';
+    }
+}
+
+// TRIANGLE TAIL
+.testimonial-bubble-tail {
+    position: absolute;
+    bottom: rem-calc(-15);
+    left: rem-calc(36);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 16px 20px 0 0;
+    border-color: #373332 transparent transparent transparent;
+}
+
+//-----------------------------------------------------------------
+// PERSON'S NAME
+//-----------------------------------------------------------------
+
+.card-cell-heading {
+    margin-bottom: 0;
+    font-size: rem-calc(16);
+    color: #484848;
+}
+
+//-----------------------------------------------------------------
+// RATING
+//-----------------------------------------------------------------
+
+.rating {
+    font-size: rem-calc(14);
+    color: lighten($primary-color, 30%);
+
+    .active {
+        color: $primary-color;
+    }
+}
+
+//-----------------------------------------------------------------
+// GROUP BY [X]
+//-----------------------------------------------------------------
+
+.card-slider .group-by-four {
+    width: 100%;
+
+    @media #{$medium-up} {
+        width: 50%;
+    }
+
+    @media #{$large-up} {
+        width: 33.33333333%;
+    }
+
+    @media #{$xlarge-up} {
+        width: 25%;
+    }
+}
+
+//-----------------------------------------------------------------
+// FLICKITY
+//-----------------------------------------------------------------
+
+.card-slider {
+
+    .flickity-prev-next-button.previous,
+    .flickity-prev-next-button.next {
+        display: none;
+        position: absolute;
+        top: calc(50% - #{rem-calc(68)} + 65px/2); // looks right
+        width: rem-calc(40);
+        min-width: rem-calc(40);
+        padding: 0;
+        background: none;
+        text-align: center;
+        opacity: 0.7;
+
+        @media #{$medium-up} {
+            display: flex;
+        }
+
+        &[disabled] {
+            opacity: 0.1;
+        }
+
+        &:hover {
+            opacity: 1;
+        }
+
+        .flickity-button-icon {
+            display: block;
+            position: static;
+            // width: 45%;
+            margin: auto;
+        }
+    }
+
+    .flickity-prev-next-button.previous {
+        left: rem-calc(-30);
+    }
+
+    .flickity-prev-next-button.next {
+        right: rem-calc(-30);
+    }
+}
+
+//-----------------------------------------------------------------
+// PAGE DOTS
+//-----------------------------------------------------------------
+
+.flickity-page-dots {
+    display: none;
+    bottom: rem-calc(-35);
+
+    @media #{$medium-up} {
+        display: block;
+    }
+
+    .dot {
+        width: 11px;
+        height: 11px;
+    }
+
+    .is-selected {
+        background: #7a7979;
+    }
+}
+
+//=========================================
+//
+//=========================================
