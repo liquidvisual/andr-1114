@@ -13,7 +13,13 @@
 //-----------------------------------------------------------------
 
 .section-testimonials {
-    padding: rem-calc(30 0 30 0);
+    padding: rem-calc(30 0 10 0);
+    overflow: hidden; // stop arrows from breaking overflow
+
+    @media #{$medium-up} {
+        padding: rem-calc(30 0 34 0);
+        overflow: visible;  // stop arrows from breaking overflow
+    }
 
     h4, .h4 {
         margin-bottom: rem-calc(25);
@@ -135,18 +141,18 @@
 
     .flickity-prev-next-button.previous,
     .flickity-prev-next-button.next {
-        display: none;
         position: absolute;
         top: calc(50% - #{rem-calc(68)} + 65px/2); // looks right
-        width: rem-calc(40);
-        min-width: rem-calc(40);
+        width: rem-calc(30);
+        min-width: rem-calc(30);
         padding: 0;
         background: none;
         text-align: center;
         opacity: 0.7;
 
         @media #{$medium-up} {
-            display: flex;
+            width: rem-calc(40);
+            min-width: rem-calc(40);
         }
 
         &[disabled] {
@@ -166,11 +172,19 @@
     }
 
     .flickity-prev-next-button.previous {
-        left: rem-calc(-30);
+        left: rem-calc(-20);
+
+        @media #{$medium-up} {
+            left: rem-calc(-30);
+        }
     }
 
     .flickity-prev-next-button.next {
-        right: rem-calc(-30);
+        right: rem-calc(-20);
+
+        @media #{$medium-up} {
+            right: rem-calc(-30);
+        }
     }
 }
 
