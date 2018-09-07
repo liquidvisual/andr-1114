@@ -880,7 +880,7 @@
 
     <!-- FOUNDATION MODAL TRIGGER -->
     <!-- https://foundation.zurb.com/sites/docs/v/5.5.3/components/reveal.html -->
-    <a href="#" data-reveal-id="myModal">Click Me For A Modal</a>
+    <a href="#" onclick="(function(e){e.preventDefault();})(event)" data-reveal-id="myModal">Click Me For A Modal</a>
 
     <!-- FOUNDATION MODAL -->
     <div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
